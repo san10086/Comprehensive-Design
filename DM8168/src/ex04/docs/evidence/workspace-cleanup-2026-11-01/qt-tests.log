@@ -1,0 +1,42 @@
+********* Start testing of FrontendTest *********
+Config: Using QtTest library 5.15.3, Qt 5.15.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 11.3.0), ubuntu 22.04
+PASS   : FrontendTest::initTestCase()
+PASS   : FrontendTest::modeRestrictions()
+PASS   : FrontendTest::lifecycleAndArguments()
+PASS   : FrontendTest::recordSkipsLoader()
+PASS   : FrontendTest::loaderFailure()
+PASS   : FrontendTest::hostFailureStillUnloads()
+PASS   : FrontendTest::shutdownFailureIsFailure()
+PASS   : FrontendTest::hostCannotExecStillUnloads()
+PASS   : FrontendTest::stopDuringStartup()
+PASS   : FrontendTest::cooperativeStop()
+PASS   : FrontendTest::separateWindowLock()
+PASS   : FrontendTest::ipcRoundTrip(semaphores)
+PASS   : FrontendTest::ipcRoundTrip(shared-memory)
+PASS   : FrontendTest::ipcStopAndCrash()
+PASS   : FrontendTest::cleanupTestCase()
+Totals: 15 passed, 0 failed, 0 skipped, 0 blacklisted, 5512ms
+********* Finished testing of FrontendTest *********
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+界面就绪 · 演示环境
+演示开始 · 不启动板端进程，不写入音频文件
+演示已停止
+演示开始 · 不启动板端进程，不写入音频文件
+演示已停止
+界面就绪 · 演示环境
+载入输入：/mnt/d/develop/vscode/projects/ex04/tests/spatial/input.wav
+载入对比：/mnt/d/develop/vscode/projects/ex04/tests/spatial/output_40e045.wav
+********* Start testing of UiTest *********
+Config: Using QtTest library 5.15.3, Qt 5.15.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 11.3.0), ubuntu 22.04
+PASS   : UiTest::initTestCase()
+PASS   : UiTest::namedParameters()
+PASS   : UiTest::directionsDoNotSnap()
+PASS   : UiTest::wavReaderAndCursor()
+PASS   : UiTest::malformedWav()
+PASS   : UiTest::waveformFilesAndBoundedStream()
+PASS   : UiTest::demoLifecycle()
+PASS   : UiTest::windowLayoutsAndInteractions()
+PASS   : UiTest::realFileUiAndBoardEmpty()
+PASS   : UiTest::cleanupTestCase()
+Totals: 10 passed, 0 failed, 0 skipped, 0 blacklisted, 6331ms
+********* Finished testing of UiTest *********

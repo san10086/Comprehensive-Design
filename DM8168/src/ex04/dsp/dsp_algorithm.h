@@ -3,12 +3,11 @@
 
 #include <stdint.h>
 
-/**
- * @brief DSP音频处理算法
- * @param pData 指向PCM音频数据的指针（16位立体声，L/R交织）
- * @param numSamples 每声道的采样点数（总数据量 = numSamples * 2 * 2字节）
- * @param mode 算法模式：0=直通, 1=左右声道交换, 2=音量×2
- * @return 0=成功, -1=失败
+/*
+ * Process interleaved S16_LE stereo PCM in-place.
+ * numSamples is the frame count per channel.
+ * mode: 0=passthrough, 1=swap, 2=gain2, 3=speed2, 4=gain3, 5=gain5.
+ * Returns 0 on success or -1 on unsupported mode.
  */
 int dsp_process_audio(int16_t *pData, int numSamples, int mode);
 

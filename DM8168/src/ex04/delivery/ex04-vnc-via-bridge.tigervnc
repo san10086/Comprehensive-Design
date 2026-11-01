@@ -1,0 +1,7 @@
+TigerVNC Configuration file Version 1.0
+
+ServerName=127.0.0.1::5901
+AutoSelect=0
+FullColor=1
+PreferredEncoding=Raw
+Shared=1

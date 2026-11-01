@@ -1,0 +1,14 @@
+********* Start testing of UiTest *********
+Config: Using QtTest library 5.15.3, Qt 5.15.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 11.3.0), ubuntu 22.04
+PASS   : UiTest::initTestCase()
+PASS   : UiTest::namedParameters()
+PASS   : UiTest::directionsDoNotSnap()
+PASS   : UiTest::wavReaderAndCursor()
+PASS   : UiTest::malformedWav()
+PASS   : UiTest::waveformFilesAndBoundedStream()
+PASS   : UiTest::demoLifecycle()
+PASS   : UiTest::windowLayoutsAndInteractions()
+PASS   : UiTest::realFileUiAndBoardEmpty()
+PASS   : UiTest::cleanupTestCase()
+Totals: 10 passed, 0 failed, 0 skipped, 0 blacklisted, 6210ms
+********* Finished testing of UiTest *********

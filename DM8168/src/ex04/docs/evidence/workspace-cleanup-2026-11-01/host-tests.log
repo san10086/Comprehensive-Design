@@ -1,0 +1,15 @@
+test_directions_and_help (__main__.HostStopTest) ... ok
+test_named_options_without_hardware (__main__.HostStopTest) ... ok
+test_new_directions_reach_pipeline (__main__.HostStopTest) ... ok
+test_normal_smoke (__main__.HostStopTest) ... ok
+test_rejected_options (__main__.HostStopTest) ... ok
+test_run_wrapper_queries_do_not_load_dsp (__main__.HostStopTest) ... ok
+test_stop_active_audio (__main__.HostStopTest) ... ok
+test_stop_active_file (__main__.HostStopTest) ... ok
+test_stop_active_record (__main__.HostStopTest) ... ok
+test_stop_immediately_after_ready (__main__.HostStopTest) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.416s
+
+OK

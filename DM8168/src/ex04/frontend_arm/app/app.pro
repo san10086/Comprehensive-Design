@@ -1,0 +1,14 @@
+QT += core gui
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TEMPLATE = app
+TARGET = ex04_frontend_arm
+DESTDIR = ../bin
+CONFIG += warn_on
+CONFIG -= app_bundle
+INCLUDEPATH += ../ipc_peer
+SOURCES += main.cpp MainWindow.cpp RunRequest.cpp PipelineRunner.cpp IpcSession.cpp
+HEADERS += MainWindow.h RunRequest.h PipelineRunner.h IpcSession.h ../ipc_peer/ipc_protocol.h
+SOURCES += AudioBackend.cpp WavReader.cpp WaveformWidget.cpp DirectionPicker.cpp
+HEADERS += AudioBackend.h WavReader.h WaveformWidget.h DirectionPicker.h
+RESOURCES += resources.qrc
+unix:!macx: LIBS += -lpthread

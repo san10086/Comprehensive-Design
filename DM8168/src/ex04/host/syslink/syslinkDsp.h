@@ -23,6 +23,9 @@ typedef struct {
     int channels;              /* PCM channel count */
     int bitDepth;              /* PCM bits per sample */
     int algorithmMode;         /* APP_ALGO_MODE_* */
+    int ringSlots;             /* shared-buffer slots; 0 uses default */
+    int directionA;            /* HRIR_DIRECTION_CODE; used by generic spatial/dual */
+    int directionB;            /* HRIR_DIRECTION_CODE; used by generic dual only */
 } syslinkDspConfig;
 
 /*

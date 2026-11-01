@@ -1,0 +1,197 @@
+root@dm816x-evm:~# tail -n 120 /tmp/ex04-gui.log
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+Cannot handle 0 bpp client
+root@dm816x-evm:~# netstat -lnt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       
+tcp        0      0 ::%72816:5900           ::%726648:*             LISTEN      
+tcp        0      0 ::%72816:8080           ::%726856:*             LISTEN      
+tcp        0      0 ::%72816:23             ::%727064:*             LISTEN      
+root@dm816x-evm:~# cat /proc/meminfo
+MemTotal:          73424 kB
+MemFree:            1772 kB
+Buffers:               0 kB
+Cached:            48332 kB
+SwapCached:            0 kB
+Active:            32008 kB
+Inactive:          25784 kB
+Active(anon):       9560 kB
+Inactive(anon):      120 kB
+Active(file):      22448 kB
+Inactive(file):    25664 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:          73424 kB
+LowFree:            1772 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:          9488 kB
+Mapped:             9372 kB
+Shmem:               220 kB
+Slab:               4364 kB
+SReclaimable:       1248 kB
+SUnreclaim:         3116 kB
+KernelStack:         392 kB
+PageTables:          288 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       36712 kB
+Committed_AS:      32072 kB
+VmallocTotal:     778240 kB
+VmallocUsed:      273600 kB
+VmallocChunk:     473084 kB
+root@dm816x-evm:~# dmesg | tail -n 30
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+notify_shm_drv_sendevent failed! status = 0xfffffff0
+notify_send_event failed! status = 0xfffffff0
+VPSS_CORE : Failed to init fvid2 interface,
+vpss: probe of vpss failed with error -22
+VPSS_CORE : failed to register ti81xx-vpss driver
+NET: Registered protocol family 10
+eth0: no IPv6 routers present
+root@dm816x-evm:~# 

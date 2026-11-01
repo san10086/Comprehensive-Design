@@ -1,0 +1,148 @@
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ ex04_build_host_dsp() {
+>     source "$HOME/ex04-build-paths.sh" || return 1
+>     cd "$PROJECT_ROOT" || return 1
+>     mkdir -p logs || return 1
+>     set -o pipefail
+> 
+>     make -j2 DEPOT="$EZSDK" \
+>         CGT_ARM_PREFIX="$ARM_PREFIX" \
+>         ARM_SYSROOT="$ARM_SYSROOT" \
+>         2>&1 | tee logs/build-host-dsp.log
+> }
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ 
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ if ex04_build_host_dsp; then
+>     printf '\n构建完成，检查产物：\n'
+>     file host/bin/release/app_host dsp/bin/release/server_dsp.xe674
+>     ls -lh host/bin/release/app_host \
+>         dsp/bin/release/server_dsp.xe674 \
+>         dsp/bin/release/obj/server_dsp.xe674.map
+> else
+>     printf '\n构建失败，日志最后 80 行：\n'
+>     tail -n 80 "$PROJECT_ROOT/logs/build-host-dsp.log"
+> fi
+#
+# Making all ...
+make -C host all
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+#
+# Making all ...
+make PROFILE=debug app_host
+make[2]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+#
+#
+# Making bin/debug/obj/main.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/main.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/main.ov5T app/main.c
+# Making bin/debug/obj/syslinkDsp.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/syslinkDsp.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/syslinkDsp.ov5T syslink/syslinkDsp.c
+#
+# Making bin/debug/obj/audioConfig.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/audioConfig.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/audioConfig.ov5T audio/audioConfig.c
+#
+# Making bin/debug/obj/audioCapture.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/audioCapture.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/audioCapture.ov5T audio/audioCapture.c
+#
+# Making bin/debug/obj/audioPlayback.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/audioPlayback.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/audioPlayback.ov5T audio/audioPlayback.c
+#
+# Making bin/debug/obj/audioWav.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/debug/obj/audioWav.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -ggdb -D DEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/debug/obj/audioWav.ov5T audio/audioWav.c
+#
+# Making bin/debug/app_host ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -ggdb -Wall -Wl,-Map=bin/debug/app_host.map -o bin/debug/app_host bin/debug/obj/main.ov5T bin/debug/obj/syslinkDsp.ov5T bin/debug/obj/audioConfig.ov5T bin/debug/obj/audioCapture.ov5T bin/debug/obj/audioPlayback.ov5T bin/debug/obj/audioWav.ov5T /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages/ti/syslink/lib/syslink.a_debug -lasound -lpthread -lc -lrt -lm
+make[2]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+make PROFILE=release app_host
+make[2]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+#
+#
+# Making bin/release/obj/main.ov5T ...
+# Making bin/release/obj/syslinkDsp.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/main.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/main.ov5T app/main.c
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/syslinkDsp.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/syslinkDsp.ov5T syslink/syslinkDsp.c
+#
+# Making bin/release/obj/audioConfig.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/audioConfig.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/audioConfig.ov5T audio/audioConfig.c
+#
+# Making bin/release/obj/audioCapture.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/audioCapture.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/audioCapture.ov5T audio/audioCapture.c
+#
+# Making bin/release/obj/audioPlayback.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/audioPlayback.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/audioPlayback.ov5T audio/audioPlayback.c
+#
+# Making bin/release/obj/audioWav.ov5T ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc -c -MD -MF bin/release/obj/audioWav.ov5T.dep -march=armv5t -D_REENTRANT -Dxdc_target_name__=GCArmv5T -Dxdc_target_types__=gnu/targets/arm/std.h --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -Wall -ffloat-store -fPIC -Wunused -Dfar= -O3 -D NDEBUG -DPLATFORM_DM8168 -I. -Iapp -Isyslink -Iaudio -I../shared -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi/usr/src/linux-2.6.37-psp04.04.00.01-headers/include -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages -o bin/release/obj/audioWav.ov5T audio/audioWav.c
+#
+# Making bin/release/app_host ...
+/home/user/arm-2014.05/bin/arm-none-linux-gnueabi-gcc --sysroot=/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/linux-devkit/arm-none-linux-gnueabi -O3 -Wall -Wl,-Map=bin/release/app_host.map -o bin/release/app_host bin/release/obj/main.ov5T bin/release/obj/syslinkDsp.ov5T bin/release/obj/audioConfig.ov5T bin/release/obj/audioCapture.ov5T bin/release/obj/audioPlayback.ov5T bin/release/obj/audioWav.ov5T /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages/ti/syslink/lib/syslink.a_release -lasound -lpthread -lc -lrt -lm
+make[2]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+make -C dsp all
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+#
+# Making configuro/linker.cmd ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/xs --xdcpath="/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages;/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages;/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages;/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" \
+            xdc.tools.configuro -o configuro \
+            -t ti.targets.elf.C674 -c /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1 \
+            -p ti.platforms.evmTI816X:dsp -b ../shared/config.bld \
+            -r release Dsp.cfg
+making package.mak (because of package.bld) ...
+generating interfaces for package configuro (because package/package.xdc.inc is older than package.xdc) ...
+configuring Dsp.xe674 from package/cfg/Dsp_pe674.cfg ...
+cle674 package/cfg/Dsp_pe674.c ...
+make PROFILE=debug server_dsp.x
+make[2]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+#
+#
+# Making bin/debug/obj/main_dsp.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -D_DEBUG_=1 --symdebug:dwarf -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/debug/obj/main_dsp.oe674 -fc main_dsp.c
+# Making bin/debug/obj/Server.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -D_DEBUG_=1 --symdebug:dwarf -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/debug/obj/Server.oe674 -fc Server.c
+#
+# Making bin/debug/obj/AudioAlgo.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -D_DEBUG_=1 --symdebug:dwarf -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/debug/obj/AudioAlgo.oe674 -fc AudioAlgo.c
+#
+# Making bin/debug/obj/dsp_algorithm.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -D_DEBUG_=1 --symdebug:dwarf -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/debug/obj/dsp_algorithm.oe674 -fc dsp_algorithm.c
+#
+# Making bin/debug/obj/dsp_spatial.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -D_DEBUG_=1 --symdebug:dwarf -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h"  \
+	--output_file=bin/debug/obj/dsp_spatial.oe674 -fc dsp_spatial.c
+#
+# Making bin/debug/server_dsp.xe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/lnk6x --abi=eabi -w -q -c -m bin/debug/obj/server_dsp.xe674.map -o bin/debug/server_dsp.xe674 bin/debug/obj/main_dsp.oe674 bin/debug/obj/Server.oe674 bin/debug/obj/AudioAlgo.oe674 bin/debug/obj/dsp_algorithm.oe674 bin/debug/obj/dsp_spatial.oe674 configuro/linker.cmd -l /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/lib/rts6740_elf.lib
+warning: creating output section ".plt" without a SECTIONS specification
+warning: entry-point symbol other than "_c_int00" specified:
+   "ti_sysbios_family_c64p_Hwi0"
+make[2]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+make PROFILE=release server_dsp.x
+make[2]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+#
+# Making bin/release/obj/main_dsp.oe674 ...
+#
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -O2 -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/release/obj/main_dsp.oe674 -fc main_dsp.c
+# Making bin/release/obj/Server.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -O2 -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/release/obj/Server.oe674 -fc Server.c
+#
+# Making bin/release/obj/AudioAlgo.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -O2 -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/release/obj/AudioAlgo.oe674 -fc AudioAlgo.c
+#
+# Making bin/release/obj/dsp_algorithm.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -O2 -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --output_file=bin/release/obj/dsp_algorithm.oe674 -fc dsp_algorithm.c
+#
+# Making bin/release/obj/dsp_spatial.oe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/cl6x -c  -qq -pdsw225 -O2 -I. -mv6740 --abi=eabi -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/bios_6_33_05_46/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/ipc_1_24_03_32/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/xdctools_3_23_03_53/packages" -I"/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/.." -I/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/include -Dxdc_target_types__="ti/targets/elf/std.h" -Dxdc_target_name__=C674 -Dxdc_cfg__header__="/home/user/ex04-work/ex04-source-20261101-ui/dsp/configuro/package/cfg/Dsp_pe674.h" --opt_level=3 --opt_for_speed=5 \
+	--output_file=bin/release/obj/dsp_spatial.oe674 -fc dsp_spatial.c
+#
+# Making bin/release/server_dsp.xe674 ...
+/home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/bin/lnk6x --abi=eabi -w -q -c -m bin/release/obj/server_dsp.xe674.map -o bin/release/server_dsp.xe674 bin/release/obj/main_dsp.oe674 bin/release/obj/Server.oe674 bin/release/obj/AudioAlgo.oe674 bin/release/obj/dsp_algorithm.oe674 bin/release/obj/dsp_spatial.oe674 configuro/linker.cmd -l /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/dsp-devkit/cgt6x_7_3_1/lib/rts6740_elf.lib
+warning: creating output section ".plt" without a SECTIONS specification
+warning: entry-point symbol other than "_c_int00" specified:
+   "ti_sysbios_family_c64p_Hwi0"
+make[2]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+
+构建完成，检查产物：
+host/bin/release/app_host:        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.14, not stripped
+dsp/bin/release/server_dsp.xe674: ELF 32-bit LSB executable, TI TMS320C6000 DSP family, version 1, dynamically linked, with debug_info, not stripped
+-rw-rw-r-- 1 user user 237K Nov  1 01:24 dsp/bin/release/obj/server_dsp.xe674.map
+-rw-rw-r-- 1 user user 7.5M Nov  1 01:24 dsp/bin/release/server_dsp.xe674
+-rwxrwxr-x 1 user user 359K Nov  1 01:23 host/bin/release/app_host

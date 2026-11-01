@@ -10,6 +10,8 @@
 #include <semaphore.h>
 #include <errno.h>
 #include <time.h>
+#include <pthread.h>
+#include <limits.h>
 
 #include <ti/syslink/Std.h>
 #include <ti/syslink/IpcHost.h>
@@ -22,6 +24,7 @@
 #include "../../shared/AppCommon.h"
 #include "../../shared/SystemCfg.h"
 #include "syslinkDsp.h"
+#include "../../shared/hrir_catalog.h"
 
 #define SYSLINK_DSP_QUEUE_SIZE          8
 #define SYSLINK_DSP_DEFAULT_PROC_NAME   "DSP"
@@ -48,27 +51,38 @@ typedef struct {
     IHeap_Handle        heap;
     int                 frameBytes;
     int                 bufferBytes;
+    int                 totalBufferBytes;
+    int                 ringSlots;
+    int                 nextSlot;
     int                 sampleRate;
     int                 channels;
     int                 bitDepth;
     int                 algorithmMode;
+    int                 directionA;
+    int                 directionB;
     int                 audioCfgValid;
     int                 syslinkReady;
     int                 loadStarted;
     int                 notifyRegistered;
     int                 semCreated;
+    int                 processMutexCreated;
     int                 bufferAllocated;
     int                 sharedPtrSent;
+    pthread_mutex_t     processMutex;
 } syslinkDspModule;
 
 static Int syslinkDspStartRemote(const char *remoteProcName);
 static Int syslinkDspCreateNotify(Void);
-static Int syslinkDspCreateBuffer(Int bufferBytes);
+static Int syslinkDspCreateBuffer(Void);
 static Int syslinkDspSendSharedPtr(Void);
+static Int syslinkDspSendRingConfig(Void);
 static Int syslinkDspSendAudioConfig(Void);
 static Int syslinkDspSendAlgorithmMode(Void);
+static Int syslinkDspSendDirection(UInt32 cmd, int code);
 static Int syslinkDspSendShutdown(Void);
 static Int syslinkDspWaitForCommand(UInt32 expectedCmd, UInt32 *eventOut);
+static Int syslinkDspWaitForSlotCommand(UInt32 expectedCmd, UInt32 slotId,
+        UInt32 *eventOut);
 static UInt32 syslinkDspWaitForEvent(syslinkDspEventQueue *eventQueue);
 static Void syslinkDspNotifyCB(UInt16 procId, UInt16 lineId, UInt32 eventId,
         UArg arg, UInt32 payload);
@@ -90,6 +104,7 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
     int         bitDepth = 0;
     int         algorithmMode = APP_ALGO_MODE_PASSTHROUGH;
     int         audioCfgValid = FALSE;
+    int         ringSlots = APP_RING_DEFAULT_SLOTS;
 
     printf("--> syslinkDspInit:\n");
 
@@ -116,6 +131,9 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
             audioCfgValid = TRUE;
         }
         algorithmMode = cfg->algorithmMode;
+        if (cfg->ringSlots > 0) {
+            ringSlots = cfg->ringSlots;
+        }
     }
 
     if ((bufferBytes <= 0) || (bufferBytes > APP_MAX_PAYLOAD_SIZE)) {
@@ -141,9 +159,20 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
     }
 
     if ((algorithmMode < APP_ALGO_MODE_PASSTHROUGH) ||
-            (algorithmMode > APP_ALGO_MODE_GAIN_X2)) {
+            (algorithmMode > APP_ALGO_MODE_MAX)) {
         printf("syslinkDspInit: invalid algorithmMode=%d\n",
                 algorithmMode);
+        return (-1);
+    }
+
+    if ((ringSlots <= 0) || (ringSlots > APP_RING_MAX_SLOTS)) {
+        printf("syslinkDspInit: invalid ringSlots=%d\n", ringSlots);
+        return (-1);
+    }
+
+    if (bufferBytes > (INT_MAX / ringSlots)) {
+        printf("syslinkDspInit: buffer size overflow, slotBytes=%d slots=%d\n",
+                bufferBytes, ringSlots);
         return (-1);
     }
 
@@ -152,11 +181,34 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
     Module.eventId = SystemCfg_EventId;
     Module.frameBytes = frameBytes;
     Module.bufferBytes = bufferBytes;
+    Module.totalBufferBytes = bufferBytes * ringSlots;
+    Module.ringSlots = ringSlots;
+    Module.nextSlot = 0;
     Module.sampleRate = sampleRate;
     Module.channels = channels;
     Module.bitDepth = bitDepth;
     Module.algorithmMode = algorithmMode;
+    Module.directionA = -1;
+    Module.directionB = -1;
+    if ((algorithmMode == APP_ALGO_MODE_SPATIAL) ||
+            (algorithmMode == APP_ALGO_MODE_DUAL)) {
+        if ((cfg == NULL) || (hrir_direction_index(cfg->directionA) < 0) ||
+                ((algorithmMode == APP_ALGO_MODE_DUAL) &&
+                 (hrir_direction_index(cfg->directionB) < 0))) {
+            printf("syslinkDspInit: unavailable HRIR direction\n");
+            return (-1);
+        }
+        Module.directionA = cfg->directionA;
+        Module.directionB = cfg->directionB;
+    }
     Module.audioCfgValid = audioCfgValid;
+
+    if (pthread_mutex_init(&Module.processMutex, NULL) != 0) {
+        printf("syslinkDspInit: failed to initialize process mutex\n");
+        syslinkDspResetModule();
+        return (-1);
+    }
+    Module.processMutexCreated = TRUE;
 
     SysLink_setup();
     Module.syslinkReady = TRUE;
@@ -171,12 +223,17 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
         goto fail;
     }
 
-    status = syslinkDspCreateBuffer(bufferBytes);
+    status = syslinkDspCreateBuffer();
     if (status < 0) {
         goto fail;
     }
 
     status = syslinkDspSendSharedPtr();
+    if (status < 0) {
+        goto fail;
+    }
+
+    status = syslinkDspSendRingConfig();
     if (status < 0) {
         goto fail;
     }
@@ -188,14 +245,21 @@ int syslinkDspInit(const syslinkDspConfig *cfg)
         }
     }
 
+    if ((algorithmMode == APP_ALGO_MODE_SPATIAL) ||
+            (algorithmMode == APP_ALGO_MODE_DUAL)) {
+        if (syslinkDspSendDirection(APP_CMD_DIRECTION_A, Module.directionA) < 0) goto fail;
+        if ((algorithmMode == APP_ALGO_MODE_DUAL) &&
+                (syslinkDspSendDirection(APP_CMD_DIRECTION_B, Module.directionB) < 0)) goto fail;
+    }
     status = syslinkDspSendAlgorithmMode();
     if (status < 0) {
         goto fail;
     }
 
     Module.sharedPtrSent = TRUE;
-    printf("syslinkDspInit: ready, frameBytes=%d, bufferBytes=%d, algorithmMode=%d\n",
-            Module.frameBytes, Module.bufferBytes, Module.algorithmMode);
+    printf("syslinkDspInit: ready, frameBytes=%d, slotBytes=%d, ringSlots=%d, algorithmMode=%d\n",
+            Module.frameBytes, Module.bufferBytes, Module.ringSlots,
+            Module.algorithmMode);
     printf("<-- syslinkDspInit:\n");
     return (0);
 
@@ -211,24 +275,36 @@ fail:
 int syslinkDspProcessBuffer(const void *inData, void *outData, int byteCount)
 {
     Int     status;
+    int     ret = -1;
+    int     locked = FALSE;
     UInt32  event;
     UInt32  payloadBytes;
     UInt32  command;
+    UInt32  slotId;
+    Char   *slotPtr;
 
     if (!Module.sharedPtrSent) {
         printf("syslinkDspProcessBuffer: module is not initialized\n");
         return (-1);
     }
 
+    if (Module.processMutexCreated) {
+        if (pthread_mutex_lock(&Module.processMutex) != 0) {
+            printf("syslinkDspProcessBuffer: failed to lock process mutex\n");
+            return (-1);
+        }
+        locked = TRUE;
+    }
+
     if ((inData == NULL) || (outData == NULL) || (byteCount <= 0)) {
         printf("syslinkDspProcessBuffer: invalid arguments\n");
-        return (-1);
+        goto leave;
     }
 
     if ((Module.frameBytes <= 0) || ((byteCount % Module.frameBytes) != 0)) {
         printf("syslinkDspProcessBuffer: byteCount=%d not aligned to frameBytes=%d\n",
                 byteCount, Module.frameBytes);
-        return (-1);
+        goto leave;
     }
 
     payloadBytes = (UInt32)byteCount;
@@ -236,35 +312,47 @@ int syslinkDspProcessBuffer(const void *inData, void *outData, int byteCount)
             (payloadBytes > APP_MAX_PAYLOAD_SIZE)) {
         printf("syslinkDspProcessBuffer: payload too large: %u\n",
                 payloadBytes);
-        return (-1);
+        goto leave;
     }
 
-    memcpy(Module.bufferPtr, inData, payloadBytes);
+    slotId = (UInt32)Module.nextSlot;
+    slotPtr = Module.bufferPtr + (slotId * (UInt32)Module.bufferBytes);
 
-    command = APP_CMD_PROCESSING | payloadBytes;
+    memcpy(slotPtr, inData, payloadBytes);
+
+    command = APP_CMD_PROCESSING | APP_SLOT_FIELD(slotId) | payloadBytes;
     status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
             Module.eventId, command, TRUE);
 
     if (status < 0) {
         printf("syslinkDspProcessBuffer: failed to send processing command\n");
-        return (-1);
+        goto leave;
     }
 
-    status = syslinkDspWaitForCommand(APP_CMD_OP_COMPLETE, &event);
+    status = syslinkDspWaitForSlotCommand(APP_CMD_OP_COMPLETE, slotId,
+            &event);
     if (status < 0) {
         if ((event & APP_CMD_MASK) == APP_CMD_OP_FAILED) {
-            printf("syslinkDspProcessBuffer: DSP processing failed, code=%u\n",
+            printf("syslinkDspProcessBuffer: DSP processing failed, slot=%u code=%u\n",
+                    (unsigned int)APP_SLOT_ID(event),
                     (unsigned int)(event & APP_DATA_MASK));
         }
         else {
             printf("syslinkDspProcessBuffer: unexpected completion event 0x%x\n",
                     event);
         }
-        return (-1);
+        goto leave;
     }
 
-    memcpy(outData, Module.bufferPtr, payloadBytes);
-    return ((int)payloadBytes);
+    memcpy(outData, slotPtr, payloadBytes);
+    Module.nextSlot = (Module.nextSlot + 1) % Module.ringSlots;
+    ret = (int)payloadBytes;
+
+leave:
+    if (locked) {
+        pthread_mutex_unlock(&Module.processMutex);
+    }
+    return (ret);
 }
 
 /*
@@ -305,13 +393,26 @@ int syslinkDspProcess(const short *inPcm, short *outPcm, int frameCount)
 int syslinkDspClose(void)
 {
     Int     status = 0;
+    int     locked = FALSE;
+
+    if (Module.processMutexCreated) {
+        if (pthread_mutex_lock(&Module.processMutex) == 0) {
+            locked = TRUE;
+        }
+        else {
+            printf("syslinkDspClose: failed to lock process mutex\n");
+            status = -1;
+        }
+    }
 
     if (Module.notifyRegistered) {
-        status = syslinkDspSendShutdown();
+        if (syslinkDspSendShutdown() < 0) {
+            status = -1;
+        }
     }
 
     if (Module.bufferAllocated) {
-        Memory_free(Module.heap, Module.bufferPtr, Module.bufferBytes);
+        Memory_free(Module.heap, Module.bufferPtr, Module.totalBufferBytes);
         Module.bufferAllocated = FALSE;
         Module.bufferPtr = NULL;
     }
@@ -329,6 +430,15 @@ int syslinkDspClose(void)
     if (Module.semCreated) {
         sem_destroy(&Module.eventQueue.semH);
         Module.semCreated = FALSE;
+    }
+
+    if (locked) {
+        pthread_mutex_unlock(&Module.processMutex);
+    }
+
+    if (Module.processMutexCreated) {
+        pthread_mutex_destroy(&Module.processMutex);
+        Module.processMutexCreated = FALSE;
     }
 
     if (Module.loadStarted) {
@@ -431,7 +541,7 @@ static Int syslinkDspCreateNotify(Void)
 /*
  *  ======== syslinkDspCreateBuffer ========
  */
-static Int syslinkDspCreateBuffer(Int bufferBytes)
+static Int syslinkDspCreateBuffer(Void)
 {
     Module.heap = (IHeap_Handle)SharedRegion_getHeap(SHARED_REGION_1);
     if (Module.heap == NULL) {
@@ -439,14 +549,45 @@ static Int syslinkDspCreateBuffer(Int bufferBytes)
         return (-1);
     }
 
-    Module.bufferPtr = (Char *)Memory_calloc(Module.heap, bufferBytes, 0,
-            NULL);
+    Module.bufferPtr = (Char *)Memory_calloc(Module.heap,
+            Module.totalBufferBytes, 0, NULL);
     if (Module.bufferPtr == NULL) {
         printf("syslinkDspInit: failed to allocate shared buffer\n");
         return (-1);
     }
 
     Module.bufferAllocated = TRUE;
+    return (0);
+}
+
+/*
+ *  ======== syslinkDspSendRingConfig ========
+ */
+static Int syslinkDspSendRingConfig(Void)
+{
+    Int     status;
+    UInt32  event;
+    UInt32  command;
+
+    command = APP_CMD_RING_CFG |
+            APP_SLOT_FIELD((UInt32)Module.ringSlots) |
+            ((UInt32)Module.bufferBytes & APP_DATA_MASK);
+
+    status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
+            Module.eventId, command, TRUE);
+    if (status < 0) {
+        printf("syslinkDspInit: failed to send ring config\n");
+        return (-1);
+    }
+
+    status = syslinkDspWaitForCommand(APP_CMD_RING_CFG_ACK, &event);
+    if (status < 0) {
+        printf("syslinkDspInit: unexpected ring config ack 0x%x\n", event);
+        return (-1);
+    }
+
+    printf("syslinkDspInit: ring cfg slots=%d slotBytes=%d totalBytes=%d\n",
+            Module.ringSlots, Module.bufferBytes, Module.totalBufferBytes);
     return (0);
 }
 
@@ -542,6 +683,22 @@ static Int syslinkDspSendAudioConfig(Void)
 /*
  *  ======== syslinkDspSendAlgorithmMode ========
  */
+static Int syslinkDspSendDirection(UInt32 cmd, int code)
+{
+    UInt32 event = 0;
+    if (Notify_sendEvent(Module.remoteProcId, Module.lineId, Module.eventId,
+            cmd | ((UInt32)code & APP_DATA_MASK), TRUE) < 0) return (-1);
+    if ((syslinkDspWaitForCommand(APP_CMD_DIRECTION_ACK, &event) < 0) ||
+            ((event & APP_DATA_MASK) != (UInt32)code)) {
+        printf("syslinkDspInit: direction rejected or unsupported, code=%d ack=0x%x\n",
+                code, event);
+        return (-1);
+    }
+    printf("syslinkDspInit: direction elevation=%d azimuth=%d\n",
+            code / 360 - 90, code % 360);
+    return (0);
+}
+
 static Int syslinkDspSendAlgorithmMode(Void)
 {
     Int     status;
@@ -617,6 +774,33 @@ static Int syslinkDspWaitForCommand(UInt32 expectedCmd, UInt32 *eventOut)
 }
 
 /*
+ *  ======== syslinkDspWaitForSlotCommand ========
+ */
+static Int syslinkDspWaitForSlotCommand(UInt32 expectedCmd, UInt32 slotId,
+        UInt32 *eventOut)
+{
+    UInt32 event = syslinkDspWaitForEvent(&Module.eventQueue);
+
+    if (eventOut != NULL) {
+        *eventOut = event;
+    }
+
+    if (event >= APP_E_FAILURE) {
+        return (-1);
+    }
+
+    if ((event & APP_CMD_MASK) != expectedCmd) {
+        return (-1);
+    }
+
+    if (APP_SLOT_ID(event) != slotId) {
+        return (-1);
+    }
+
+    return (0);
+}
+
+/*
  *  ======== syslinkDspNotifyCB ========
  */
 static Void syslinkDspNotifyCB(UInt16 procId, UInt16 lineId, UInt32 eventId,
@@ -632,6 +816,7 @@ static Void syslinkDspNotifyCB(UInt16 procId, UInt16 lineId, UInt32 eventId,
     next = (eventQueue->head + 1) % SYSLINK_DSP_QUEUE_SIZE;
     if (next == eventQueue->tail) {
         eventQueue->error = APP_E_OVERFLOW;
+        sem_post(&eventQueue->semH);
     }
     else {
         eventQueue->queue[eventQueue->head] = payload;

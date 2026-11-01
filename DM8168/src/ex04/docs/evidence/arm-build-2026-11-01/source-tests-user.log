@@ -1,0 +1,132 @@
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ ex04_step() {
+> # [Ubuntu20；本机测试终端]
+> source "$HOME/ex04-build-paths.sh"
+> cd "$PROJECT_ROOT" || return 1
+> make hrir-check || return 1
+> make -C tests/spatial CC=gcc test test-catalog || return 1
+> python3 frontend_arm/tests/test_host_stop.py || return 1
+> }
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ if ex04_step; then
+>     printf '本段执行结束，请按通过标准核对。\n'
+> else
+>     printf '本段失败，保留上方输出；不要继续下一段。\n' >&2
+> fi
+python3 tools/generate_hrir.py --source "temp/MIT KERMER" --check
+HRIR check PASS: 710 directions, 1420 WAVs, 1454080 coefficient bytes
+  ignored non-direction WAV: headphones+spkr/AKG-K240-L.wav
+  ignored non-direction WAV: headphones+spkr/AKG-K240-R.wav
+  ignored non-direction WAV: headphones+spkr/Opti-inverse.wav
+  ignored non-direction WAV: headphones+spkr/Opti-minphase.wav
+  ignored non-direction WAV: headphones+spkr/Optimus.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-L.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-R.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-L.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-R.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-L.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-R.wav
+make: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/tests/spatial'
+gcc -std=c99 -O2 -Wall -Wextra -Werror -pedantic -o spatial_q15 main.c spatial_fir.c wav_pcm16.c
+gcc -std=c99 -O2 -Wall -Wextra -Werror -pedantic -o dsp_spatial_selftest dsp_spatial_selftest.c spatial_fir.c wav_pcm16.c ../../dsp/dsp_spatial.c
+./spatial_q15 selftest \
+	../../assets/hrir/original/L40e045a.wav ../../assets/hrir/original/R40e045a.wav
+selftest PASS: impulse response keeps natural HRIR order
+selftest PASS: variable-size blocks equal direct convolution
+selftest PASS: 511-sample tail flush is correct
+./spatial_q15 selftest \
+	../../assets/hrir/original/L60e250a.wav ../../assets/hrir/original/R60e250a.wav
+selftest PASS: impulse response keeps natural HRIR order
+selftest PASS: variable-size blocks equal direct convolution
+selftest PASS: 511-sample tail flush is correct
+./dsp_spatial_selftest \
+	../../assets/hrir/original/L40e045a.wav ../../assets/hrir/original/R40e045a.wav \
+	../../assets/hrir/original/L60e250a.wav ../../assets/hrir/original/R60e250a.wav
+DSP spatial FFT selftest PASS: ../../assets/hrir/original/L40e045a.wav + ../../assets/hrir/original/R40e045a.wav (max error 1 LSB)
+DSP spatial orbit selftest PASS: variable blocks remain within 3 LSB (max error 1 LSB)
+DSP spatial FFT selftest PASS: ../../assets/hrir/original/L60e250a.wav + ../../assets/hrir/original/R60e250a.wav (max error 1 LSB)
+DSP spatial dual selftest PASS: A=54250 B=46845 (max error 1 LSB)
+DSP saturation/mix-before-clipping selftest PASS
+DSP spatial orbit selftest PASS: 4-second triangular path turns smoothly
+python3 test_hrir_generator.py
+test_complete_library_exact_arrays (__main__.GeneratorTest) ... HRIR check PASS: 710 directions, 1420 WAVs, 1454080 coefficient bytes
+  ignored non-direction WAV: headphones+spkr/AKG-K240-L.wav
+  ignored non-direction WAV: headphones+spkr/AKG-K240-R.wav
+  ignored non-direction WAV: headphones+spkr/Opti-inverse.wav
+  ignored non-direction WAV: headphones+spkr/Opti-minphase.wav
+  ignored non-direction WAV: headphones+spkr/Optimus.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-L.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-R.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-L.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-R.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-L.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-R.wav
+ok
+test_invalid_import_preserves_generated_files (__main__.GeneratorTest) ... HRIR generated: 2 directions, 4 WAVs, 4096 coefficient bytes
+ok
+test_missing_pair_duplicate_and_bad_angles (__main__.GeneratorTest) ... ok
+test_negative_direction_and_determinism (__main__.GeneratorTest) ... HRIR generated: 3 directions, 6 WAVs, 6144 coefficient bytes
+HRIR generated: 3 directions, 6 WAVs, 6144 coefficient bytes
+HRIR check PASS: 3 directions, 6 WAVs, 6144 coefficient bytes
+ok
+test_truncated_and_disguised_wav (__main__.GeneratorTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.443s
+
+OK
+./dsp_spatial_selftest --catalog "../../temp/MIT KERMER"
+DSP spatial dual selftest PASS: A=18000 B=18006 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=18000 B=18000 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=21864 B=21870 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=21864 B=21864 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=28860 B=28865 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=28860 B=28860 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=32600 B=32605 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=32600 B=32600 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=36340 B=36345 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=36340 B=36340 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=43344 B=43350 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=43344 B=43344 (max error 1 LSB)
+DSP spatial orbit selftest PASS: variable blocks remain within 3 LSB (max error 1 LSB)
+DSP spatial dual selftest PASS: A=50464 B=50472 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=50464 B=50464 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=61290 B=61320 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=61290 B=61290 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=64800 B=18000 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=64800 B=64800 (max error 1 LSB)
+DSP full catalog PASS: 710 directions, variable blocks, tails, generic dual
+DSP cache/invalid-direction selftest PASS
+python3 test_spatial_protocol.py
+test_arm_direction_acknowledgements (__main__.ProtocolTest) ... syslinkDspInit: direction elevation=90 azimuth=0
+syslinkDspInit: direction elevation=90 azimuth=0
+syslinkDspInit: direction rejected or unsupported, code=64800 ack=0x6a000001
+syslinkDspInit: direction rejected or unsupported, code=64800 ack=0x6900fd21
+syslinkDspInit: algorithm mode=11
+syslinkDspInit: unexpected algorithm mode ack 0x6a000001
+ARM direction/algorithm acknowledgements PASS
+ok
+test_dsp_config_and_dispatch (__main__.ProtocolTest) ... DSP protocol/algorithm adapter PASS
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.044s
+
+OK
+make: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/tests/spatial'
+test_directions_and_help (__main__.HostStopTest) ... ok
+test_named_options_without_hardware (__main__.HostStopTest) ... ok
+test_new_directions_reach_pipeline (__main__.HostStopTest) ... ok
+test_normal_smoke (__main__.HostStopTest) ... ok
+test_rejected_options (__main__.HostStopTest) ... ok
+test_run_wrapper_queries_do_not_load_dsp (__main__.HostStopTest) ... ok
+test_stop_active_audio (__main__.HostStopTest) ... ok
+test_stop_active_file (__main__.HostStopTest) ... ok
+test_stop_active_record (__main__.HostStopTest) ... ok
+test_stop_immediately_after_ready (__main__.HostStopTest) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.324s
+
+OK
+本段执行结束，请按通过标准核对。
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ unset -f ex04_step
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ 

@@ -26,8 +26,8 @@
 #ifdef PLATFORM_DM8168
   #define AUDIO_DEV_CAPTURE      "default"
   #define AUDIO_DEV_PLAYBACK     "default"
-  #define AUDIO_SAMPLE_RATE      8000
-  #define AUDIO_PERIOD_FRAMES    128
+  #define AUDIO_SAMPLE_RATE      44100
+  #define AUDIO_PERIOD_FRAMES    1024
 #endif
 
 #ifdef PLATFORM_X86

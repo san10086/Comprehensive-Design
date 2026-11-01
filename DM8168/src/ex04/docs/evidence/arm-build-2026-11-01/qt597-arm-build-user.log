@@ -1,0 +1,246 @@
+user@ubuntu:~$ ex04_build_qt() {
+>     source "$HOME/ex04-build-paths.sh" || return 1
+> 
+>     test -f "$QT5_DIR/bin/qmake" || {
+>         printf '找不到 Qt5 SDK：%s\n' "$QT5_DIR"
+>         return 1
+>     }
+> 
+>     sudo mkdir -p /home/qt_arm || return 1
+>     if [ ! -e "$QT5_PREFIX" ] && [ ! -L "$QT5_PREFIX" ]; then
+>         sudo ln -s "$QT5_DIR" "$QT5_PREFIX" || return 1
+>     fi
+> 
+>     if [ "$(readlink -f "$QT5_PREFIX")" != "$(readlink -f "$QT5_DIR")" ]; then
+>         printf 'Qt5 前缀指向其他目录，请保留现状并回传输出：\n'
+>         ls -ld "$QT5_PREFIX"
+>         return 1
+>     fi
+> 
+>     export PATH="/home/user/arm-2014.05/bin:$PATH"
+>     export QMAKESPEC=linux-TIarmv7-g++
+> 
+>     "$QMAKE_ARM" -v || return 1
+>     cd "$PROJECT_ROOT" || return 1
+>     mkdir -p logs || return 1
+>     set -o pipefail
+> 
+>     BUILD_TARGET=arm BUILD_DIR="$QT_BUILD" \
+>         sh frontend_arm/build.sh "$QMAKE_ARM" \
+>         2>&1 | tee logs/build-qt597-arm.log
+> }
+user@ubuntu:~$ 
+user@ubuntu:~$ if ex04_build_qt; then
+>     printf '\nQt 构建完成：\n'
+>     file "$QT_BUILD/bin/ex04_frontend_arm" \
+>          "$QT_BUILD/bin/ex04_ipc_peer"
+>     "${ARM_PREFIX}readelf" -d "$QT_BUILD/bin/ex04_frontend_arm"
+> 
+>     printf '\nDSP map 前 90 行：\n'
+>     sed -n '1,90p' "$PROJECT_ROOT/dsp/bin/release/obj/server_dsp.xe674.map"
+> else
+>     printf '\nQt 构建未完成，请回传上方错误。\n'
+> fi
+[sudo] password for user: 
+Sorry, try again.
+[sudo] password for user: 
+QMake version 3.1
+Using Qt version 5.9.7 in /home/qt_arm/qt5.9.7_install/lib
+QT_SYSROOT:
+QT_INSTALL_PREFIX:/home/qt_arm/qt5.9.7_install
+QT_INSTALL_ARCHDATA:/home/qt_arm/qt5.9.7_install
+QT_INSTALL_DATA:/home/qt_arm/qt5.9.7_install
+QT_INSTALL_DOCS:/home/qt_arm/qt5.9.7_install/doc
+QT_INSTALL_HEADERS:/home/qt_arm/qt5.9.7_install/include
+QT_INSTALL_LIBS:/home/qt_arm/qt5.9.7_install/lib
+QT_INSTALL_LIBEXECS:/home/qt_arm/qt5.9.7_install/libexec
+QT_INSTALL_BINS:/home/qt_arm/qt5.9.7_install/bin
+QT_INSTALL_TESTS:/home/qt_arm/qt5.9.7_install/tests
+QT_INSTALL_PLUGINS:/home/qt_arm/qt5.9.7_install/plugins
+QT_INSTALL_IMPORTS:/home/qt_arm/qt5.9.7_install/imports
+QT_INSTALL_QML:/home/qt_arm/qt5.9.7_install/qml
+QT_INSTALL_TRANSLATIONS:/home/qt_arm/qt5.9.7_install/translations
+QT_INSTALL_CONFIGURATION:/home/qt_arm/qt5.9.7_install/etc/xdg
+QT_INSTALL_EXAMPLES:/home/qt_arm/qt5.9.7_install/examples
+QT_INSTALL_DEMOS:/home/qt_arm/qt5.9.7_install/examples
+QT_HOST_PREFIX:/home/qt_arm/qt5.9.7_install
+QT_HOST_DATA:/home/qt_arm/qt5.9.7_install
+QT_HOST_BINS:/home/qt_arm/qt5.9.7_install/bin
+QT_HOST_LIBS:/home/qt_arm/qt5.9.7_install/lib
+QMAKE_SPEC:linux-g++
+QMAKE_XSPEC:linux-TIarmv7-g++
+QMAKE_VERSION:3.1
+QT_VERSION:5.9.7
+Info: creating stash file /home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/.qmake.stash
+cd ipc_peer/ && ( test -e Makefile || /home/qt_arm/qt5.9.7_install/bin/qmake -o Makefile /home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer/ipc_peer.pro ) && make -f Makefile 
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/ipc_peer'
+arm-none-linux-gnueabi-gcc -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -Wall -W -fPIC  -I../../ipc_peer -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o main.o ../../ipc_peer/main.c
+In file included from ../../ipc_peer/main.c:4:0:
+/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include/sys/ipc.h:24:3: warning: #warning "Files using this header must be compiled with _SVID_SOURCE or _XOPEN_SOURCE" [-Wcpp]
+ # warning "Files using this header must be compiled with _SVID_SOURCE or _XOPEN_SOURCE"
+   ^
+arm-none-linux-gnueabi-g++ -Wl,-O1 -o ../bin/ex04_ipc_peer main.o    
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/ipc_peer'
+cd app/ && ( test -e Makefile || /home/qt_arm/qt5.9.7_install/bin/qmake -o Makefile /home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app/app.pro ) && make -f Makefile 
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/app'
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o main.o ../../app/main.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o MainWindow.o ../../app/MainWindow.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o RunRequest.o ../../app/RunRequest.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o PipelineRunner.o ../../app/PipelineRunner.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o IpcSession.o ../../app/IpcSession.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o AudioBackend.o ../../app/AudioBackend.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o WavReader.o ../../app/WavReader.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o WaveformWidget.o ../../app/WaveformWidget.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o DirectionPicker.o ../../app/DirectionPicker.cpp
+/home/qt_arm/qt5.9.7_install/bin/rcc -name resources ../../app/resources.qrc -o qrc_resources.cpp
+arm-none-linux-gnueabi-g++ -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /home/qt_arm/qt5.9.7_install/mkspecs/features/data/dummy.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o qrc_resources.o qrc_resources.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/MainWindow.h -o moc_MainWindow.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/PipelineRunner.h -o moc_PipelineRunner.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/IpcSession.h -o moc_IpcSession.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/AudioBackend.h -o moc_AudioBackend.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/WavReader.h -o moc_WavReader.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/WaveformWidget.h -o moc_WaveformWidget.cpp
+/home/qt_arm/qt5.9.7_install/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/app -I/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3 -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/arm-none-linux-gnueabi -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include/c++/4.8.3/backward -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include -I/home/user/arm-2014.05/lib/gcc/arm-none-linux-gnueabi/4.8.3/include-fixed -I/home/user/arm-2014.05/arm-none-linux-gnueabi/include -I/home/user/arm-2014.05/arm-none-linux-gnueabi/libc/usr/include ../../app/DirectionPicker.h -o moc_DirectionPicker.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_MainWindow.o moc_MainWindow.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_PipelineRunner.o moc_PipelineRunner.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_IpcSession.o moc_IpcSession.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_AudioBackend.o moc_AudioBackend.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_WavReader.o moc_WavReader.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_WaveformWidget.o moc_WaveformWidget.cpp
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../app -I. -I../../ipc_peer -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o moc_DirectionPicker.o moc_DirectionPicker.cpp
+arm-none-linux-gnueabi-g++ -Wl,-O1 -Wl,-rpath,/home/qt_arm/qt5.9.7_install/lib -o ../bin/ex04_frontend_arm main.o MainWindow.o RunRequest.o PipelineRunner.o IpcSession.o AudioBackend.o WavReader.o WaveformWidget.o DirectionPicker.o qrc_resources.o moc_MainWindow.o moc_PipelineRunner.o moc_IpcSession.o moc_AudioBackend.o moc_WavReader.o moc_WaveformWidget.o moc_DirectionPicker.o   -L/home/qt_arm/qt5.9.7_install/lib -lQt5Widgets -lQt5Gui -lQt5Core -lpthread 
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/app'
+bin/ex04_frontend_arm: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.16, not stripped
+bin/ex04_ipc_peer: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.16, not stripped
+
+Qt 构建完成：
+/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/bin/ex04_frontend_arm: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.16, not stripped
+/home/user/ex04-work/ex04-source-20261101-ui/frontend_arm/build-qt597-arm/bin/ex04_ipc_peer:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.16, not stripped
+
+Dynamic section at offset 0x2f660 contains 32 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libQt5Widgets.so.5]
+ 0x00000001 (NEEDED)                     Shared library: [libQt5Gui.so.5]
+ 0x00000001 (NEEDED)                     Shared library: [libQt5Core.so.5]
+ 0x00000001 (NEEDED)                     Shared library: [libpthread.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libstdc++.so.6]
+ 0x00000001 (NEEDED)                     Shared library: [libm.so.6]
+ 0x00000001 (NEEDED)                     Shared library: [libgcc_s.so.1]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.6]
+ 0x0000000f (RPATH)                      Library rpath: [/home/qt_arm/qt5.9.7_install/lib]
+ 0x0000000c (INIT)                       0xf4b4
+ 0x0000000d (FINI)                       0x2e37c
+ 0x00000019 (INIT_ARRAY)                 0x3f000
+ 0x0000001b (INIT_ARRAYSZ)               8 (bytes)
+ 0x0000001a (FINI_ARRAY)                 0x3f008
+ 0x0000001c (FINI_ARRAYSZ)               4 (bytes)
+ 0x00000004 (HASH)                       0x8168
+ 0x00000005 (STRTAB)                     0xafd4
+ 0x00000006 (SYMTAB)                     0x9544
+ 0x0000000a (STRSZ)                      13579 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0x3f788
+ 0x00000002 (PLTRELSZ)                   2808 (bytes)
+ 0x00000014 (PLTREL)                     REL
+ 0x00000017 (JMPREL)                     0xe9bc
+ 0x00000011 (REL)                        0xe954
+ 0x00000012 (RELSZ)                      104 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x6ffffffe (VERNEED)                    0xe834
+ 0x6fffffff (VERNEEDNUM)                 8
+ 0x6ffffff0 (VERSYM)                     0xe4e0
+ 0x00000000 (NULL)                       0x0
+
+DSP map 前 90 行：
+******************************************************************************
+               TMS320C6x Linker Unix v7.3.1                    
+******************************************************************************
+>> Linked Sun Nov  1 01:24:04 2026
+
+OUTPUT FILE NAME:   <bin/release/server_dsp.xe674>
+ENTRY POINT SYMBOL: "ti_sysbios_family_c64p_Hwi0"  address: 8f1b6000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  OCMC_0                40300000   00040000  00000000  00040000  RW X
+  OCMC_1                40400000   00040000  00000000  00040000  RW X
+  SR_0                  8e000000   00010000  00010000  00000000  RW X
+  SR_1                  8e010000   00ff0000  00ff0000  00000000  RW X
+  DSP_PROG              8f000000   01000000  001b60e6  00e49f1a  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+8f000000    8f000000    0016f856   0016f856    r--
+  8f000000    8f000000    0016f856   0016f856    r-- .const
+8f16f858    8f16f858    00000008   00000008    rw-
+  8f16f858    8f16f858    00000008   00000008    rw- .fardata.1
+8f16f860    8f16f860    00020e60   00020e60    r-x
+  8f16f860    8f16f860    00020e60   00020e60    r-x .text
+8f1906c0    8f1906c0    00023210   00000000    rw-
+  8f1906c0    8f1906c0    00023210   00000000    rw- .far
+8f1b38d0    8f1b38d0    00001414   00001414    rw-
+  8f1b38d0    8f1b38d0    00001414   00001414    rw- .fardata.2
+8f1b4ce8    8f1b4ce8    00001120   00000000    rw-
+  8f1b4ce8    8f1b4ce8    00001000   00000000    rw- .stack
+  8f1b5ce8    8f1b5ce8    00000120   00000000    rw- .cio
+8f1b5e08    8f1b5e08    00000064   00000064    rw-
+  8f1b5e08    8f1b5e08    00000064   00000064    rw- .args
+8f1b5e6c    8f1b5e6c    00000028   00000028    r--
+  8f1b5e6c    8f1b5e6c    00000028   00000028    r-- .switch
+8f1b5e94    8f1b5e94    0000000c   0000000c    rw-
+  8f1b5e94    8f1b5e94    0000000c   0000000c    rw- .neardata
+8f1b6000    8f1b6000    00000200   00000200    r-x
+  8f1b6000    8f1b6000    00000200   00000200    r-x .vecs
+8f1b6400    8f1b6400    0000004c   0000004c    r--
+  8f1b6400    8f1b6400    0000004c   0000004c    r-- ti_sdo_ipc_init
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.cinit     0    8f000000    00000000     UNINITIALIZED
+
+.init_array 
+*          0    8f000000    00000000     UNINITIALIZED
+
+ti.sdo.ipc.SharedRegion_0 
+*          0    8e000000    00010000     NOLOAD SECTION
+                  8e000000    00010000     --HOLE--
+
+ti.sdo.ipc.SharedRegion_1 
+*          0    8e010000    00ff0000     NOLOAD SECTION
+                  8e010000    00ff0000     --HOLE--
+
+xdc.meta   0    8f000000    000000f0     COPY SECTION
+                  8f000000    000000f0     Dsp_pe674.oe674 (xdc.meta)
+
+.const     0    8f000000    0016f856     
+                  8f000000    00163000     dsp_spatial.oe674 (.const:kHrirCoefficients)
+                  8f163000    00002898     Dsp_pe674.oe674 (.const:xdc_runtime_Text_charTab__A)
+                  8f165898    00002148     AudioAlgo.oe674 (.const:kHrirDirections)
+                  8f1679e0    00002148     Server.oe674 (.const:kHrirDirections)
+                  8f169b28    00002148     dsp_spatial.oe674 (.const:kHrirDirections)
+                  8f16bc70    00002000     dsp_spatial.oe674 (.const:kSpatialFftTwiddle)
+                  8f16dc70    00000638     Server.oe674 (.const)
+                  8f16e2a8    0000042c     sysbios.lib : BIOS.obj (.const)
+                  8f16e6d4    00000004     ti.targets.rts6000.ae674 : Assert.oe674 (.const:.string)
+                  8f16e6d8    0000016c     Dsp_pe674.oe674 (.const:xdc_runtime_Text_nodeTab__A)
+                  8f16e844    000000e3     main_dsp.oe674 (.const)
+                  8f16e927    00000001     --HOLE-- [fill = 0]
+                  8f16e928    0000009f     Dsp_pe674.oe674 (.const)
+                  8f16e9c7    00000001     --HOLE-- [fill = 0]
+                  8f16e9c8    00000058     ti.targets.rts6000.ae674 : Error.oe674 (.const:.string)
+                  8f16ea20    00000048     Dsp_pe674.oe674 (.const:xdc_runtime_Startup_sfxnTab__A)
+                  8f16ea68    00000040     ti.targets.rts6000.ae674 : Text.oe674 (.const:.string)
+                  8f16eaa8    0000003c     Dsp_pe674.oe674 (.const:xdc_runtime_LoggerBuf_Module__FXNS__C)
+                  8f16eae4    00000038     Dsp_pe674.oe674 (.const:ti_sdo_ipc_notifyDrivers_NotifyDriverShm_Module__FXNS__C)

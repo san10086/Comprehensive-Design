@@ -1,0 +1,9 @@
+sha256: PASS
+md5: PASS
+busybox-md5: PASS
+missing-tools: PASS
+bad-archive: PASS
+bad-file-manifest: PASS
+active-process: PASS
+changed-stage-rejected: PASS
+Legacy deployment checks: 8 PASS (local fixtures, not board execution)

@@ -1,0 +1,58 @@
+$ C:\Users\30522\AppData\Local\Programs\Python\Python39\python.exe tests/spatial/test_spatial_protocol.py
+test_arm_direction_acknowledgements (__main__.ProtocolTest) ... D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspClose+0xe8): undefined reference to `Memory_free'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspClose+0x133): undefined reference to `Notify_unregisterEvent'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspClose+0x1c7): undefined reference to `Ipc_control'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspClose+0x1ec): undefined reference to `SysLink_destroy'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x24e): undefined reference to `SysLink_setup'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x260): undefined reference to `MultiProc_getId'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x2bc): undefined reference to `Ipc_control'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x2f3): undefined reference to `Ipc_control'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x36d): undefined reference to `Notify_registerEvent'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x3d1): undefined reference to `SharedRegion_getHeap'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x3f5): undefined reference to `Memory_calloc'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccN6AmPc.o:host.c:(.text$syslinkDspInit+0x41c): undefined reference to `SharedRegion_getSRPtr'
+collect2.exe: error: ld returned 1 exit status
+ERROR
+test_dsp_config_and_dispatch (__main__.ProtocolTest) ... D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_notifyCB+0x2c): undefined reference to `Semaphore_post'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_notifyCB+0x3c): undefined reference to `Semaphore_post'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_init+0x27): undefined reference to `Registry_addModule'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_create+0x95): undefined reference to `Diags_setMask'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_create+0x9d): undefined reference to `Semaphore_Params_init'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_create+0xb9): undefined reference to `Semaphore_construct'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_create+0xc1): undefined reference to `Semaphore_handle'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_create+0xf2): undefined reference to `Notify_registerEvent'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_delete+0x2e): undefined reference to `Notify_unregisterEvent'
+D:\develop\CLion 2025.1.2\bin\mingw\bin/ld.exe: C:\Users\30522\AppData\Local\Temp\ccGkUIAr.o:server.c:(.text$Server_delete+0x40): undefined reference to `Semaphore_destruct'
+collect2.exe: error: ld returned 1 exit status
+ERROR
+
+======================================================================
+ERROR: test_arm_direction_acknowledgements (__main__.ProtocolTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\develop\vscode\projects\ex04\tests\spatial\test_spatial_protocol.py", line 243, in test_arm_direction_acknowledgements
+    self.compile_and_run("host", HOST, [])
+  File "D:\develop\vscode\projects\ex04\tests\spatial\test_spatial_protocol.py", line 231, in compile_and_run
+    subprocess.run([os.environ.get("CC", "gcc"), "-std=c99", "-D_DEFAULT_SOURCE",
+  File "C:\Users\30522\AppData\Local\Programs\Python\Python39\lib\subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\develop\\CLion 2025.1.2\\bin\\mingw\\bin\\gcc.exe', '-std=c99', '-D_DEFAULT_SOURCE', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-int-to-pointer-cast', '-O2', '-ffunction-sections', '-fdata-sections', '-Wl,--gc-sections', '-pthread', '-IC:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0', '-ID:\\develop\\vscode\\projects\\ex04', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0\\host.c', '-o', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0\\host']' returned non-zero exit status 1.
+
+======================================================================
+ERROR: test_dsp_config_and_dispatch (__main__.ProtocolTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\develop\vscode\projects\ex04\tests\spatial\test_spatial_protocol.py", line 239, in test_dsp_config_and_dispatch
+    self.compile_and_run("server", SERVER,
+  File "D:\develop\vscode\projects\ex04\tests\spatial\test_spatial_protocol.py", line 231, in compile_and_run
+    subprocess.run([os.environ.get("CC", "gcc"), "-std=c99", "-D_DEFAULT_SOURCE",
+  File "C:\Users\30522\AppData\Local\Programs\Python\Python39\lib\subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\develop\\CLion 2025.1.2\\bin\\mingw\\bin\\gcc.exe', '-std=c99', '-D_DEFAULT_SOURCE', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-int-to-pointer-cast', '-O2', '-ffunction-sections', '-fdata-sections', '-Wl,--gc-sections', '-pthread', '-IC:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0', '-ID:\\develop\\vscode\\projects\\ex04', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0\\server.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\AudioAlgo.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\dsp_spatial.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\dsp_algorithm.c', '-o', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-x07y9vo0\\server']' returned non-zero exit status 1.
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.482s
+
+FAILED (errors=2)
+
+EXIT: 1

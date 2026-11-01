@@ -1,0 +1,11 @@
+/* XPM */
+static const char *chevron_down[] = {
+"9 5 2 1",
+". c None",
+"X c #426687",
+"XX.....XX",
+".XX...XX.",
+"..XX.XX..",
+"...XXX...",
+"....X...."
+};

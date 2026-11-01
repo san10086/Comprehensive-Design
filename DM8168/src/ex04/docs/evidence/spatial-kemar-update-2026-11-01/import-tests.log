@@ -1,0 +1,46 @@
+$ C:\Users\30522\AppData\Local\Programs\Python\Python39\python.exe tools/generate_hrir.py --check
+HRIR check PASS: 710 directions, 1420 WAVs, 1454080 coefficient bytes
+  ignored non-direction WAV: headphones+spkr/AKG-K240-L.wav
+  ignored non-direction WAV: headphones+spkr/AKG-K240-R.wav
+  ignored non-direction WAV: headphones+spkr/Opti-inverse.wav
+  ignored non-direction WAV: headphones+spkr/Opti-minphase.wav
+  ignored non-direction WAV: headphones+spkr/Optimus.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-L.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-R.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-L.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-R.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-L.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-R.wav
+
+EXIT: 0
+
+$ C:\Users\30522\AppData\Local\Programs\Python\Python39\python.exe tests/spatial/test_hrir_generator.py
+test_complete_library_exact_arrays (__main__.GeneratorTest) ... ok
+test_invalid_import_preserves_generated_files (__main__.GeneratorTest) ... ok
+test_missing_pair_duplicate_and_bad_angles (__main__.GeneratorTest) ... ok
+test_negative_direction_and_determinism (__main__.GeneratorTest) ... ok
+test_truncated_and_disguised_wav (__main__.GeneratorTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.035s
+
+OK
+HRIR check PASS: 710 directions, 1420 WAVs, 1454080 coefficient bytes
+  ignored non-direction WAV: headphones+spkr/AKG-K240-L.wav
+  ignored non-direction WAV: headphones+spkr/AKG-K240-R.wav
+  ignored non-direction WAV: headphones+spkr/Opti-inverse.wav
+  ignored non-direction WAV: headphones+spkr/Opti-minphase.wav
+  ignored non-direction WAV: headphones+spkr/Optimus.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-L.wav
+  ignored non-direction WAV: headphones+spkr/RS-Nova38-R.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-L.wav
+  ignored non-direction WAV: headphones+spkr/Senn-HD480-R.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-L.wav
+  ignored non-direction WAV: headphones+spkr/Sony-TwinTurbo-R.wav
+HRIR generated: 2 directions, 4 WAVs, 4096 coefficient bytes
+HRIR generated: 3 directions, 6 WAVs, 6144 coefficient bytes
+HRIR generated: 3 directions, 6 WAVs, 6144 coefficient bytes
+HRIR check PASS: 3 directions, 6 WAVs, 6144 coefficient bytes
+
+EXIT: 0
+

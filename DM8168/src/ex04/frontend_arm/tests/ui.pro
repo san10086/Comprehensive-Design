@@ -1,0 +1,11 @@
+QT += core gui testlib
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TEMPLATE = app
+TARGET = test_ui
+CONFIG += console warn_on
+CONFIG -= app_bundle
+INCLUDEPATH += ../app ../ipc_peer
+SOURCES += test_ui.cpp ../app/MainWindow.cpp ../app/RunRequest.cpp ../app/PipelineRunner.cpp ../app/IpcSession.cpp ../app/AudioBackend.cpp ../app/WavReader.cpp ../app/WaveformWidget.cpp ../app/DirectionPicker.cpp
+HEADERS += ../app/MainWindow.h ../app/RunRequest.h ../app/PipelineRunner.h ../app/IpcSession.h ../app/AudioBackend.h ../app/WavReader.h ../app/WaveformWidget.h ../app/DirectionPicker.h
+RESOURCES += ../app/resources.qrc
+unix:!macx: LIBS += -lpthread

@@ -1,0 +1,52 @@
+[
+  {
+    "slide": 9,
+    "sourceTemplateSlide": 6,
+    "notes": "第二章介绍 Qt 图形交互应用开发。先说明三端环境与发布过程，再展示界面和参数接入，随后介绍进程生命周期、错误处理、独立 IPC 验证，以及无屏环境下的 VNC 排错。"
+  },
+  {
+    "slide": 10,
+    "sourceTemplateSlide": 8,
+    "notes": "环境搭建首先解决三端职责和架构匹配问题。Windows 负责源码与传输，Ubuntu20 使用目标 ARM Qt SDK 和 TI 工具链交叉编译，程序最终运行在 DM8168。我们检查 ELF 架构、解释器和动态依赖，形成带校验清单的发布目录。部署时还遇到板端 shell 精简的问题，因此增加了实际执行工具的探测和 MD5 兼容路径，并保留旧版本备份。当前构建和文件部署已完成，音频运行另行验收。\n\n桌面自动化测试环境另为 WSL Ubuntu22.04 / GCC11 / Qt5.15.3，不与 Ubuntu20 的 ARM 构建混写。GUI 与 IPC peer 已构建为 ARM；11 文件校验来自用户虚拟机发布包日志，板端部署获确认，完整部署日志仍待归档。目标解释器 /lib/ld-linux.so.3。板端精简 shell 缺少 command 和 SHA256 applet，部署脚本改用实际执行探测及 MD5 兼容。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 11,
+    "sourceTemplateSlide": 4,
+    "notes": "界面围绕音频任务组织为四页，底部保留开始与停止操作。参数页接入方位库，根据仰角只列出有效方位，单声源与双声源分别生成对应的具名参数。波形页既能展示真实输入与结果文件，也能使用演示信号验证交互。文件读取放到工作线程，使用有界包络和固定时间窗口，避免随文件大小和运行时长累积完整 PCM。真实板端实时波形仍待数据通道接入。\n\n本页采用用户 report/ima/屏幕截图 2026-11-01 182404.png，截图中 A=20/270、B=40/141。命令与图中方向对应，输出名为演示命令示例。默认 DemoBackend 不启动 DSP、不写音频文件。当前 GUI 接入 spatial / dual 具名参数；兼容 CLI 的 orbit 等模式不描述为 GUI 按钮。读取文件限定 44.1 kHz、双声道 PCM16，使用工作线程与有界包络。实际 QProcess 使用 QStringList，不通过 shell 执行这段展示文本。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 12,
+    "sourceTemplateSlide": 13,
+    "notes": "界面能够启动进程只是第一步，真正需要处理的是失败与退出顺序。这里把流程做成分阶段状态控制：加载失败不进入业务，host 退出后执行卸载，停止时等待 host 安装好信号处理再发送 SIGINT。测试还发现启动失败回调中立即复用 QProcess 的重入问题，已改为在下一次事件循环继续清理。桌面环境的生命周期与 IPC QtTest 汇总为十五项通过，但真实板端业务仍需按相同阶段验收。\n\nrecord 模式只启动录音 host，不加载 DSP。30 秒提示只用于 loader 阶段和请求停止后的等待，不是正常业务运行的通用 watchdog。停止不以强杀音频 host 或 DSP loader 为常规路径。/tmp/ex04-qt-audio.lock 仅协调 GUI 实例，不能排斥其他终端的手工音频任务。FailedToStart 回调使用 QTimer 下一轮事件循环继续清理，避免立即重用 QProcess 的重入。15 passed 含初始化与清理项。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 13,
+    "sourceTemplateSlide": 17,
+    "notes": "课程要求的进程交互采用独立 C 进程和 Qt 接收线程实现。两个信号量控制可写与可读，写入序号和内容后再通知，Qt 复制完成后才允许下一次写入。这样既能验证同步，也能发现丢消息或覆盖。桌面测试使用真实 System V IPC，并检查停止和异常后的回收。该示例已经建立进程间交互基础，但目前尚未承载 app_host 的真实实时 PCM。\n\n桌面验证使用真实 Linux 内核 IPC。IPC_PRIVATE、权限 0600，semid/shmid 进入日志。GUI 接收线程每 20ms 非阻塞检查。C peer 以约 200ms 间隔发送 10 条消息。Qt 负责创建及释放资源。Linux System V 共享内存与 TI SysLink SharedRegion 分别验证。当前截图中的诊断页只显示入口与演示日志，不是板端 IPC PASS 证据，因此不使用其充当运行结果。板端 ARM IPC 的 1–10 条和资源清理仍需归档。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 14,
+    "sourceTemplateSlide": 7,
+    "notes": "没有显示器时，我们先用 VNC 验证 GUI。Qt4 环境缺少对应驱动，改用板上已有的 Qt5.9.7 VNC 插件。随后遇到黑屏和中文方块，分别通过完整握手抓取真实帧、像素格式兼容转发和中文字库部署处理。现在用户已经确认全彩中文与波形正常，并确认一次关闭查看器后的重新连接正常。当前进展证明板端界面能够绘制和传输，音频处理闭环仍需单独测试。\n\n本页采用用户 report/ima/屏幕截图 2026-11-01 182317.png。该图显示真实输入 WAV 的 L/R 波形，输出区仍为等待数据，界面处于演示环境。它支持远程显示结果，不作为 DSP 输出验收。RFB 转发只监听 Windows 本机回环。Qt 插件未重编译，固定 256 色不是最终稳定方案。一次重新连接由用户确认；HDMI、鼠标、长期稳定性及 VPSS 与 DSP 共存仍待验证。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 15,
+    "sourceTemplateSlide": 9,
+    "notes": "第三章说明当前还缺少哪些板端证据，以及后续如何推进。重点是补齐 GUI 控制真实音频进程的完整闭环，接入真实 PCM，再按课程要求准备 RPE 例程与算法封装，最后补齐性能和试听评价。"
+  },
+  {
+    "slide": 16,
+    "sourceTemplateSlide": 19,
+    "notes": "现阶段需要明确“显示成功”和“业务成功”的边界。ARM 程序已构建并部署，界面也能通过 VNC 正常显示，但缺少 GUI 启动真实音频任务、完成处理、协作停止并再次运行的完整板端记录。实时 PCM 回传目前只有统一接口，尚未把 host 输入输出送入绘图层。System V IPC 示例和进程生命周期测试已经通过，接下来要将这些基础能力与真实业务链路逐步连接。\n\nQtTest 数字含初始化与清理条目，不合并成独立功能数量。BoardBackend 目前包装 PipelineRunner，没有发送真实 waveformReady(PcmChunk)，演示数据由 DemoBackend 生成。DSP_PROG 的 map 使用 1,794,278 字节，约 1.71 MiB，已在 16 MiB 配置范围内完成链接核对，但它不是运行期峰值，也不证明与其他核固件共存。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 17,
+    "sourceTemplateSlide": 14,
+    "notes": "课程后续计划使用 RPE 完成 Linux 程序对 DSP 算法的调用。目前项目仍沿用 SysLink，RPE 尚未集成。准备工作先核对 SDK 和课程例程，让最小计算调用独立通过，再封装空间算法。特别要明确历史尾部状态由谁持有、配置变化如何重置，以及输入输出缓冲区的所有权与缓存一致性。GUI 已有后端抽象，可以在调用层完成适配后接入，保留现有测试作为结果对照。\n\nRPE 名称按用户确认统一。全称来自课程第 1、6 次课。当前没有 RPE 构建与运行结果，也没有可引用的真实启动命令。准备先核对 SDK，跑通最小例程，再封装空间算法。跨块状态的所有权、配置重置、缓冲区与缓存一致性需要明确。更换调用框架不能直接宣称消除显示与 DSP 的固件、内存冲突。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 18,
+    "sourceTemplateSlide": 11,
+    "notes": "后续工作按验收依赖推进。先确认固件和内存配置，再独立运行基础音频路径；随后用 GUI 复现启动、停止和再次运行，接入真实 PCM 更新波形。同时可以整理 RPE SDK 和参考例程，只有最小调用和空间结果一致后再扩展业务。最终补齐处理时间、端到端延迟、持续运行和听感记录，形成从算法到界面的完整证据链。\n\n本页命令为后续验收计划，不代表已通过。先确认输入素材、业务目录、固件和物理内存配置，再逐条执行。失败时停在首个异常阶段并保留退出码、帧块数及日志。GUI 应验证真实任务启动、协作停止、清理和再次运行。持续运行先做短时冒烟，再按课程条件安排更长时间测试。DSP 算法耗时、ARM/DSP 往返和完整链路延迟分别统计，日志与耳机试听分开评价。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  }
+]

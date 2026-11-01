@@ -1,0 +1,121 @@
+[
+  {
+    "slide": 1,
+    "part": "ppt/slides/slide1.xml",
+    "note_part": "ppt/notesSlides/notesSlide1.xml",
+    "title": "中期汇报 空间音效处理系统 综合设计 III MIDTERM REPORT 阶段：中期汇报 2026 年  秋期",
+    "text": ""
+  },
+  {
+    "slide": 2,
+    "part": "ppt/slides/slide2.xml",
+    "note_part": "ppt/notesSlides/notesSlide2.xml",
+    "title": "目录 CONTENTS 01. 空间音效处理算法 研究与实现 02. 基于 QT 的 GUI 图形交互 应用开发上手 03. 不足与后续工作",
+    "text": "本次汇报依次介绍空间算法、Qt 图形交互开发和不足与后续工作。"
+  },
+  {
+    "slide": 3,
+    "part": "ppt/slides/slide3.xml",
+    "note_part": "ppt/notesSlides/notesSlide3.xml",
+    "title": "01. 空间音效 处理算法 研究与实现 SPATIAL AUDIO PROCESSING 研究过程与算法选型 MIT KEMAR 与方向参数 功能演示与验证",
+    "text": ""
+  },
+  {
+    "slide": 4,
+    "part": "ppt/slides/slide4.xml",
+    "note_part": "ppt/notesSlides/notesSlide4.xml",
+    "title": "1.1 研究目标与开发过程 PART ONE 目标：通过左右耳 HRIR 卷积，为输入音频加入可选方向的双耳线索 MATLAB 原理复现 读取声源与 HRIR 分别卷积，合成立体声 准备耳机试听结果 ",
+    "text": "研究工作先围绕双耳卷积建立 MATLAB 原型，再用纯 C 定点版本明确数值规则，最后以 FFT 分块实现接入 DSP。原有工程只使用两组固定响应，本阶段进一步导入 MIT KEMAR 方位库，让方向选择通过参数进入算法，并扩展双声源的独立方向配置。这里按实现用途组织开发阶段；Q15 基准与 FFT 模块在同一空间算法提交中加入。"
+  },
+  {
+    "slide": 5,
+    "part": "ppt/slides/slide5.xml",
+    "note_part": "ppt/notesSlides/notesSlide5.xml",
+    "title": "1.2 MIT KEMAR 系数导入与参数贯通 PART ONE 原始系数自动导入 44.1 kHz · 单声道 · PCM16 · 512 点 保留采样顺序与幅值，排除 11 个非方向 WAV 原始",
+    "text": "QQ群 MIT KERMER 中有 1420 个方向 HRIR WAV，配成 710 组双耳响应。生成器检查采样率、声道、PCM16 和 512 点长度，同时检查缺耳、重复与非法角度，保留原始系数幅度和顺序。ARM 只保留方向目录，DSP 保存原始系数并缓存当前方向的频谱。仰角和方位角经 ARM 校验、SysLink 方向确认后进入算法。当前精确匹配已存在的离散点，不做近邻或插值。\n\n参数预检查命令：\n./run.sh audio --seconds 10 --algo spatial --elevation -40 --azimuth 45 --check\n该命令不加载 DSP。当前 GUI 已接入 710 个方向及 spatial / dual 具名参数，旧 CLI 兼容模式继续保留。"
+  },
+  {
+    "slide": 6,
+    "part": "ppt/slides/slide6.xml",
+    "note_part": "ppt/notesSlides/notesSlide6.xml",
+    "title": "1.3 试错与算法选型 PART ONE 输入格式 旧 WAV 扩展名实际为 M4A，统一为真实 PCM16 WAV 数值对照 试听输出可能归一化，另建统一舍入与饱和的 Q15 参考 连续处理 保留 ",
+    "text": "试错主要集中在数据格式、数值规则和块间连续性。MATLAB 试听脚本可能整体缩放，因此另建统一量化规则的参考。卷积使用自然顺序 HRIR，与 x[n-k]h[k] 的索引配套。FFT 长度由输入块和滤波器长度决定：最大 1024 帧和 512 点 HRIR 需要 1535 点线性卷积，选用 2048 点 FFT。实际加速幅度与实时预算仍需板端计时；块时长 23.22 ms 不作为端到端延迟。"
+  },
+  {
+    "slide": 7,
+    "part": "ppt/slides/slide7.xml",
+    "note_part": "ppt/notesSlides/notesSlide7.xml",
+    "title": "1.4 指定方向与动态过渡 PART ONE 指定方向文件渲染 左右输入平均为单声源，选择仰角与方位角 ./run.sh file --input input.wav \\   --output mid",
+    "text": "单声源模式将两个输入声道平均，再选取方向进行双耳渲染。文件路径先保存结果再使用 aplay 播放，方便检查数据。audio 模式接入采集、DSP 和播放，是连续音频链路的入口。orbit 保持原有实现，在 40e045 双耳输出和左右互换输出之间逐样本交叉淡化，往返约四秒，属于镜像往返演示。\n\n完整命令：\n./run.sh file --input input.wav --output midterm_spatial.wav --algo spatial --elevation 60 --azimuth 250\n./run.sh audio --seconds 10 --algo spatial --elevation -40 --azimuth 45\n./run.sh file --input input.wav --output midterm_orbit.wav --algo orbit\naplay -D default midterm_orbit.wav\n\n角度须存在于 directions 列表。板端性能与听感尚需实测。\n\n资料依据：\nD:/develop/vscode/projects/ex04/run.sh\nD:/develop/vscode/projects/ex04/host/app/main.c\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c"
+  },
+  {
+    "slide": 8,
+    "part": "ppt/slides/slide8.xml",
+    "note_part": "ppt/notesSlides/notesSlide8.xml",
+    "title": "1.5 双独立声源与兼容模式 PART ONE 源 A：左输入 方向 60e250 独立双耳卷积与尾部 源 B：右输入 方向 40e045 独立双耳卷积与尾部 双耳混合 两源各 0.5 权重 输出继续",
+    "text": "双声源模式保留输入左右声道的独立性。A、B 各自经过两耳卷积并保留独立尾部，随后以 0.5 权重混合为耳机双声道。新的具名参数可以分别选择两个方向；原固定模式继续保留。演示文件 dual_footsteps.wav 应事先把不同节奏的两路素材放到左右声道。\n\n完整命令：\n./run.sh file --input dual_footsteps.wav --output midterm_dual.wav --algo dual --a-elevation 60 --a-azimuth 250 --b-elevation 40 --b-azimuth 45\naplay -D default midterm_dual.wav\n\n旧语法 spatial40、spatial60、dual4060 保持原固定方向，不混用具名和位置参数。0.5 权重增加余量，不保证任意输入永不削波。\n\n资料依据：\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c\nD:/develop/vscode/projects/ex04/host/app/main.c\nD:/develop/vscode/projects/ex04/run.sh"
+  },
+  {
+    "slide": 9,
+    "part": "ppt/slides/slide9.xml",
+    "note_part": "ppt/notesSlides/notesSlide9.xml",
+    "title": "02. 基于 QT 的 GUI 图形交互 应用开发上手 QT GUI APPLICATION DEVELOPMENT 环境与交付 进程控制与 IPC VNC 联调",
+    "text": "第二章介绍 Qt 图形交互应用开发。先说明三端环境与发布过程，再展示界面和参数接入，随后介绍进程生命周期、错误处理、独立 IPC 验证，以及无屏环境下的 VNC 排错。"
+  },
+  {
+    "slide": 10,
+    "part": "ppt/slides/slide10.xml",
+    "note_part": "ppt/notesSlides/notesSlide10.xml",
+    "title": "2.1 GUI 页面与空间参数接入 PART TWO 四页任务界面 波形：输入 / 输出 L、R 四轨 参数：模式、路径与方向 诊断：日志与 IPC 验证入口 设置：运行环境与业务目录 710 个方向",
+    "text": "界面围绕音频任务组织为四页，底部保留开始与停止操作。参数页接入方位库，根据仰角只列出有效方位，单声源与双声源分别生成对应的具名参数。波形页既能展示真实输入与结果文件，也能使用演示信号验证交互。文件读取放到工作线程，使用有界包络和固定时间窗口，避免随文件大小和运行时长累积完整 PCM。真实板端实时波形仍待数据通道接入。\n\n本页采用用户 report/ima/屏幕截图 2026-11-01 182404.png，截图中 A=20/270、B=40/141。命令与图中方向对应，输出名为演示命令示例。默认 DemoBackend 不启动 DSP、不写音频文件。当前 GUI 接入 spatial / dual 具名参数；兼容 CLI 的 orbit 等模式不描述为 GUI 按钮。读取文件限定 44.1 kHz、双声道 PCM16，使用工作线程与有界包络。实际 QProcess 使用 QStringList，不通过 shell 执行这段展示文本。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 11,
+    "part": "ppt/slides/slide11.xml",
+    "note_part": "ppt/notesSlides/notesSlide11.xml",
+    "title": "2.2 进程生命周期与错误处理 PART TWO 分阶段控制 DSP 任务，启动失败与停止均保留界面和日志 配置检查 › 加载 DSP › 运行 host › 卸载 DSP › 任务回收 启动前检查 ",
+    "text": "界面能够启动进程只是第一步，真正需要处理的是失败与退出顺序。这里把流程做成分阶段状态控制：加载失败不进入业务，host 退出后执行卸载，停止时等待 host 安装好信号处理再发送 SIGINT。测试还发现启动失败回调中立即复用 QProcess 的重入问题，已改为在下一次事件循环继续清理。桌面环境的生命周期与 IPC QtTest 汇总为十五项通过，但真实板端业务仍需按相同阶段验收。\n\nrecord 模式只启动录音 host，不加载 DSP。30 秒提示只用于 loader 阶段和请求停止后的等待，不是正常业务运行的通用 watchdog。停止不以强杀音频 host 或 DSP loader 为常规路径。/tmp/ex04-qt-audio.lock 仅协调 GUI 实例，不能排斥其他终端的手工音频任务。FailedToStart 回调使用 QTimer 下一轮事件循环继续清理，避免立即重用 QProcess 的重入。15 passed 含初始化与清理项。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 12,
+    "part": "ppt/slides/slide12.xml",
+    "note_part": "ppt/notesSlides/notesSlide12.xml",
+    "title": "2.3 IPC 同步与共享内存数据交互 PART TWO 独立 C peer 与 Qt 接收线程，验证 Linux System V IPC C peer 等待可写，写序号与内容 › 信号量握手 写完",
+    "text": "课程要求的进程交互采用独立 C 进程和 Qt 接收线程实现。两个信号量控制可写与可读，写入序号和内容后再通知，Qt 复制完成后才允许下一次写入。这样既能验证同步，也能发现丢消息或覆盖。桌面测试使用真实 System V IPC，并检查停止和异常后的回收。该示例已经建立进程间交互基础，但目前尚未承载 app_host 的真实实时 PCM。\n\n桌面验证使用真实 Linux 内核 IPC。IPC_PRIVATE、权限 0600，semid/shmid 进入日志。GUI 接收线程每 20ms 非阻塞检查。C peer 以约 200ms 间隔发送 10 条消息。Qt 负责创建及释放资源。Linux System V 共享内存与 TI SysLink SharedRegion 分别验证。当前截图中的诊断页只显示入口与演示日志，不是板端 IPC PASS 证据，因此不使用其充当运行结果。板端 ARM IPC 的 1–10 条和资源清理仍需归档。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 13,
+    "part": "ppt/slides/slide13.xml",
+    "note_part": "ppt/notesSlides/notesSlide13.xml",
+    "title": "2.4 VNC 远程显示与连接排错 PART TWO 用户回传的 VNC 波形页；输入 WAV 已加载，输出仍等待数据 驱动与运行库 Qt4 报 driver not found 切换 Qt5.9.7",
+    "text": "没有显示器时，我们先用 VNC 验证 GUI。Qt4 环境缺少对应驱动，改用板上已有的 Qt5.9.7 VNC 插件。随后遇到黑屏和中文方块，分别通过完整握手抓取真实帧、像素格式兼容转发和中文字库部署处理。现在用户已经确认全彩中文与波形正常，并确认一次关闭查看器后的重新连接正常。当前进展证明板端界面能够绘制和传输，音频处理闭环仍需单独测试。\n\n本页采用用户 report/ima/屏幕截图 2026-11-01 182317.png。该图显示真实输入 WAV 的 L/R 波形，输出区仍为等待数据，界面处于演示环境。它支持远程显示结果，不作为 DSP 输出验收。RFB 转发只监听 Windows 本机回环。Qt 插件未重编译，固定 256 色不是最终稳定方案。一次重新连接由用户确认；HDMI、鼠标、长期稳定性及 VPSS 与 DSP 共存仍待验证。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 14,
+    "part": "ppt/slides/slide14.xml",
+    "note_part": "ppt/notesSlides/notesSlide14.xml",
+    "title": "03. 不足与 后续工作 LIMITATIONS AND NEXT STEPS 业务闭环与数据回传 RPE 引入准备 分阶段验收",
+    "text": "第三章说明当前还缺少哪些板端证据，以及后续如何推进。重点是补齐 GUI 控制真实音频进程的完整闭环，接入真实 PCM，再按课程要求准备 RPE 例程与算法封装，最后补齐性能和试听评价。"
+  },
+  {
+    "slide": 15,
+    "part": "ppt/slides/slide15.xml",
+    "note_part": "ppt/notesSlides/notesSlide15.xml",
+    "title": "3.1 当前不足与验收边界 PART THREE 当前缺口集中在真实任务闭环与实时 PCM 回传 环节 已经完成 尚需验证与归档 构建与部署 ARM host / DSP / GUI 构建通过 板端部",
+    "text": "现阶段需要明确“显示成功”和“业务成功”的边界。ARM 程序已构建并部署，界面也能通过 VNC 正常显示，但缺少 GUI 启动真实音频任务、完成处理、协作停止并再次运行的完整板端记录。实时 PCM 回传目前只有统一接口，尚未把 host 输入输出送入绘图层。System V IPC 示例和进程生命周期测试已经通过，接下来要将这些基础能力与真实业务链路逐步连接。\n\nQtTest 数字含初始化与清理条目，不合并成独立功能数量。BoardBackend 目前包装 PipelineRunner，没有发送真实 waveformReady(PcmChunk)，演示数据由 DemoBackend 生成。DSP_PROG 的 map 使用 1,794,278 字节，约 1.71 MiB，已在 16 MiB 配置范围内完成链接核对，但它不是运行期峰值，也不证明与其他核固件共存。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 16,
+    "part": "ppt/slides/slide16.xml",
+    "note_part": "ppt/notesSlides/notesSlide16.xml",
+    "title": "3.2 RPE 引入准备与技术路线 PART THREE RPE（Remote Processor Execute Engine），目前处于引入准备阶段 Qt GUI › 音频后端适配 › RPE 调",
+    "text": "课程后续计划使用 RPE 完成 Linux 程序对 DSP 算法的调用。目前项目仍沿用 SysLink，RPE 尚未集成。准备工作先核对 SDK 和课程例程，让最小计算调用独立通过，再封装空间算法。特别要明确历史尾部状态由谁持有、配置变化如何重置，以及输入输出缓冲区的所有权与缓存一致性。GUI 已有后端抽象，可以在调用层完成适配后接入，保留现有测试作为结果对照。\n\nRPE 名称按用户确认统一。全称来自课程第 1、6 次课。当前没有 RPE 构建与运行结果，也没有可引用的真实启动命令。准备先核对 SDK，跑通最小例程，再封装空间算法。跨块状态的所有权、配置重置、缓冲区与缓存一致性需要明确。更换调用框架不能直接宣称消除显示与 DSP 的固件、内存冲突。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  },
+  {
+    "slide": 17,
+    "part": "ppt/slides/slide17.xml",
+    "note_part": "ppt/notesSlides/notesSlide17.xml",
+    "title": "3.3 后续工作与分阶段验收 PART THREE 先建立可重复的板端基线，再连接 GUI 与真实音频数据 板端闭环 基线与 GUI 核对固件、内存 逐项验证音频模式 启动、停止后可重跑 真实 PCM",
+    "text": "后续工作按验收依赖推进。先确认固件和内存配置，再独立运行基础音频路径；随后用 GUI 复现启动、停止和再次运行，接入真实 PCM 更新波形。同时可以整理 RPE SDK 和参考例程，只有最小调用和空间结果一致后再扩展业务。最终补齐处理时间、端到端延迟、持续运行和听感记录，形成从算法到界面的完整证据链。\n\n本页命令为后续验收计划，不代表已通过。先确认输入素材、业务目录、固件和物理内存配置，再逐条执行。失败时停在首个异常阶段并保留退出码、帧块数及日志。GUI 应验证真实任务启动、协作停止、清理和再次运行。持续运行先做短时冒烟，再按课程条件安排更长时间测试。DSP 算法耗时、ARM/DSP 往返和完整链路延迟分别统计，日志与耳机试听分开评价。\n\n稿件与证据索引：\nD:/develop/vscode/projects/ex04/docs/中期汇报_第二章与第三章_Qt开发与后续工作.md\nD:/develop/vscode/projects/ex04/frontend_arm/README.md\nD:/develop/vscode/projects/ex04/frontend_arm/VALIDATION.md\nD:/develop/vscode/projects/ex04/docs/evidence/arm-build-2026-11-01/README.md"
+  }
+]

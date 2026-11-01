@@ -1,0 +1,17 @@
+{
+  "protected_source_files_unchanged": 60,
+  "baseline_files": 1952,
+  "deleted_files": 181,
+  "deleted_bytes": 340098815,
+  "moved_files": 1472,
+  "changed_existing_files": 32,
+  "local_markdown_links": "pass",
+  "backup_integrity": "pass",
+  "packaging": {
+    "status": "pass",
+    "members": 1641,
+    "hrir_wavs": 1431,
+    "bytes": 7159757,
+    "temporary_archive_removed": true
+  }
+}

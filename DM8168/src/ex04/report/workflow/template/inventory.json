@@ -1,0 +1,1745 @@
+[
+  {
+    "slide": 1,
+    "shape_count": 47,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "17",
+        "name": "TextBox 17",
+        "text": "公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "22",
+        "name": "TextBox 22",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "营销策略",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "内容总结",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "49",
+        "name": "TextBox 49",
+        "text": "商业计划书",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1205237\" y=\"2855483\" /><ns0:ext cx=\"7284196\" cy=\"1783714\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10400\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "50",
+        "name": "TextBox 50",
+        "text": "演示模板",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1626236\" y=\"4740862\" /><ns0:ext cx=\"3670756\" cy=\"1085215\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"6399\" spc=\"319\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "51",
+        "name": "TextBox 51",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5296993\" y=\"5183722\" /><ns0:ext cx=\"2563281\" cy=\"420370\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2799\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"16BF84\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "52",
+        "name": "TextBox 52",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "53",
+        "name": "TextBox 53",
+        "text": "汇报人：张小可",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1739191\" y=\"6971376\" /><ns0:ext cx=\"2175993\" cy=\"314325\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2100\" spc=\"210\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "54",
+        "name": "TextBox 54",
+        "text": "汇报公司：可画公司",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4669028\" y=\"6971376\" /><ns0:ext cx=\"2640330\" cy=\"314325\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2100\" spc=\"210\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "55",
+        "name": "TextBox 55",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"6099240\" /><ns0:ext cx=\"6001061\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "66",
+        "name": "TextBox 66",
+        "text": "www.canva.com",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "67",
+        "name": "TextBox 67",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "68",
+        "name": "TextBox 68",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "69",
+        "name": "TextBox 69",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "shape_count": 36,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "9",
+        "name": "TextBox 9",
+        "text": "目录",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1028700\" y=\"2171674\" /><ns0:ext cx=\"2986918\" cy=\"1363345\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"8799\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "10",
+        "name": "TextBox 10",
+        "text": "CONTENTS",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3928083\" y=\"2934908\" /><ns0:ext cx=\"2208051\" cy=\"405765\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"2400\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "11",
+        "name": "TextBox 11",
+        "text": "公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"4529731\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "13",
+        "name": "TextBox 13",
+        "text": "01.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"5646061\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "14",
+        "name": "TextBox 14",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2546468\" y=\"5595579\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "15",
+        "name": "TextBox 15",
+        "text": "营销策略",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7325330\" y=\"4529731\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "17",
+        "name": "TextBox 17",
+        "text": "03.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7325330\" y=\"5667969\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "18",
+        "name": "TextBox 18",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8281897\" y=\"5617486\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "19",
+        "name": "TextBox 19",
+        "text": "财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13060759\" y=\"4529731\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "05.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13060759\" y=\"5667969\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "22",
+        "name": "TextBox 22",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"14017327\" y=\"5617486\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "23",
+        "name": "TextBox 23",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"7118979\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "25",
+        "name": "TextBox 25",
+        "text": "02.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"8281981\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "26",
+        "name": "TextBox 26",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2546468\" y=\"8231499\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7325330\" y=\"7118979\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "29",
+        "name": "TextBox 29",
+        "text": "04.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7325330\" y=\"8281981\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8281897\" y=\"8231499\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "内容总结",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13060759\" y=\"7118979\" /><ns0:ext cx=\"2824916\" cy=\"760095\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4800\" spc=\"96\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "33",
+        "name": "TextBox 33",
+        "text": "06.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13060759\" y=\"8281981\" /><ns0:ext cx=\"824727\" cy=\"548640\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3599\" spc=\"71\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"14017327\" y=\"8231499\" /><ns0:ext cx=\"3241973\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART ONE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "01.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "公司\n简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "shape_count": 24,
+    "pictures": 3,
+    "texts": [
+      {
+        "id": "8",
+        "name": "TextBox 8",
+        "text": "01.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "25",
+        "name": "TextBox 25",
+        "text": "PART ONE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "26",
+        "name": "TextBox 26",
+        "text": "公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"2329575\" /><ns0:ext cx=\"6546934\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"2963209\" /><ns0:ext cx=\"6546934\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "29",
+        "name": "TextBox 29",
+        "text": "01.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"4129926\" /><ns0:ext cx=\"6546934\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"4784451\" /><ns0:ext cx=\"6546934\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "02.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"5769776\" /><ns0:ext cx=\"6546934\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"6424301\" /><ns0:ext cx=\"6439794\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "33",
+        "name": "TextBox 33",
+        "text": "03.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"7409626\" /><ns0:ext cx=\"6546934\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1278890\" y=\"8064151\" /><ns0:ext cx=\"6439794\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "shape_count": 33,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "01.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "PART ONE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "01.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1634537\" y=\"5288816\" /><ns0:ext cx=\"3598498\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1634537\" y=\"6207202\" /><ns0:ext cx=\"3598498\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "02.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7346095\" y=\"5288816\" /><ns0:ext cx=\"3598498\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7346095\" y=\"6207202\" /><ns0:ext cx=\"3598498\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "03.公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13054966\" y=\"5288816\" /><ns0:ext cx=\"3598498\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "44",
+        "name": "TextBox 44",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13054966\" y=\"6207202\" /><ns0:ext cx=\"3598498\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART TWO",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "02.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "市场\n概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "shape_count": 25,
+    "pictures": 3,
+    "texts": [
+      {
+        "id": "4",
+        "name": "TextBox 4",
+        "text": "02.市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "PART TWO",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "26",
+        "name": "TextBox 26",
+        "text": "01.市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12564829\" y=\"3309884\" /><ns0:ext cx=\"4153809\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12564829\" y=\"3964409\" /><ns0:ext cx=\"4153809\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "02.市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12564829\" y=\"6129413\" /><ns0:ext cx=\"4153809\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12564829\" y=\"6783938\" /><ns0:ext cx=\"4153809\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6108010\" y=\"4042576\" /><ns0:ext cx=\"2815421\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6108010\" y=\"5135493\" /><ns0:ext cx=\"2815421\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "shape_count": 35,
+    "pictures": 4,
+    "texts": [
+      {
+        "id": "4",
+        "name": "TextBox 4",
+        "text": "02.市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "PART TWO",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1174346\" y=\"5234723\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "28",
+        "name": "TextBox 28",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1174346\" y=\"6099796\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5500957\" y=\"5234723\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5500957\" y=\"6099796\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9827568\" y=\"5234723\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "44",
+        "name": "TextBox 44",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9827568\" y=\"6099796\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "51",
+        "name": "TextBox 51",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"14154179\" y=\"5234723\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "52",
+        "name": "TextBox 52",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"14154179\" y=\"6099796\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART THREE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "03.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "营销\n策略",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 10,
+    "shape_count": 26,
+    "pictures": 3,
+    "texts": [
+      {
+        "id": "4",
+        "name": "TextBox 4",
+        "text": "03.市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "23",
+        "name": "TextBox 23",
+        "text": "PART THERR",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4416958\" y=\"4753340\" /><ns0:ext cx=\"7486546\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "28",
+        "name": "TextBox 28",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4416958\" y=\"5386973\" /><ns0:ext cx=\"7486546\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "33",
+        "name": "TextBox 33",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4416958\" y=\"7076566\" /><ns0:ext cx=\"7486546\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4416958\" y=\"7710200\" /><ns0:ext cx=\"7486546\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1879653\" y=\"2400207\" /><ns0:ext cx=\"7486546\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1879653\" y=\"3033840\" /><ns0:ext cx=\"7486546\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 11,
+    "shape_count": 52,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "步骤1",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1449859\" y=\"3185060\" /><ns0:ext cx=\"2622601\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1281132\" y=\"5855980\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1281132\" y=\"6721053\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "步骤2",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5614201\" y=\"3185060\" /><ns0:ext cx=\"2622601\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5445474\" y=\"5855980\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "44",
+        "name": "TextBox 44",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5445474\" y=\"6721053\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "54",
+        "name": "TextBox 54",
+        "text": "步骤3",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9778543\" y=\"3185060\" /><ns0:ext cx=\"2622601\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "55",
+        "name": "TextBox 55",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9609816\" y=\"5855980\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "56",
+        "name": "TextBox 56",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9609816\" y=\"6721053\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "66",
+        "name": "TextBox 66",
+        "text": "步骤4",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13942886\" y=\"3185060\" /><ns0:ext cx=\"2622601\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "67",
+        "name": "TextBox 67",
+        "text": "市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13774158\" y=\"5855980\" /><ns0:ext cx=\"2958894\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "68",
+        "name": "TextBox 68",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13774158\" y=\"6721053\" /><ns0:ext cx=\"2960056\" cy=\"1249680\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "69",
+        "name": "TextBox 69",
+        "text": "03.市场营销",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "70",
+        "name": "TextBox 70",
+        "text": "PART THERR",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 12,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART FOUR",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "04.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "融资\n方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 13,
+    "shape_count": 32,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "04.融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "33",
+        "name": "TextBox 33",
+        "text": "PART FOUR",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "请在此处编辑文字",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1527918\" y=\"2291936\" /><ns0:ext cx=\"7951523\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。它们有多种用途，是演讲和教学的有力工具。如果您想在演示文稿中展现内容，可以选择多种方式。您可以在讲座中包含团队照片，产品说明或目标。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6274375\" y=\"2272886\" /><ns0:ext cx=\"10726815\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12518028\" y=\"4144333\" /><ns0:ext cx=\"3174010\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "演示文稿是一种实用的工具。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12518028\" y=\"4798859\" /><ns0:ext cx=\"3174010\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12511160\" y=\"5736153\" /><ns0:ext cx=\"3174010\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "演示文稿是一种实用的工具。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12511160\" y=\"6390678\" /><ns0:ext cx=\"3174010\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12511160\" y=\"7327972\" /><ns0:ext cx=\"3174010\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "演示文稿是一种实用的工具。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12511160\" y=\"7982498\" /><ns0:ext cx=\"3174010\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 14,
+    "shape_count": 35,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "04.融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "PART FOUR",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2159083\" y=\"2898577\" /><ns0:ext cx=\"4295106\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2159083\" y=\"3661813\" /><ns0:ext cx=\"4295106\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7344410\" y=\"2898577\" /><ns0:ext cx=\"4153809\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7344410\" y=\"3553103\" /><ns0:ext cx=\"4153809\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12253013\" y=\"2898577\" /><ns0:ext cx=\"4153809\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12253013\" y=\"3553103\" /><ns0:ext cx=\"4153809\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3096192\" y=\"5710972\" /><ns0:ext cx=\"3174010\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "演示文稿是一种实用的工具。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3096192\" y=\"6365497\" /><ns0:ext cx=\"3174010\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "44",
+        "name": "TextBox 44",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3096192\" y=\"7223067\" /><ns0:ext cx=\"3174010\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "45",
+        "name": "TextBox 45",
+        "text": "演示文稿是一种实用的工具。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3096192\" y=\"7877593\" /><ns0:ext cx=\"3174010\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 15,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART FIVE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "05.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "财务\n分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 16,
+    "shape_count": 17,
+    "pictures": 3,
+    "texts": [
+      {
+        "id": "4",
+        "name": "TextBox 4",
+        "text": "05.财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "PART FIVE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "27",
+        "name": "TextBox 27",
+        "text": "财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9788229\" y=\"2629772\" /><ns0:ext cx=\"7086046\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "28",
+        "name": "TextBox 28",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。它们有多种用途，是演讲和教学的有力工具。如果您想在演示文稿中展现内容，可以选择多种方式。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"9788229\" y=\"3284297\" /><ns0:ext cx=\"7086046\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 17,
+    "shape_count": 34,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "05.财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "PART FIVE",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "33",
+        "name": "TextBox 33",
+        "text": "财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5600977\" y=\"5439350\" /><ns0:ext cx=\"10746247\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。它们有多种用途，是演讲和教学的有力工具。如果您想在演示文稿中展现内容，可以选择多种方式。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5600977\" y=\"6092765\" /><ns0:ext cx=\"10746247\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5600977\" y=\"7559816\" /><ns0:ext cx=\"2447338\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8367280\" y=\"7559816\" /><ns0:ext cx=\"2447338\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "46",
+        "name": "TextBox 46",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11133583\" y=\"7559816\" /><ns0:ext cx=\"2447338\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "50",
+        "name": "TextBox 50",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13899886\" y=\"7559816\" /><ns0:ext cx=\"2447338\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 18,
+    "shape_count": 33,
+    "pictures": 0,
+    "texts": [
+      {
+        "id": "30",
+        "name": "TextBox 30",
+        "text": "PART SIX",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "34",
+        "name": "TextBox 34",
+        "text": "06.",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"2200010\" y=\"3626803\" /><ns0:ext cx=\"4195323\" cy=\"2947670\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"18800\" spc=\"376\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"22745\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "内容\n分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"2997483\" /><ns0:ext cx=\"5754288\" cy=\"1693545\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10800\" spc=\"216\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "Lorem ipsum dolor sit ametconsectetuer adipiscing elitMaecenas porttitor congue massa. ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8160901\" y=\"4969475\" /><ns0:ext cx=\"7276104\" cy=\"621030\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8450782\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "38",
+        "name": "TextBox 38",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"11119391\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "单击输入您的内容",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"13788001\" y=\"6765997\" /><ns0:ext cx=\"1867577\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\"><ns0:alpha val=\"50980\" /></ns0:srgbClr></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 19,
+    "shape_count": 32,
+    "pictures": 4,
+    "texts": [
+      {
+        "id": "4",
+        "name": "TextBox 4",
+        "text": "06.内容分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"478737\" /><ns0:ext cx=\"5489465\" cy=\"659130\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"4200\" spc=\"84\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "PART SIX",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "24",
+        "name": "TextBox 24",
+        "text": "内容分析关键词 ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1452455\" y=\"8005690\" /><ns0:ext cx=\"4076791\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "28",
+        "name": "TextBox 28",
+        "text": "内容分析关键词 ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"7105605\" y=\"8005690\" /><ns0:ext cx=\"4076791\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "32",
+        "name": "TextBox 32",
+        "text": "内容分析关键词 ",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"12758754\" y=\"8005690\" /><ns0:ext cx=\"4076791\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "35",
+        "name": "TextBox 35",
+        "text": "内容分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1573163\" y=\"2400973\" /><ns0:ext cx=\"9186577\" cy=\"567690\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"3600\" spc=\"72\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。大部分时间，它们都是在为观众服务。它们有多种用途，是演讲和教学的有力工具。如果您想在演示文稿中展现内容，可以选择多种方式。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1573163\" y=\"3055498\" /><ns0:ext cx=\"9186577\" cy=\"935355\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"949292\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "37",
+        "name": "TextBox 37",
+        "text": "01.内容分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1573163\" y=\"4365252\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "39",
+        "name": "TextBox 39",
+        "text": "30%",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8944839\" y=\"4365252\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "40",
+        "name": "TextBox 40",
+        "text": "02.内容分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1573163\" y=\"5367052\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "42",
+        "name": "TextBox 42",
+        "text": "60%",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8944839\" y=\"5367052\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "43",
+        "name": "TextBox 43",
+        "text": "03.内容分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1573163\" y=\"6368852\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "45",
+        "name": "TextBox 45",
+        "text": "90%",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"8944839\" y=\"6368852\" /><ns0:ext cx=\"1814901\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"545454\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      }
+    ]
+  },
+  {
+    "slide": 20,
+    "shape_count": 47,
+    "pictures": 1,
+    "texts": [
+      {
+        "id": "16",
+        "name": "TextBox 16",
+        "text": "公司简述",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "21",
+        "name": "TextBox 21",
+        "text": "市场概括",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "26",
+        "name": "TextBox 26",
+        "text": "营销策略",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "31",
+        "name": "TextBox 31",
+        "text": "融资方案",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "36",
+        "name": "TextBox 36",
+        "text": "财务分析",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "41",
+        "name": "TextBox 41",
+        "text": "内容总结",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"266881\" y=\"-9525\" /><ns0:ext cx=\"1329078\" cy=\"375285\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" spc=\"36\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "48",
+        "name": "TextBox 48",
+        "text": "谢谢观看",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1529080\" y=\"2887265\" /><ns0:ext cx=\"6331194\" cy=\"1783714\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"10400\" spc=\"1664\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "49",
+        "name": "TextBox 49",
+        "text": "演示模板",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1626236\" y=\"4740862\" /><ns0:ext cx=\"3670756\" cy=\"1085215\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"6399\" spc=\"319\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "50",
+        "name": "TextBox 50",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"5296993\" y=\"5183722\" /><ns0:ext cx=\"2563281\" cy=\"420370\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2799\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"16BF84\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体-超粗体\" /><ns0:ea typeface=\"思源黑体-超粗体\" /><ns0:cs typeface=\"思源黑体-超粗体\" /><ns0:sym typeface=\"思源黑体-超粗体\" /></ns0:rPr>"
+      },
+      {
+        "id": "51",
+        "name": "TextBox 51",
+        "text": "汇报人：张小可",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1739191\" y=\"6971376\" /><ns0:ext cx=\"2175993\" cy=\"314325\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2100\" spc=\"210\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "52",
+        "name": "TextBox 52",
+        "text": "汇报公司：可画公司",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4669028\" y=\"6971376\" /><ns0:ext cx=\"2640330\" cy=\"314325\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"2100\" spc=\"210\" b=\"true\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Heavy\" /><ns0:ea typeface=\"思源黑体 1 Heavy\" /><ns0:cs typeface=\"思源黑体 1 Heavy\" /><ns0:sym typeface=\"思源黑体 1 Heavy\" /></ns0:rPr>"
+      },
+      {
+        "id": "53",
+        "name": "TextBox 53",
+        "text": "演示文稿是一种实用的工具，可以是演示，演讲，报告等。",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"1589901\" y=\"6099240\" /><ns0:ext cx=\"6001061\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "64",
+        "name": "TextBox 64",
+        "text": "www.canva.com",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"15685169\" y=\"9877738\" /><ns0:ext cx=\"1817921\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 2\" /><ns0:ea typeface=\"思源黑体 2\" /><ns0:cs typeface=\"思源黑体 2\" /><ns0:sym typeface=\"思源黑体 2\" /></ns0:rPr>"
+      },
+      {
+        "id": "66",
+        "name": "TextBox 66",
+        "text": "Business plan",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"784910\" y=\"694378\" /><ns0:ext cx=\"1609982\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "67",
+        "name": "TextBox 67",
+        "text": "Market",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"3000447\" y=\"694378\" /><ns0:ext cx=\"843054\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "68",
+        "name": "TextBox 68",
+        "text": "Financing",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"4449056\" y=\"694378\" /><ns0:ext cx=\"1104424\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      },
+      {
+        "id": "69",
+        "name": "TextBox 69",
+        "text": "Company",
+        "xfrm": "<ns0:xfrm xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" rot=\"0\"><ns0:off x=\"6159036\" y=\"694378\" /><ns0:ext cx=\"1073825\" cy=\"306705\" /></ns0:xfrm>",
+        "rPr": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" lang=\"en-US\" b=\"true\" sz=\"1800\" strike=\"noStrike\" u=\"none\"><ns0:solidFill><ns0:srgbClr val=\"2E568C\" /></ns0:solidFill><ns0:latin typeface=\"思源黑体 1 Bold\" /><ns0:ea typeface=\"思源黑体 1 Bold\" /><ns0:cs typeface=\"思源黑体 1 Bold\" /><ns0:sym typeface=\"思源黑体 1 Bold\" /></ns0:rPr>"
+      }
+    ]
+  }
+]

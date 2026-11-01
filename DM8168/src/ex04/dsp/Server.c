@@ -92,6 +92,11 @@ typedef struct {
     UInt16          audioChannels;
     UInt16          audioBitDepth;
     UInt16          audioFrameBytes;
+    UInt16          ringSlotBytes;
+    UInt16          ringSlotCount;
+    Int32           directionA;
+    Int32           directionB;
+    UInt32          directionMask;
 } Server_Module;
 
 /* private functions */
@@ -99,6 +104,7 @@ static Int Server_recvSharedPtr(SharedRegion_SRPtr* sharedBufferPtr,
         Char** bufferPtr);
 static Int Server_handleAudioConfig(UInt32 cmd, UInt32 payload);
 static Int Server_handleAlgorithmMode(UInt32 payload);
+static Int Server_handleRingConfig(UInt32 payload);
 static Int Server_configureAudioAlgo(Void);
 static Int Server_processBuffer(Char* bufferPtr, UInt32 size);
 static UInt32 Server_waitForEvent(Event_Queue* eventQueue);
@@ -155,6 +161,11 @@ Int Server_create(UInt16 remoteProcId)
     Module.audioChannels        = 2;
     Module.audioBitDepth        = 16;
     Module.audioFrameBytes      = 4;
+    Module.ringSlotBytes        = APP_MAX_PAYLOAD_SIZE;
+    Module.ringSlotCount        = 1;
+    Module.directionA           = -1;
+    Module.directionB           = -1;
+    Module.directionMask        = 0;
     AudioAlgo_init(&Module.audioAlgo);
     
     /* enable some log events */
@@ -218,7 +229,9 @@ Int Server_exec()
     UInt32              event;
     UInt32              cmd;
     UInt32              size;
+    UInt32              slotId;
     Char*               bufferPtr;
+    Char*               slotPtr;
     Bool                running             = TRUE;
 
     Log_print0(Diags_ENTRY | Diags_INFO, "--> Server_exec:");
@@ -239,8 +252,23 @@ Int Server_exec()
 
         cmd = event & APP_CMD_MASK;
         size = event & APP_DATA_MASK;
+        slotId = APP_SLOT_ID(event);
 
-        if ((cmd == APP_CMD_AUDIO_CFG_RATE) ||
+        if (cmd == APP_CMD_RING_CFG) {
+            status = Server_handleRingConfig(event);
+            if (status < 0) {
+                goto leave;
+            }
+
+            status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
+                    Module.eventId, APP_CMD_RING_CFG_ACK, TRUE);
+
+            if (status < 0) {
+                Log_error0("Server_exec: Error sending ring config ack");
+                goto leave;
+            }
+        }
+        else if ((cmd == APP_CMD_AUDIO_CFG_RATE) ||
                 (cmd == APP_CMD_AUDIO_CFG_FMT)) {
             status = Server_handleAudioConfig(cmd, size);
             if (status < 0) {
@@ -255,10 +283,35 @@ Int Server_exec()
                 goto leave;
             }
         }
+        else if ((cmd == APP_CMD_DIRECTION_A) || (cmd == APP_CMD_DIRECTION_B)) {
+            UInt32 response;
+            if (hrir_direction_index((int)size) < 0) {
+                /* A failed update must not reuse the preceding valid code. */
+                Module.directionMask &= (cmd == APP_CMD_DIRECTION_A) ? ~1u : ~2u;
+                response = APP_CMD_ALGO_CFG_FAILED | 1u;
+            }
+            else {
+                if (cmd == APP_CMD_DIRECTION_A) {
+                    Module.directionA = (Int32)size;
+                    Module.directionMask |= 1u;
+                }
+                else {
+                    Module.directionB = (Int32)size;
+                    Module.directionMask |= 2u;
+                }
+                response = APP_CMD_DIRECTION_ACK | size;
+            }
+            status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
+                    Module.eventId, response, TRUE);
+            if (status < 0) goto leave;
+        }
         else if (cmd == APP_CMD_ALGO_MODE) {
             status = Server_handleAlgorithmMode(size);
             if (status < 0) {
-                goto leave;
+                status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
+                        Module.eventId, APP_CMD_ALGO_CFG_FAILED | 2u, TRUE);
+                if (status < 0) goto leave;
+                continue;
             }
 
             status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
@@ -270,11 +323,13 @@ Int Server_exec()
             }
         }
         else if (cmd == APP_CMD_PROCESSING) {
-            if ((size == 0) || (size > APP_MAX_PAYLOAD_SIZE)) {
+            if ((slotId >= Module.ringSlotCount) ||
+                    (size == 0) || (size > Module.ringSlotBytes)) {
                 Log_error1("Server_exec: Invalid processing size: %d", size);
                 status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
                         Module.eventId,
-                        APP_CMD_OP_FAILED | SERVER_E_BAD_PAYLOAD, TRUE);
+                        APP_CMD_OP_FAILED | APP_SLOT_FIELD(slotId) |
+                        SERVER_E_BAD_PAYLOAD, TRUE);
                 if (status < 0) {
                     Log_error0("Server_exec: Error sending operation failed");
                     goto leave;
@@ -285,11 +340,13 @@ Int Server_exec()
             Log_print1(Diags_INFO, "Server_exec: Processing size=%d",
                     (IArg)size);
 
-            status = Server_processBuffer(bufferPtr, size);
+            slotPtr = bufferPtr + (slotId * Module.ringSlotBytes);
+            status = Server_processBuffer(slotPtr, size);
             if (status < 0) {
                 status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
                         Module.eventId,
-                        APP_CMD_OP_FAILED | SERVER_E_PROCESSING, TRUE);
+                        APP_CMD_OP_FAILED | APP_SLOT_FIELD(slotId) |
+                        SERVER_E_PROCESSING, TRUE);
                 if (status < 0) {
                     Log_error0("Server_exec: Error sending operation failed");
                     goto leave;
@@ -298,7 +355,8 @@ Int Server_exec()
             }
 
             status = Notify_sendEvent(Module.remoteProcId, Module.lineId,
-                    Module.eventId, APP_CMD_OP_COMPLETE, TRUE);
+                    Module.eventId,
+                    APP_CMD_OP_COMPLETE | APP_SLOT_FIELD(slotId), TRUE);
 
             if (status < 0) {
                 Log_error0("Server_exec: Error sending operation complete");
@@ -384,7 +442,7 @@ static Int Server_handleAlgorithmMode(UInt32 payload)
     AudioAlgoParams params;
     UInt32 i;
 
-    if (payload > APP_ALGO_MODE_GAIN_X2) {
+    if (payload > APP_ALGO_MODE_MAX) {
         Log_error1("Server_exec: Invalid algorithm mode: %d",
                 (IArg)payload);
         return (-1);
@@ -394,6 +452,12 @@ static Int Server_handleAlgorithmMode(UInt32 payload)
     params.flags = (payload == APP_ALGO_MODE_PASSTHROUGH) ?
             AUDIO_ALGO_FLAG_BYPASS : 0u;
     params.gainQ15 = AUDIO_ALGO_GAIN_UNITY_Q15;
+    params.directionA = Module.directionA;
+    params.directionB = Module.directionB;
+    if (((payload == APP_ALGO_MODE_SPATIAL) && !(Module.directionMask & 1u)) ||
+            ((payload == APP_ALGO_MODE_DUAL) && ((Module.directionMask & 3u) != 3u))) {
+        return (-1);
+    }
     for (i = 0; i < AUDIO_ALGO_RESERVED_WORDS; i++) {
         params.reserved[i] = 0;
     }
@@ -402,9 +466,35 @@ static Int Server_handleAlgorithmMode(UInt32 payload)
         Log_error0("Server_exec: Audio algorithm params failed");
         return (-1);
     }
+    Module.directionMask = 0; /* Each generic configuration requires fresh directions. */
 
     Log_print1(Diags_INFO, "Server_exec: Algorithm mode=%d",
             (IArg)payload);
+    return (0);
+}
+
+/*
+ *  ======== Server_handleRingConfig ========
+ */
+static Int Server_handleRingConfig(UInt32 payload)
+{
+    UInt16 slotCount;
+    UInt16 slotBytes;
+
+    slotCount = (UInt16)APP_SLOT_ID(payload);
+    slotBytes = (UInt16)(payload & APP_DATA_MASK);
+
+    if ((slotCount == 0) || (slotCount > APP_RING_MAX_SLOTS) ||
+            (slotBytes == 0)) {
+        Log_error1("Server_exec: Invalid ring config payload: 0x%x",
+                payload);
+        return (-1);
+    }
+
+    Module.ringSlotCount = slotCount;
+    Module.ringSlotBytes = slotBytes;
+    Log_print2(Diags_INFO, "Server_exec: Ring slots=%d slotBytes=%d",
+            (IArg)slotCount, (IArg)slotBytes);
     return (0);
 }
 
@@ -617,6 +707,7 @@ Void Server_notifyCB( UInt16 procId, UInt16 lineId, UInt32  eventId, UArg arg,
     if (next == eventQueue->tail) {
         /* queue is full, drop event and set error flag */
         eventQueue->error = APP_E_OVERFLOW;
+        Semaphore_post(eventQueue->semH);
     }
     else {
         eventQueue->queue[eventQueue->head] = payload;

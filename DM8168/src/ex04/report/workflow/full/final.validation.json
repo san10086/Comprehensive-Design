@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "presentation-finalization.v1",
+  "finalSha256": "7a51ce7e6736d4d77db0bf07ac3d006c19e1765f8e9a63ef17c629e4478d92ea",
+  "byteCount": 48769593,
+  "packageIntegrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 18,
+    "relationship_part_count": 63,
+    "slide_count": 18,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "presentationLayout": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 455,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "思源黑体 1 Heavy",
+        "思源黑体 2",
+        "思源黑体-超粗体"
+      ],
+      "observed_font_use_counts": {
+        "思源黑体 1 Heavy": 40,
+        "思源黑体 2": 350,
+        "思源黑体-超粗体": 65
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 18,
+    "slide_size_in": [
+      20,
+      11.25
+    ],
+    "warning_count": 1,
+    "warnings": [
+      {
+        "kind": "object_outside_slide_boundary",
+        "object_id": "3",
+        "object_kind": "pic",
+        "slide": 1
+      }
+    ],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 455,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "思源黑体 1 Heavy",
+        "思源黑体 2",
+        "思源黑体-超粗体"
+      ],
+      "observed_font_use_counts": {
+        "思源黑体 1 Heavy": 40,
+        "思源黑体 2": 350,
+        "思源黑体-超粗体": 65
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "fontSelection": {
+    "basis": "reference",
+    "approvedFamilies": [
+      "思源黑体 1 Heavy",
+      "思源黑体-超粗体",
+      "思源黑体 2"
+    ],
+    "scriptFonts": {},
+    "referenceSha256": "477f04bce00fbdf7903e01dbc0a040d8c7dedc821a66590b5d2519b29663710e",
+    "referenceFontsVerifiedInEncodedText": true,
+    "checked_text_script_count": 455,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "思源黑体 1 Heavy",
+      "思源黑体 2",
+      "思源黑体-超粗体"
+    ],
+    "observed_font_use_counts": {
+      "思源黑体 1 Heavy": 40,
+      "思源黑体 2": 350,
+      "思源黑体-超粗体": 65
+    },
+    "passed": true,
+    "performed": true
+  },
+  "firstPartyImport": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 18,
+    "sha256": "7a51ce7e6736d4d77db0bf07ac3d006c19e1765f8e9a63ef17c629e4478d92ea",
+    "runtimeNodeModules": "C:\\Users\\30522\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+    "nodeExecutable": "C:\\Users\\30522\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+  },
+  "nativeTableArithmetic": {
+    "performed": true,
+    "checked_column_count": 0,
+    "checks": [],
+    "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+    "eligible_table_count": 0,
+    "finding_count": 0,
+    "findings": [],
+    "native_table_count": 2,
+    "passed": true,
+    "schema_version": "presentation-native-table-arithmetic.v1",
+    "skipped_tables": [
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 16,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 17,
+        "table": 1
+      }
+    ],
+    "slide_count": 18,
+    "warning_count": 0,
+    "warnings": []
+  },
+  "nativeChartTitles": {
+    "performed": true,
+    "checks": [],
+    "finding_count": 0,
+    "findings": [],
+    "native_chart_count": 0,
+    "native_powerpoint_verified": false,
+    "passed": true,
+    "presentation_sha256": "7a51ce7e6736d4d77db0bf07ac3d006c19e1765f8e9a63ef17c629e4478d92ea",
+    "schema_version": "presentation-native-chart-titles.v1",
+    "slide_count": 18,
+    "source_text_emitted": false,
+    "unresolved_linked_title_count": 0
+  },
+  "sourceDerivedPolicyFlags": [
+    "--expected-slide-size-emu",
+    "18288000,10287000",
+    "--validate-bullet-geometry",
+    "--validate-heading-fit",
+    "--require-native-table-slide",
+    "16",
+    "--require-native-table-slide",
+    "17",
+    "--expected-slide-count",
+    "18",
+    "--cover-role",
+    "none",
+    "--approved-font-family",
+    "思源黑体 1 Heavy",
+    "--approved-font-family",
+    "思源黑体-超粗体",
+    "--approved-font-family",
+    "思源黑体 2"
+  ],
+  "nativeChartValidation": {
+    "detectedOwnerSlides": [],
+    "detectedChartCount": 0,
+    "targetApplication": null,
+    "sourceChartOwnersExplicitlyDeclared": false,
+    "validatorRan": false,
+    "passed": true
+  }
+}

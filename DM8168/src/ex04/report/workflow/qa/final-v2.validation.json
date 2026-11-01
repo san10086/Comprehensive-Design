@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "presentation-finalization.v1",
+  "finalSha256": "cfeb8f5c851b17f5eb7256021cfe58238c99823ba277eaff9e3f59d25fbff1b1",
+  "byteCount": 60345800,
+  "packageIntegrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 9,
+    "relationship_part_count": 33,
+    "slide_count": 9,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "presentationLayout": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 201,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "思源黑体 1 Heavy",
+        "思源黑体 2",
+        "思源黑体-超粗体"
+      ],
+      "observed_font_use_counts": {
+        "思源黑体 1 Heavy": 17,
+        "思源黑体 2": 140,
+        "思源黑体-超粗体": 44
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 9,
+    "slide_size_in": [
+      20,
+      11.25
+    ],
+    "warning_count": 1,
+    "warnings": [
+      {
+        "kind": "object_outside_slide_boundary",
+        "object_id": "3",
+        "object_kind": "pic",
+        "slide": 1
+      }
+    ],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 201,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "思源黑体 1 Heavy",
+        "思源黑体 2",
+        "思源黑体-超粗体"
+      ],
+      "observed_font_use_counts": {
+        "思源黑体 1 Heavy": 17,
+        "思源黑体 2": 140,
+        "思源黑体-超粗体": 44
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "fontSelection": {
+    "basis": "reference",
+    "approvedFamilies": [
+      "思源黑体 1 Heavy",
+      "思源黑体-超粗体",
+      "思源黑体 2"
+    ],
+    "scriptFonts": {},
+    "referenceSha256": "477f04bce00fbdf7903e01dbc0a040d8c7dedc821a66590b5d2519b29663710e",
+    "referenceFontsVerifiedInEncodedText": true,
+    "checked_text_script_count": 201,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "思源黑体 1 Heavy",
+      "思源黑体 2",
+      "思源黑体-超粗体"
+    ],
+    "observed_font_use_counts": {
+      "思源黑体 1 Heavy": 17,
+      "思源黑体 2": 140,
+      "思源黑体-超粗体": 44
+    },
+    "passed": true,
+    "performed": true
+  },
+  "firstPartyImport": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 9,
+    "sha256": "cfeb8f5c851b17f5eb7256021cfe58238c99823ba277eaff9e3f59d25fbff1b1",
+    "runtimeNodeModules": "C:\\Users\\30522\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+    "nodeExecutable": "C:\\Users\\30522\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+  },
+  "nativeTableArithmetic": {
+    "performed": true,
+    "checked_column_count": 0,
+    "checks": [],
+    "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+    "eligible_table_count": 0,
+    "finding_count": 0,
+    "findings": [],
+    "native_table_count": 0,
+    "passed": true,
+    "schema_version": "presentation-native-table-arithmetic.v1",
+    "skipped_tables": [],
+    "slide_count": 9,
+    "warning_count": 0,
+    "warnings": []
+  },
+  "nativeChartTitles": {
+    "performed": true,
+    "checks": [],
+    "finding_count": 0,
+    "findings": [],
+    "native_chart_count": 0,
+    "native_powerpoint_verified": false,
+    "passed": true,
+    "presentation_sha256": "cfeb8f5c851b17f5eb7256021cfe58238c99823ba277eaff9e3f59d25fbff1b1",
+    "schema_version": "presentation-native-chart-titles.v1",
+    "slide_count": 9,
+    "source_text_emitted": false,
+    "unresolved_linked_title_count": 0
+  },
+  "sourceDerivedPolicyFlags": [
+    "--expected-slide-size-emu",
+    "18288000,10287000",
+    "--validate-bullet-geometry",
+    "--validate-heading-fit",
+    "--cover-role",
+    "none",
+    "--approved-font-family",
+    "思源黑体 1 Heavy",
+    "--approved-font-family",
+    "思源黑体-超粗体",
+    "--approved-font-family",
+    "思源黑体 2"
+  ],
+  "nativeChartValidation": {
+    "detectedOwnerSlides": [],
+    "detectedChartCount": 0,
+    "targetApplication": null,
+    "sourceChartOwnersExplicitlyDeclared": false,
+    "validatorRan": false,
+    "passed": true
+  }
+}

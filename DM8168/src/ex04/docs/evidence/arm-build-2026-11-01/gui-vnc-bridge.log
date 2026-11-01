@@ -1,0 +1,8 @@
+18:13:13 Listening only on 127.0.0.1:5901 -> 192.168.1.21:5900
+18:13:13 Viewer connected from loopback port=54388
+18:13:13 Initialized Qt pixel format bpp=32 depth=32 frame=800x480
+18:13:13 Viewer SetEncodings=(-314, 1464686180, -239, -240, 1464686182, -223, -308, -261, 1464686184, -307, -224, -1063131698, -313, -312, -258, -316, 0, 1, 50, 21, 16, 7, 5, 2, 1, -254, -24)
+18:13:13 Viewer framebuffer request incremental=0
+18:13:13 First server update received: 1460 bytes
+18:13:13 Viewer framebuffer request incremental=1
+18:13:38 Viewer framebuffer request incremental=1
