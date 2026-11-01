@@ -7,7 +7,16 @@ include $(EXBASE)/products.mak
 
 .DEFAULT_GOAL := all
 
-.PHONY: all clean install help
+.PHONY: all clean install help hrir hrir-check
+
+PYTHON ?= python3
+HRIR_SOURCE ?= assets/hrir/mit_kemar
+
+hrir:
+	$(PYTHON) tools/generate_hrir.py --source "$(HRIR_SOURCE)"
+
+hrir-check:
+	$(PYTHON) tools/generate_hrir.py --source "$(HRIR_SOURCE)" --check
 
 all:
 	@$(ECHO) "#"

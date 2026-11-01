@@ -1,0 +1,40 @@
+Environment: Windows / MinGW GCC 13.1.0; compiler bin prepended to PATH
+$ "D:\develop\CLion 2025.1.2\bin\mingw\bin\gcc.exe" -std=c99 -O2 -Wall -Wextra -Werror -pedantic -o D:\develop\vscode\projects\ex04\docs\evidence\spatial-kemar-update-2026-11-01\dsp_spatial_selftest.exe dsp_spatial_selftest.c spatial_fir.c wav_pcm16.c ../../dsp/dsp_spatial.c
+
+EXIT: 0
+
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-kemar-update-2026-11-01\dsp_spatial_selftest.exe --catalog "D:\develop\vscode\projects\ex04\temp\MIT KERMER"
+DSP spatial dual selftest PASS: A=18000 B=18006 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=18000 B=18000 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=21864 B=21870 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=21864 B=21864 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=28860 B=28865 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=28860 B=28860 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=32600 B=32605 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=32600 B=32600 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=36340 B=36345 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=36340 B=36340 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=43344 B=43350 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=43344 B=43344 (max error 1 LSB)
+DSP spatial orbit selftest PASS: variable blocks remain within 3 LSB (max error 1 LSB)
+DSP spatial dual selftest PASS: A=50464 B=50472 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=50464 B=50464 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=61290 B=61320 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=61290 B=61290 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=64800 B=18000 (max error 1 LSB)
+DSP spatial dual selftest PASS: A=64800 B=64800 (max error 1 LSB)
+DSP full catalog PASS: 710 directions, variable blocks, tails, generic dual
+DSP cache/invalid-direction selftest PASS
+
+EXIT: 0
+
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-kemar-update-2026-11-01\dsp_spatial_selftest.exe D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\L60e250a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R60e250a.wav
+DSP spatial FFT selftest PASS: D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav (max error 1 LSB)
+DSP spatial orbit selftest PASS: variable blocks remain within 3 LSB (max error 1 LSB)
+DSP spatial FFT selftest PASS: D:\develop\vscode\projects\ex04\assets\hrir\original\L60e250a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R60e250a.wav (max error 1 LSB)
+DSP spatial dual selftest PASS: A=54250 B=46845 (max error 1 LSB)
+DSP saturation/mix-before-clipping selftest PASS
+DSP spatial orbit selftest PASS: 4-second triangular path turns smoothly
+
+EXIT: 0
+

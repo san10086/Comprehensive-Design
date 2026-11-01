@@ -7,7 +7,7 @@ include ../products.mak
 
 .DEFAULT_GOAL := all
 
-srcs = main_dsp.c Server.c AudioAlgo.c dsp_algorithm.c
+srcs = main_dsp.c Server.c AudioAlgo.c dsp_algorithm.c dsp_spatial.c
 objs = $(addprefix bin/$(PROFILE)/obj/,$(patsubst %.c,%.oe674,$(srcs)))
 libs = configuro/linker.cmd
 
@@ -35,9 +35,15 @@ bin/$(PROFILE)/obj/%.oe674: %.c
 	@$(ECHO) "# Making $@ ..."
 	$(CC) $(CPPFLAGS) $(CFLAGS) --output_file=$@ -fc $<
 
-bin/$(PROFILE)/obj/Server.oe674: AudioAlgo.h
-bin/$(PROFILE)/obj/AudioAlgo.oe674: AudioAlgo.h dsp_algorithm.h
+bin/$(PROFILE)/obj/Server.oe674: AudioAlgo.h ../shared/AppCommon.h ../shared/hrir_catalog.h
+bin/$(PROFILE)/obj/AudioAlgo.oe674: AudioAlgo.h dsp_algorithm.h dsp_spatial.h ../shared/AppCommon.h ../shared/hrir_catalog.h
 bin/$(PROFILE)/obj/dsp_algorithm.oe674: dsp_algorithm.h
+bin/$(PROFILE)/obj/dsp_spatial.oe674: dsp_spatial.h \
+		dsp_spatial_coefficients.inc dsp_spatial_fft_twiddles.inc ../shared/hrir_catalog.h
+	@$(ECHO) "#"
+	@$(ECHO) "# Making $@ ..."
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(SPATIAL_CFLAGS_$(PROFILE)) \
+		--output_file=$@ -fc dsp_spatial.c
 
 configuro/linker.cmd: Dsp.cfg ../shared/config.bld
 	@$(ECHO) "#"
@@ -84,6 +90,7 @@ LDLIBS = -l $(CGTOOLS)/lib/rts6740_elf.lib
 
 CCPROFILE_debug = -D_DEBUG_=1 --symdebug:dwarf
 CCPROFILE_release = -O2
+SPATIAL_CFLAGS_release = --opt_level=3 --opt_for_speed=5
 COMPILER_OPTS = $(shell cat configuro/compiler.opt)
 
 ifneq (,$(wildcard $(XDC_INSTALL_DIR)/bin/echo.exe))

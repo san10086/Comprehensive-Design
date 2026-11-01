@@ -1,82 +1,23 @@
-# ALSA 承接情况
+# EX04 空间音效处理工程
 
-### 已承接到主工程的文件
+文档入口见 [文档索引](docs/README.md)，本次整理内容见 [工作目录整理报告](docs/workspace-cleanup-2026-11-01.md)。
 
-成员 A 的核心 ALSA 模块已经整合到 `host/audio/`：
+## Qt 前端状态
 
-| ALSA-NEW 文件 | 主工程承接位置 | 当前用途 |
-|---|---|---|
-| `ALSA-NEW/audioCapture.c` | `host/audio/audioCapture.c` | ALSA 录音 |
-| `ALSA-NEW/audioCapture.h` | `host/audio/audioCapture.h` | 录音接口 |
-| `ALSA-NEW/audioPlayback.c` | `host/audio/audioPlayback.c` | ALSA 播放 |
-| `ALSA-NEW/audioPlayback.h` | `host/audio/audioPlayback.h` | 播放接口 |
-| `ALSA-NEW/audioWav.c` | `host/audio/audioWav.c` | WAV 读写 |
-| `ALSA-NEW/audioWav.h` | `host/audio/audioWav.h` | WAV 接口 |
-| `ALSA-NEW/audioConfig.h` | `host/audio/audioConfig.h` | 音频参数宏和 `audioConfig` |
-| `ALSA-NEW/audioPipeline.h` | `host/audio/audioPipeline.h` | 流水线预留接口 |
+- `frontend_arm/`：当前使用的 ARM 板端 Qt 工程，在 Ubuntu20 中交叉编译，在 DM8168 上运行。构建、部署及 IPC 验证见 [ARM Qt 说明](frontend_arm/README.md)。
+- 原桌面前端已清理；历史实现可从 Git 历史或本次清理备份查看。
 
-此外主工程新增了：
+环境搭建请按 [ARM Qt 环境配置与操作报告](docs/arm-qt-environment-setup-report.md) 操作，包含 Windows、Ubuntu20 虚拟机、DM8168 板端的分步命令与验收标准。
 
-| 主工程文件 | 用途 |
-|---|---|
-| `host/audio/audioConfig.c` | 提供 `audioGetConfig()`，供 `app_host` 获取当前平台音频配置 |
+从当前源码开始更新与部署，见 [空间处理与 Qt 更新、编译、打包说明书（XFTP）](docs/空间处理与Qt更新编译打包说明书_XFTP.md)：Windows 源码打包、XFTP 上传、host/DSP 与 Qt5.9.7 构建、发布包、板端 VNC 及后续增量更新。
 
-### 未承接到主工程的文件
-
-以下文件没有放入 `host/audio/`，原因是它们属于成员 A 的独立测试程序，不是主链路库代码：
-
-| ALSA-NEW 文件 | 是否需要主工程使用 | 说明 |
-|---|---:|---|
-| `ALSA-NEW/mainTest.c` | 否 | 生成独立 `audioTest/audioTest_arm`，用于纯 ALSA 单测 |
-| `ALSA-NEW/Makefile` | 否 | 只服务 `audioTest` 单独构建 |
-| `ALSA-NEW/deploy.sh` | 否 | 只服务 `audioTest_arm` 单独部署 |
-| `ALSA-NEW/README.md` | 否 | 成员 A 模块说明文档 |
-
-### 主工程在 ALSA-NEW 基础上的增强
-
-`host/audio/` 不是简单复制，已经做了适配和加固：
-
-- `audioCapInit(audioConfig *cfg)` 会把 ALSA 实际协商后的 `sampleRate / periodFrames / bufferBytes` 回写到 `cfg`。
-- `audioPbInit(audioConfig *cfg)` 也会回写播放侧实际参数。
-- `audioPlayback.c` 增加静音预填充，降低启动播放时 underrun 的概率。
-- `audioWav.c` 增加 WAV 读取校验：
-  - `fmt chunkSize >= 16`
-  - `fseek()` / `ftell()` 失败检查
-  - RIFF chunk 奇数字节 padding 处理
-  - `blockAlign` 校验
-  - `byteRate` 校验
-  - `dataSize % blockAlign` 校验
-- `host/app/main.c` 已经直接使用 `host/audio/` 实现 `record / audio / file` 模式。
-
-### 和成员 A 原命令的对应关系
-
-成员 A 原命令：
-
-```sh
-./audioTest record test.wav 5
-./audioTest play test.wav
-./audioTest pipe 5
-```
-
-当前主工程对应关系：
-
-| 成员 A 命令 | 当前主工程命令 | 是否经过 DSP |
-|---|---|---:|
-| `./audioTest record test.wav 5` | `./run.sh record test.wav 5` | 否 |
-| `./audioTest play test.wav` | `./run.sh file test.wav` | 是 |
-| `./audioTest pipe 5` | `./run.sh audio 5` | 是 |
-
-说明：
-
-- `audioTest play` 是纯 ALSA 播放，不经过 DSP。
-- `run.sh file test.wav` 会走完整链路：`WAV -> ARM -> DSP -> ARM -> Playback`。
-- 如果只想排查声卡，可以继续单独部署 `audioTest_arm`。
-- 主工程构建不需要复制 `ALSA/` 或 `ALSA-NEW/`，只使用 `host/audio/`。
+ALSA 模块来源、适配增强与旧命令对应关系已整合至 [ALSA 模块承接记录](docs/alsa-integration-history.md)。
 
 # 当前模块结构
 
 ```text
 ex04/
+  frontend_arm/             当前 ARM 板端 Qt GUI、Linux 进程控制及 IPC 验证
   host/
     app/main.c              ARM 侧主程序，解析 smoke/record/file/audio 和算法 mode
     syslink/syslinkDsp.*    ARM 侧 SysLink 封装，发送音频配置和 APP_ALGO_MODE_*
@@ -85,23 +26,106 @@ ex04/
   dsp/
     Server.c                DSP 侧 Notify/SharedRegion 服务，接收算法 mode 并调用 AudioAlgo
     AudioAlgo.c/.h          DSP 算法统一入口/适配层，保持旧 frame/config/stats 设计
-    dsp_algorithm.c/.h      算法同学提供的 S16_LE stereo helper：passthrough/swap/gain2
+    dsp_algorithm.c/.h      算法同学提供的 S16_LE stereo helper：passthrough/swap/gain2/gain3/gain5/speed2
+    dsp_spatial.c/.h        2048 点 FFT overlap-add 双耳卷积、跨块尾部和 710 组内嵌 HRIR
     main_dsp.c              DSP 入口
-    makefile                DSP server_dsp.xe674 构建脚本，已编入 dsp_algorithm.c
+    makefile                DSP server_dsp.xe674 构建脚本，已编入基础与空间算法
   shared/
     AppCommon.h             ARM/DSP 共用命令、payload 定义和 APP_ALGO_MODE_* 常量
     SystemCfg.h             Notify line/event 配置
     config.bld              DSP 平台内存配置
+  tests/spatial/            纯 C/Q15 空间卷积参考工程、自测和 MATLAB 对照脚本
   run.sh                    ARM rootfs 上运行脚本，负责启动/关闭 DSP image
   makefile                  顶层构建/安装脚本
   products.mak              TI/SysLink 工具链路径配置
 ```
 
+空间音效算法在 `tests/spatial/` 离线验证；DSP 侧实现位于
+`dsp/dsp_spatial.c`，由 `AudioAlgo_process()` 调用。测试文档给出了 HRIR
+顺序、分块连续性、MATLAB 定点对照、DSP 原地处理回归及板端试听步骤。
+
 # 主程序运行模式
 
+## HRIR 方位库与具名参数
+
+完整数据源位于 `assets/hrir/mit_kemar`：1420 个 HRIR WAV 配成 710 个方向，
+覆盖仰角 -40° 到 90°。11 个耳机/扬声器响应 WAV 不属于方向数据，不参与编译。
+系数按原始 PCM16 数值编入 DSP，合计 1,454,080 字节（约 1.39 MiB）；
+ARM 只编入方向目录。DSP 仅缓存当前一组或两组 HRIR 的 FFT 频谱。
+
+```sh
+# 查看编入的方向，无须加载 DSP
+./run.sh directions
+
+# 单声源：两个输入声道平均后定位到指定方向
+./run.sh file --input input.wav --output out.wav \
+  --algo spatial --elevation 60 --azimuth 250
+./run.sh audio --seconds 10 --algo spatial --elevation 0 --azimuth 90
+
+# 双声源：输入左声道为 A，右声道为 B，各以 0.5 权重混合
+./run.sh file --input sources.wav --output out.wav --algo dual \
+  --a-elevation 60 --a-azimuth 250 --b-elevation 40 --b-azimuth 45
+
+# 其他算法及录音同样支持具名参数
+./run.sh file --input input.wav --output out.wav --algo swap
+./run.sh record --output record.wav --seconds 5
+./run.sh smoke --algo passthrough
+
+# 仅校验命令，不加载 DSP、不打开音频设备
+./run.sh audio --seconds 10 --algo spatial --elevation -40 --azimuth 45 --check
+```
+
+仰角、方位角必须为整数，范围分别为 -90..90、0..359，且必须出现在
+`directions` 列表中；不存在时直接报错，不自动选择近邻、不插值。
+沿用 MIT 坐标约定：仰角 0° 为水平、90° 为头顶；方位角 0° 前方、90° 右侧、
+180° 后方、270° 左侧。`spatial` 必须提供一组角度，`dual` 必须提供 A/B 两组角度。
+文件输入仍需为 44.1 kHz、双声道 PCM16；时长默认 5 秒，0 表示持续运行，最大 2147 秒。
+
+旧位置参数、算法及数字别名继续可用；`spatial40`、`spatial60`、`dual4060`
+和旧语法中的 `dual` 保持原固定方向，`orbit` 保持原四秒镜像往返。
+新具名语法中的 `--algo dual` 使用用户指定的 A/B 方向。一次调用不能混用新旧语法。
+Qt 界面已改为仅生成新版具名参数，支持按方向库选择单声源与双声源角度；
+旧固定方向入口不再出现在界面中。新版界面默认演示环境，提供真实 WAV
+四轨对比及动态波形；板端模式复用现有进程控制，实时 PCM 通信保留接口。
+界面操作、构建与截图验收见 [ARM Qt 说明](frontend_arm/README.md)。
+
+### 更新 HRIR 数据
+
+将新的配对文件放入 `assets/hrir/mit_kemar` 的子目录，采用
+`L60e250a.wav` / `R60e250a.wav` 这类命名，负仰角如 `L-40e045a.wav`。
+生成器要求单声道、44.1 kHz、PCM16、512 点，保留自然采样顺序和幅值。
+缺耳、重复方向或格式错误会导致生成失败，保留已有生成文件。
+现有兼容命令需要的 `40e045`、`60e250` 必须保留。
+
+```sh
+make hrir
+make hrir-check
+# 可覆盖源目录；路径含空格时需要引号
+make hrir HRIR_SOURCE="assets/hrir/mit_kemar"
+
+make -C tests/spatial test test-catalog
+python3 tests/spatial/test_spatial_protocol.py
+python3 frontend_arm/tests/test_host_stop.py
+
+# 在已配置 TI/ARM 工具链的构建环境中
+make
+make install
+```
+
+生成文件已纳入源码，普通交叉编译无需运行 Python；再次生成和完整目录测试需要原始 WAV。
+**ARM 程序与 DSP 固件必须成套重新编译、部署**，不能只替换 WAV 或只部署一端。
+方位编码为 `360 * (elevation + 90) + azimuth`，不会因添加数据而改变。
+启动时经 SysLink 发送方位并确认后才选择算法；方向在一次运行内固定。
+新增配置失败会明确返回错误，旧固件不支持新命令时按现有通信超时退出。
+部署后先用 `directions` 和 `--check` 检查，再验证文件输出和耳机实时试听；
+完整 DSP 链接是否满足 16 MiB 程序区限制，以目标工具链的 map 文件为准。
+
 `host/app/main.c` 支持四种模式。除 `record` 外，都会经过 SysLink 启动
-`server_dsp.xe674` 并调用 DSP。`smoke`、`file`、`audio` 都可以追加算法
-mode：`passthrough`、`swap`、`gain2`；不传时默认 `passthrough`。
+`server_dsp.xe674` 并调用 DSP。`file` 支持
+`passthrough`、`swap`、`gain2`、`gain3`、`gain5`、`speed2`、
+`spatial40`、`spatial60`、`orbit`、`dual4060`；`audio` 除 `speed2` 外也支持上述模式，
+`smoke` 只支持非空间模式。
+不传时默认 `passthrough`。
 
 ### smoke
 
@@ -110,7 +134,7 @@ mode：`passthrough`、`swap`、`gain2`；不传时默认 `passthrough`。
 命令：
 
 ```sh
-./run.sh smoke [passthrough|swap|gain2]
+./run.sh smoke [passthrough|swap|gain2|gain3|gain5|speed2]
 ```
 
 The optional mode selects which DSP algorithm smoke should configure and verify.
@@ -138,7 +162,7 @@ main: DSP <mode> verified
 命令：
 
 ```sh
-./run.sh record test.wav 5
+./run.sh record 1.wav 3
 ```
 
 执行链路：
@@ -165,24 +189,31 @@ main: actual record cfg ...
 
 ### file
 
-用途：ARM 选择一个 WAV 文件，发送给 DSP 处理，再播放；可选保存 DSP 输出。
+用途：ARM 选择一个 WAV 文件并发送给 DSP 处理。未指定输出文件时实时
+播放；指定输出文件时离线保存，完成后再用 `aplay` 播放，避免较慢算法
+造成 ALSA underrun。
 
 命令：
 
 ```sh
-./run.sh file test.wav [passthrough|swap|gain2]
-./run.sh file test.wav out.wav [passthrough|swap|gain2]
+./run.sh file test.wav [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]
+./run.sh file test.wav out.wav [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]
 ```
 
 Mode argument is optional. Omit it for `passthrough`; use `swap` for stereo
-L/R swap, or `gain2` for saturated 2x S16_LE gain.
+L/R swap, `gain2`/`gain3`/`gain5` for saturated S16_LE gain, or `speed2`
+for fixed-size 2x-speed file/smoke demo. `spatial40` and `spatial60` select the
+two embedded 512-tap binaural HRIR pairs. `orbit` moves the `40e045` response
+to its left/right-ear-swapped mirror and back over a smooth four-second cycle.
+`dual4060` treats input left as independent source A at `60e250` and input
+right as independent source B at `40e045`, then mixes both binaural renders
+with 0.5 gain per source.
 
 执行链路：
 
 ```text
-WAV -> ARM -> DSP -> ARM -> ALSA Playback
-                  \
-                   -> 可选输出 out.wav
+无 out.wav：WAV -> ARM -> DSP -> ARM -> ALSA Playback
+有 out.wav：WAV -> ARM -> DSP -> ARM -> out.wav
 ```
 
 参数：
@@ -194,7 +225,7 @@ WAV -> ARM -> DSP -> ARM -> ALSA Playback
 
 注意：
 
-* `swap` and `gain2` currently require S16_LE stereo PCM. The DSP-side
+* `swap`, `gain2`, `gain3`, `gain5`, and `speed2` currently require S16_LE stereo PCM. The DSP-side
   `AudioAlgo_process()` rejects non-`channels == 2` or non-`bitDepth == 16`
   payloads for these modes, so ARM may accept the command line but processing
   can fail at runtime if ALSA/WAV negotiation uses another format.
@@ -204,16 +235,17 @@ WAV -> ARM -> DSP -> ARM -> ALSA Playback
   example `./run.sh file input.wav swap passthrough`.
 
 - 输入 WAV 必须和当前平台音频配置匹配。
-- 当前 DM8168 默认配置为 8000 Hz、2 声道、16 bit。
+- 当前 DM8168 默认配置为 44100 Hz、2 声道、16 bit、1024 帧 period。
 - WAV 读取会检查 `blockAlign / byteRate / dataSize`。
+- 离线生成后使用 `aplay -D default out.wav` 检查效果。
 
 典型输出：
 
 ```text
-main: wav cfg rate=8000 ch=2 bit=16 period=128 payload=512
-syslinkDspInit: audio cfg rate=8000 ch=2 bit=16
+main: wav cfg rate=44100 ch=2 bit=16 period=1024 payload=4096
+syslinkDspInit: audio cfg rate=44100 ch=2 bit=16
 main: file block: ...
-<-- main: file status=0, blocks=...
+<-- main: file status=0, blocks=..., frames=220500/220500
 ```
 
 ### audio
@@ -223,10 +255,11 @@ main: file block: ...
 命令：
 
 ```sh
-./run.sh audio 5 [passthrough|swap|gain2]
+./run.sh audio 5 [passthrough|swap|gain2|gain3|gain5|spatial40|spatial60|orbit|dual4060]
 ```
 
-Mode argument is optional and has the same meaning as in `file` mode.
+Mode argument is optional. `audio` also supports both spatial modes;
+`speed2` is intentionally limited to `smoke` and `file`.
 
 执行链路：
 
@@ -251,8 +284,8 @@ ALSA Capture -> ARM -> DSP -> ARM -> ALSA Playback
 典型输出：
 
 ```text
-main: actual capture cfg rate=8000 ch=2 bit=16 period=128 payload=512
-main: actual playback cfg rate=8000 ch=2 bit=16 period=128 payload=512
+main: actual capture cfg rate=44100 ch=2 bit=16 period=1024 payload=4096
+main: actual playback cfg rate=44100 ch=2 bit=16 period=1024 payload=4096
 main: starting blocking ALSA -> DSP -> ALSA pipeline
 main: audio block: ...
 <-- main: audio status=0, blocks=...
@@ -267,8 +300,8 @@ main: audio block: ...
 ```sh
 ./run.sh smoke
 ./run.sh record output.wav [seconds]
-./run.sh file input.wav [output.wav] [passthrough|swap|gain2]
-./run.sh audio [seconds] [passthrough|swap|gain2]
+./run.sh file input.wav [output.wav] [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]
+./run.sh audio [seconds] [passthrough|swap|gain2|gain3|gain5|spatial40|spatial60|orbit|dual4060]
 ```
 
 行为：
@@ -292,8 +325,8 @@ slaveloader shutdown DSP
 ./app_host DSP smoke
 ./app_host DSP audio 5
 ./app_host record output.wav 5
-./app_host DSP file input.wav [passthrough|swap|gain2]
-./app_host DSP file input.wav output.wav [passthrough|swap|gain2]
+./app_host DSP file input.wav [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]
+./app_host DSP file input.wav output.wav [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]
 ```
 
 一般不建议手动直接调 `app_host DSP ...`，因为还需要自己先启动 DSP image。使用 `run.sh` 更稳。
@@ -354,6 +387,13 @@ typedef struct {
 | `APP_ALGO_MODE_PASSTHROUGH` | keep PCM unchanged |
 | `APP_ALGO_MODE_SWAP_STEREO` | swap interleaved stereo L/R samples |
 | `APP_ALGO_MODE_GAIN_X2` | saturated 2x S16_LE gain |
+| `APP_ALGO_MODE_SPEED2` | fixed-size 2x-speed file/smoke demo |
+| `APP_ALGO_MODE_GAIN_X3` | saturated 3x S16_LE gain |
+| `APP_ALGO_MODE_GAIN_X5` | saturated 5x S16_LE gain |
+| `APP_ALGO_MODE_SPATIAL_40E045` | 512-tap binaural FIR using the 40e045 pair |
+| `APP_ALGO_MODE_SPATIAL_60E250` | 512-tap binaural FIR using the 60e250 pair |
+| `APP_ALGO_MODE_ORBIT` | four-second smooth motion between 40e045 and its ear-swapped mirror |
+| `APP_ALGO_MODE_DUAL_60_40` | input L at 60e250 plus independent input R at 40e045 |
 
 ### ALSA/WAV C API
 
@@ -525,34 +565,28 @@ typedef struct {
 - 统计 DSP 已处理 block/frame/sample 数量。
 - 调试算法是否被调用、是否处理失败。
 
-### 算法同学主要需要改哪里
+### DSP 算法入口
 
-当前 `AudioAlgo_process()` 是 passthrough：
-
-Current implementation:
+当前实现：
 
 ```text
 AudioAlgo_process()
   validates AudioAlgoFrame
   copies inputData to outputData when they are separate
   applies ctx->params.mode for S16_LE stereo modes
-  calls dsp_process_audio() for swap/gain2 helper logic
+  calls dsp_process_audio() for swap/gain/speed helper logic
+  calls dsp_spatial_process_inplace() for spatial40/spatial60
+  calls dsp_spatial_process_orbit_inplace() for orbit
+  calls dsp_spatial_process_dual_inplace() for dual4060
 ```
 
-后续算法同学主要替换这里：
-
-```c
-Int AudioAlgo_process(AudioAlgoContext *ctx, AudioAlgoFrame *frame)
-{
-    /* 在这里实现真实算法 */
-}
-```
-
-建议：
+约束：
 
 - 保留函数签名不变。
 - 先检查 `frame->channels / bitDepth / sampleRate`。
-- 当前 S16_LE 算法可以直接使用 `inputPcm/outputPcm`。
+- 空间模式要求 44100 Hz、双声道、S16_LE；`spatial40`、`spatial60`、
+  `orbit` 先下混成单声道，`dual4060` 保留左右输入作为两个独立声源。
+- `DspSpatialState` 必须跨 block 保留，配置或模式变化时才清零。
 - 如果算法支持更多格式，使用 `inputData/outputData`。
 - 出错返回 `-1`，DSP Server 会通知 ARM `APP_CMD_OP_FAILED`。
 
@@ -588,7 +622,7 @@ shared/AppCommon.h
 
 - Notify payload 当前只携带 16 bit 数据字段。
 - `APP_MAX_PAYLOAD_SIZE = 65535`。
-- 当前 sampleRate 限制为 `<= 65535`，8000/44100 没问题。
+- 当前 sampleRate 限制为 `<= 65535`，空间链路使用 44100 Hz。
 - 若后续要支持 96000/192000，建议改为共享配置结构体或 RATE 高低 16 位拆包。
 
 # 构建与部署指南
@@ -732,7 +766,15 @@ chmod +x run.sh app_host slaveloader
 ./run.sh smoke
 ./run.sh record test.wav 5
 ./run.sh file test.wav out.wav
+./run.sh file test.wav spatial40.wav spatial40
+./run.sh file test.wav spatial60.wav spatial60
+./run.sh file test.wav orbit.wav orbit
+./run.sh file dual_footsteps.wav dual4060.wav dual4060
 ./run.sh audio 5
+./run.sh audio 10 spatial40
+./run.sh audio 10 spatial60
+./run.sh audio 10 orbit
+./run.sh audio 10 dual4060
 ```
 
 ### 可选：部署成员 A 的 audioTest_arm

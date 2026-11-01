@@ -1,0 +1,65 @@
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+/.codex_doc_extract/
+
+# Build trees (keep source Makefile/makefile and required TI libraries)
+/build/
+/build-*/
+/host/bin/
+/dsp/bin/
+/dsp/configuro/
+/install/
+/frontend_arm/build*/
+/frontend_arm/bin/
+/frontend_arm/Makefile
+/frontend_arm/app/Makefile
+/frontend_arm/ipc_peer/Makefile
+/frontend_arm/tests/Makefile
+/frontend_arm/**/moc_*.cpp
+/frontend_arm/**/qrc_*.cpp
+/frontend_arm/**/ui_*.h
+*.o
+*.obj
+*.ov5T
+*.oe674
+*.dep
+*.user
+.qmake.stash
+
+# Standalone test executables and generated audio
+/tests/audio/audioTest
+/tests/audio/audioTest_arm
+/tests/audio/audioTest.exe
+/tests/spatial/spatial_q15
+/tests/spatial/spatial_q15.exe
+/tests/spatial/dsp_spatial_selftest
+/tests/spatial/dsp_spatial_selftest.exe
+/tests/spatial/rendered_*.wav
+/tests/spatial/input_pcm16_44100.wav
+/tests/spatial/matlab_q15_*.wav
+/tests/spatial/build-verification/
+/docs/evidence/**/*.exe
+
+# Local transfer packages and their checksums; keep viewer configs and docs
+/delivery/*.tar.gz
+/delivery/*.tar.gz.sha256
+/delivery/*.tar.gz.md5
+
+# Local presentation binaries and reproducible rendering caches
+/report/template.pptx
+/report/output/*.pptx
+/report/archive/*.pptx
+/report/workflow/**/*.pptx
+/report/workflow/**/*.ndjson
+/report/workflow/**/previews/
+/report/workflow/**/*-previews/
+/report/workflow/template/slides/
+/report/workflow/**/contact*.jpg
+/report/workflow/qa/*-contact.jpg

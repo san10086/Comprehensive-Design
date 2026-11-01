@@ -1,0 +1,114 @@
+root@dm816x-evm:~# mkdir -p /home/root/qt-vnc-probe
+t/qt-vnc-probe || exit 1
+
+wget -O qt_syslink_probe \
+    http://192.168.1.41:8000/qt_syslink_probe || exit 1
+chmodroot@dm816x-evm:~# cd /home/root/qt-vnc-probe || exit 1
+root@dm816x-evm:~/qt-vnc-probe#
+root@dm816x-evm:~/qt-vnc-probe# wget -O qt_syslink_probe \
+>     http://192.168.1.41:8000/qt_syslink_probe || exit 1
+Connecting to 192.168.1.41:8000 (192.168.1.41:8000)
+qt_syslink_probe     100% |*******************************| 24807  --:--:-- ETA
+root@dm816x-evm:~/qt-vnc-probe# chmod 755 qt_syslink_probe
+root@dm816x-evm:~/qt-vnc-probe#
+root@dm816x-evm:~/qt-vnc-probe# ls -l /lib/ld-linux.so.3
+lrwxrwxrwx    1 1000     root           10 Nov 19  2021 /lib/ld-linux.so.3 -> ld-2.18.so
+root@dm816x-evm:~/qt-vnc-probe# QT5_DIR=/home/qt_arm/qt5.9.7_install
+root@dm816x-evm:~/qt-vnc-probe#
+root@dm816x-evm:~/qt-vnc-probe# LD_LIBRARY_PATH="$QT5_DIR/lib" \
+> QT_PLUGIN_PATH="$QT5_DIR/plugins" \
+> QT_QPA_PLATFORM_PLUGIN_PATH="$QT5_DIR/plugins/platforms" \
+> QT_DEBUG_PLUGINS=1 \
+> ./qt_syslink_probe -platform 'vnc:size=640x480:port=5900' \
+>     > /tmp/ex04-qt5-vnc-probe.log 2>&1 &
+root@dm816x-evm:~/qt-vnc-probe#
+root@dm816x-evm:~/qt-vnc-probe# VNC_PROBE_PID=$!
+root@dm816x-evm:~/qt-vnc-probe#
+root@dm816x-evm:~/qt-vnc-probe# sleep 2
+
+root@dm816x-evm:~/qt-vnc-probe# tail -n 80 /tmp/ex04-qt5-vnc-probe.log
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/home/qt_arm/qt5.9.7_install/plugins/platforms/libqlinuxfb.so"
+Found metadata in lib /home/qt_arm/qt5.9.7_install/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 329991
+}
+
+
+Got keys from plugin meta data ("linuxfb")
+QFactoryLoader::QFactoryLoader() looking at "/home/qt_arm/qt5.9.7_install/plugins/platforms/libqminimal.so"
+Found metadata in lib /home/qt_arm/qt5.9.7_install/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 329991
+}
+
+
+Got keys from plugin meta data ("minimal")
+QFactoryLoader::QFactoryLoader() looking at "/home/qt_arm/qt5.9.7_install/plugins/platforms/libqoffscreen.so"
+Found metadata in lib /home/qt_arm/qt5.9.7_install/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 329991
+}
+
+
+Got keys from plugin meta data ("offscreen")
+QFactoryLoader::QFactoryLoader() looking at "/home/qt_arm/qt5.9.7_install/plugins/platforms/libqvnc.so"
+Found metadata in lib /home/qt_arm/qt5.9.7_install/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 329991
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/root/qt-vnc-probe" ...
+QFactoryLoader::QFactoryLoader() looking at "/home/root/qt-vnc-probe/qt_syslink_probe"
+"Failed to extract plugin meta data from '/home/root/qt-vnc-probe/qt_syslink_probe'"
+         not a plugin
+loaded library "/home/qt_arm/qt5.9.7_install/plugins/platforms/libqvnc.so"
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins/platforms/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/root/qt-vnc-probe/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins/platforms/accessiblebridge" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/qt_arm/qt5.9.7_install/plugins/accessiblebridge" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/home/root/qt-vnc-probe/accessiblebridge" ...
+QVncServer created on port 5900
+QT_HEARTBEAT time=16:38:26.770 ticks=10 clicks=0
+root@dm816x-evm:~/qt-vnc-probe# netstat -lnt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 ::%72816:5900           ::%726648:*             LISTEN
+tcp        0      0 ::%72816:8080           ::%726856:*             LISTEN
+tcp        0      0 ::%72816:23             ::%727064:*             LISTEN

@@ -7,15 +7,22 @@ fi
 
 MODE=$1
 
-if [ "$MODE" = "file" ] && [ $# -lt 2 ]; then
-    echo "Usage: $0 file input.wav [output.wav] [passthrough|swap|gain2]"
-    exit 1
-fi
+case "$MODE" in
+    directions|--help|-h) exec ./app_host "$@" ;;
+esac
+for ARG in "$@"; do
+    if [ "$ARG" = "--check" ]; then
+        exec ./app_host "$@"
+    fi
+done
 
-if [ "$MODE" = "record" ] && [ $# -lt 2 ]; then
-    echo "Usage: $0 record output.wav [seconds]"
-    exit 1
-fi
+case "$MODE" in
+    smoke|audio|record|file) ;;
+    *) echo "Unknown mode: $MODE; use ./run.sh --help"; exit 1 ;;
+esac
+
+# Reject malformed commands before loading firmware or opening audio devices.
+./app_host --check "$@" || exit $?
 
 if [ "$MODE" = "record" ]; then
     ./app_host "$@"

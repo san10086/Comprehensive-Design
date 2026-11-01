@@ -1,0 +1,194 @@
+[
+  {
+    "before": "makefile",
+    "after": "makefile",
+    "before_sha256": "1534b5a6f7dd93b14f40e640ca8f6060823c2030d601b9340e11d497825f7e62",
+    "after_sha256": "1e912e808cc9c13da4fccd55213ff3bc9017c6ddfdcfbb224c4864ebdf7f4c18"
+  },
+  {
+    "before": "README.md",
+    "after": "README.md",
+    "before_sha256": "b50b1511cd15263963343e263e3deb615a25f5f511d236bbe48d01f7e1b0e1c5",
+    "after_sha256": "e6cd4e55917f2c40143614a85a55fa6a0cb4a15eaab59bdf92c6d223dd9bafd4"
+  },
+  {
+    "before": "assets/hrir/original/spatial_test.m",
+    "after": "assets/hrir/original/spatial_test.m",
+    "before_sha256": "9ba05eadea24061a27e467e35203d71fac8749f0e52e3f8896f4f3096b264c4b",
+    "after_sha256": "4b012630eccb1fe607a4af474a436e6f9b4f4925ca7c298998e35bbf374b81f2"
+  },
+  {
+    "before": "docs/arm-qt-environment-setup-report.md",
+    "after": "docs/arm-qt-environment-setup-report.md",
+    "before_sha256": "87e60444a7c4d259d032213e280abb50b4647c939ae86e454412b349a770cb43",
+    "after_sha256": "3bbe63e909b5ea81f95ddbb703d79b2d41372c5acb1fd78eb3a09ea36f05050a"
+  },
+  {
+    "before": "docs/arm-qt-headless-validation.md",
+    "after": "docs/arm-qt-headless-validation.md",
+    "before_sha256": "e4b5c6c45c2d5a939a632376327948b265eb4162bf5ea0125ac0afb046fec118",
+    "after_sha256": "abcf9ba2a0e22f65c0f7a33564dcb23fbac2b0e75351f83b856d259070d539ce"
+  },
+  {
+    "before": "docs/qt-syslink-coexistence-test.md",
+    "after": "docs/qt-syslink-coexistence-test.md",
+    "before_sha256": "810ee9afa8ee001b8cb0bda8e7e14e844e485b65c13dea1d01683966512db01e",
+    "after_sha256": "b754dcf9b1e450ae779a1221256f9fa93fc249bb8bab5dd14d8b75cb0f92a85f"
+  },
+  {
+    "before": "docs/空间处理与Qt更新编译打包说明书_XFTP.md",
+    "after": "docs/空间处理与Qt更新编译打包说明书_XFTP.md",
+    "before_sha256": "ae1885559942fe2e4f2be7673e02621d9a0380e5cf422cef843fc23a2779a366",
+    "after_sha256": "2f442d32c12e88580eff1b25118975b07b1b73b5dc0d45ed1dfdb694d3f4e1c2"
+  },
+  {
+    "before": "docs/evidence/spatial-kemar-update-2026-11-01/README.md",
+    "after": "docs/evidence/spatial-kemar-update-2026-11-01/README.md",
+    "before_sha256": "09c18a4724c0f0a7b834839f0cb22c3716a1ba4c766848dc8da831833a0f5142",
+    "after_sha256": "6da264986507d1fcdd038f11a99a541713ab3bab354e80867f93c476454f62f6"
+  },
+  {
+    "before": "docs/evidence/spatial-midterm-2026-11-01/README.md",
+    "after": "docs/evidence/spatial-midterm-2026-11-01/README.md",
+    "before_sha256": "c412cd9dc2659f894e047eae5a691078ff9233a07bb606be30d9217fa34d07ac",
+    "after_sha256": "750837bcc9b77a561d6459ca909151b1c2351bf46068c8d3a1ce7cf8df880677"
+  },
+  {
+    "before": "docs/evidence/spatial-midterm-2026-11-01/verify.py",
+    "after": "docs/evidence/spatial-midterm-2026-11-01/verify.py",
+    "before_sha256": "94b3a05b9b40620b0b5f0c344fd3f90e28ddec6baea7298b19a845cfac8d0743",
+    "after_sha256": "0a03b60c9b13ea7e0884f4e28935ed7381b8e19bac27b0354835972e6ca60920"
+  },
+  {
+    "before": "frontend_arm/README.md",
+    "after": "frontend_arm/README.md",
+    "before_sha256": "441caacd928e11e49a28d7e7f058f2edea4ed4ea9e22ecabff5c314c1c592b0d",
+    "after_sha256": "b708e13e68faed5a98452ba9629a9edc632aba392363f4b15a2eb27675ee2f98"
+  },
+  {
+    "before": "frontend_arm/VALIDATION.md",
+    "after": "frontend_arm/VALIDATION.md",
+    "before_sha256": "9ee6ede1aefe4d51d48b783e24563ff167170aed0c609046da7e25fccca80294",
+    "after_sha256": "9e6289bd88e6e73ebdd33ce2e29ee9401c94bbd2a8ab86713a881a4bb4433887"
+  },
+  {
+    "before": "frontend_arm/build-desktop/build.log",
+    "after": "frontend_arm/build-desktop/build.log",
+    "before_sha256": "cf6a17b2802363a7ef8d76aa4d0de4497252adb74cbb55c55539917b3837faab",
+    "after_sha256": "d29e48d10487963b19ed6b86fcfbfa40b1fbf56f04f8efc2b672f36c8a4691f4"
+  },
+  {
+    "before": "frontend_arm/build-desktop/core-tests/build.log",
+    "after": "frontend_arm/build-desktop/core-tests/build.log",
+    "before_sha256": "cc9c09bbe60cb3dc1c8154d3719a4e90f8d668e4525d2e0c15bc97f9bdb9ec85",
+    "after_sha256": "574a4acf2cfac76fc34d268f1ca1705477e7d703a191c1242ec84fb719e5c722"
+  },
+  {
+    "before": "frontend_arm/build-desktop/core-tests/results.txt",
+    "after": "frontend_arm/build-desktop/core-tests/results.txt",
+    "before_sha256": "876a26d5ecd810c9157ee5a4853c9241efeaabbc4d9604eb164e9e0b195b6bc9",
+    "after_sha256": "581992dbfb8bf5f0f2468a42929c64583f420116e4193dfe02c13d334bd0e44b"
+  },
+  {
+    "before": "frontend_arm/build-desktop/ui-tests/build.log",
+    "after": "frontend_arm/build-desktop/ui-tests/build.log",
+    "before_sha256": "a6b057351863a2371d086a2f0398d5c9a7681477e400d371962171495b56edb1",
+    "after_sha256": "574a4acf2cfac76fc34d268f1ca1705477e7d703a191c1242ec84fb719e5c722"
+  },
+  {
+    "before": "frontend_arm/build-desktop/ui-tests/results.txt",
+    "after": "frontend_arm/build-desktop/ui-tests/results.txt",
+    "before_sha256": "fa3fabd0ee53782f8f38cd8e9fcbea69f1c0bc2a0c72292514172c2d4d1733a1",
+    "after_sha256": "8c2658ecac2ca18e3287a50a96ae83bb19cd57a59f029d80a41402ff038263ed"
+  },
+  {
+    "before": "report/.build/build_deck.mjs",
+    "after": "report/workflow/build_deck.mjs",
+    "before_sha256": "1fe950e346c1b6f335a26a73d429159f8fef4a5864ad7850be47853a9532d802",
+    "after_sha256": "8480073e4ec8f06c7b26d6494287480461c04da6e76d0d97771bf8611fa80c8d"
+  },
+  {
+    "before": "report/.build/finalize_deck.mjs",
+    "after": "report/workflow/finalize_deck.mjs",
+    "before_sha256": "9c0f5e8c4383bed14365937c70e38bcea24e747b0460e09ecdbef9466cf1546f",
+    "after_sha256": "14650d3f23f978ed2f15202f117672a29a4322ada3ad3f6994249ce19bd78c82"
+  },
+  {
+    "before": "report/.build/inspect_template.mjs",
+    "after": "report/workflow/inspect_template.mjs",
+    "before_sha256": "25049d0f446873ee78dce43dea86ca441046b03a6793757c12a45eec34fb7526",
+    "after_sha256": "64ff058fd7a4945e5b15da06f936400485d6f3c24bfc7a36b68a33ebfe375430"
+  },
+  {
+    "before": "report/.build/match_template_titles.py",
+    "after": "report/workflow/match_template_titles.py",
+    "before_sha256": "d12ded67c09cebb3b0ff557ab26bd97bf41e1696bb9e67094fae36bd8b5cb90b",
+    "after_sha256": "19b8685805df09245fccabe76ed3afb76a82095dc5fb70c0a3d89774ffe49130"
+  },
+  {
+    "before": "report/.build/merge_notes_only.py",
+    "after": "report/workflow/merge_notes_only.py",
+    "before_sha256": "cc346526b27b01643e75060ac37a79ff261d532b5942fdbbad420914d584afb3",
+    "after_sha256": "032d1b948bee4ed68f2b74f70497d228d0af9d63de7b221217cfa6a0a61b8f0b"
+  },
+  {
+    "before": "report/.build/render_candidate.mjs",
+    "after": "report/workflow/render_candidate.mjs",
+    "before_sha256": "f15e7ad34de9e8fc241c10fcccbd6421119e051b52ea44a8cfee92890f5ebd5c",
+    "after_sha256": "080dfd9e0c593300bf92671109582363a338bfa18e845ef349cb0e03a67343cb"
+  },
+  {
+    "before": "report/.build/rewrite_notes.mjs",
+    "after": "report/workflow/rewrite_notes.mjs",
+    "before_sha256": "5766144858e7b8ec5ef0984021987a69efe843bc47aeba4360b97da7523e9df6",
+    "after_sha256": "695a9bee2053faa4bf0fc2603372cbc0c7b7cf338d25d3493e21547e9708d18e"
+  },
+  {
+    "before": "report/.build/full/build_append.mjs",
+    "after": "report/workflow/full/build_append.mjs",
+    "before_sha256": "0dc35f3f8dc6ebf1ca916151ff9ee0901a78cef2dd636f8fcbd943468cefb092",
+    "after_sha256": "7971bf54284d959bef44567de46a851fe810e55a45c2bfdf3fa8fa611789c026"
+  },
+  {
+    "before": "report/.build/full/finalize_full.mjs",
+    "after": "report/workflow/full/finalize_full.mjs",
+    "before_sha256": "95e594802b471ad8b9c8562374534ad54ca96d74bbf6beb0c6adf7cee1554f4a",
+    "after_sha256": "cb88f6f2c6b59474a1df45d85254a9db63041a1c200cfd79e81f85cb43519404"
+  },
+  {
+    "before": "report/.build/full/merge_deck.py",
+    "after": "report/workflow/full/merge_deck.py",
+    "before_sha256": "75b4331caf6d5dc0bd5c3e46525cf794d1851e06b008dcc2c02ae9bba691ea4c",
+    "after_sha256": "14b3357183f4edea50908c8ac9cf72033f8f0216b6516f2a44d3760c2aa6ad47"
+  },
+  {
+    "before": "report/.build/full/render_full.mjs",
+    "after": "report/workflow/full/render_full.mjs",
+    "before_sha256": "ee7bcc9a39c3433e9da12de8d9eb238adee9daf5adf4dbea1abbaa0d4379d1ad",
+    "after_sha256": "c3be3bab47534fb328198ec7e255c5bb412075888a4ef5ce7528e06213fd6f0f"
+  },
+  {
+    "before": "report/.build/notes-revision/render_validate.mjs",
+    "after": "report/workflow/notes-revision/render_validate.mjs",
+    "before_sha256": "d28c58b762615ba777b7c4147737ffa534e96db6763486d376ce29bd674e3bcf",
+    "after_sha256": "8295cec324c51e9f05208297f2ccf3d33102bc10ceebaae0c44201181fb04d55"
+  },
+  {
+    "before": "tests/spatial/Makefile",
+    "after": "tests/spatial/Makefile",
+    "before_sha256": "897e206ef80b6235388370c61b65cd41d59593da001be7c0ad0b4e8e1391b06b",
+    "after_sha256": "facadbe68c1e32ee204e3a772cac288bc2d18c7451e406b5a7f5d3e4984b0f70"
+  },
+  {
+    "before": "tests/spatial/README.md",
+    "after": "tests/spatial/README.md",
+    "before_sha256": "9fead13111ba24d5bd798a3df28455dad7b70d421bb23e5f0f22665b56998082",
+    "after_sha256": "1e97c1fbbe3991a60164b41270299cb523758bbcef13b456e5e020ddcdb0ea1d"
+  },
+  {
+    "before": "tools/generate_hrir.py",
+    "after": "tools/generate_hrir.py",
+    "before_sha256": "65d3a605aa7bf2c026ec14106ac5bc714a9822005b2248c9a7b616e764dbfa37",
+    "after_sha256": "515d4d7bacc2fdfc7a2cf471c078ac682920f543441f3b8a169108e78058375f"
+  }
+]

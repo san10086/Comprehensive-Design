@@ -1,0 +1,5 @@
+make: Entering directory '/mnt/d/develop/vscode/projects/ex04/tests/spatial'
+rm -f spatial_q15 spatial_q15.exe dsp_spatial_selftest dsp_spatial_selftest.exe \
+	rendered_*.wav input_pcm16_44100.wav \
+	matlab_q15_*.wav
+make: Leaving directory '/mnt/d/develop/vscode/projects/ex04/tests/spatial'

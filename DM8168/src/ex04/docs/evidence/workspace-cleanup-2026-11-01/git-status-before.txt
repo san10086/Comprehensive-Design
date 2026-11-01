@@ -1,0 +1,62 @@
+ M README.md
+ M docs/arm-qt-environment-setup-report.md
+ M docs/中期汇报_空间音效处理算法研究与实现.md
+ M dsp/AudioAlgo.c
+ M dsp/AudioAlgo.h
+ M dsp/Server.c
+ M dsp/dsp_spatial.c
+ M dsp/dsp_spatial.h
+ M dsp/dsp_spatial_coefficients.inc
+ M dsp/makefile
+ M frontend_arm/README.md
+ M frontend_arm/VALIDATION.md
+ M frontend_arm/app/MainWindow.cpp
+ M frontend_arm/app/MainWindow.h
+ M frontend_arm/app/PipelineRunner.cpp
+ M frontend_arm/app/PipelineRunner.h
+ M frontend_arm/app/RunRequest.cpp
+ M frontend_arm/app/RunRequest.h
+ M frontend_arm/app/app.pro
+ M frontend_arm/app/main.cpp
+ M frontend_arm/tests/test_frontend.cpp
+ M frontend_arm/tests/test_host_stop.py
+ M host/app/main.c
+ M host/makefile
+ M host/syslink/syslinkDsp.c
+ M host/syslink/syslinkDsp.h
+ M makefile
+ M run.sh
+ M shared/AppCommon.h
+ M tests/spatial/Makefile
+ M tests/spatial/README.md
+ M tests/spatial/dsp_spatial_selftest.c
+?? delivery/
+?? docs/arm-qt-headless-validation.md
+?? docs/evidence/arm-build-2026-11-01/
+?? docs/evidence/frontend-ui-2026-11-01/
+?? docs/evidence/qt-vnc-probe-2026-11-01/
+?? docs/evidence/spatial-kemar-update-2026-11-01/
+?? docs/evidence/workspace-cleanup-2026-11-01/
+?? docs/qt5-vnc-probe-runbook.md
+?? docs/中期汇报_第二章与第三章_Qt开发与后续工作.md
+?? docs/空间处理与Qt更新编译打包说明书_XFTP.md
+?? frontend_arm/app/AudioBackend.cpp
+?? frontend_arm/app/AudioBackend.h
+?? frontend_arm/app/DirectionPicker.cpp
+?? frontend_arm/app/DirectionPicker.h
+?? frontend_arm/app/WavReader.cpp
+?? frontend_arm/app/WavReader.h
+?? frontend_arm/app/WaveformWidget.cpp
+?? frontend_arm/app/WaveformWidget.h
+?? frontend_arm/app/chevron-down.xpm
+?? frontend_arm/app/chevron-up.xpm
+?? frontend_arm/app/resources.qrc
+?? frontend_arm/app/theme.qss
+?? frontend_arm/tests/test_ui.cpp
+?? frontend_arm/tests/ui.pro
+?? report/
+?? shared/hrir_catalog.h
+?? "temp/MIT KERMER/"
+?? tests/spatial/test_hrir_generator.py
+?? tests/spatial/test_spatial_protocol.py
+?? tools/

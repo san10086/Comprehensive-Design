@@ -1,0 +1,17 @@
+[artifact-tool] embedded_font_import_budget_exceeded: The presentation exceeds the 67108864-byte embedded font input budget.
+[artifact-tool] embedded_font_name_mismatch: EOT family "思源黑体 1" does not match decoded SFNT name "Source Han Sans SC".
+[artifact-tool] embedded_font_name_mismatch: EOT subfamily "Regular" does not match decoded SFNT name "Heavy".
+[artifact-tool] embedded_font_face_mismatch: Decoded font reports weight 900 and italic=false, which does not match the authored regular face (expected weight 300-500 and italic=false).
+[artifact-tool] embedded_font_name_mismatch: EOT family "思源黑体-超粗体" does not match decoded SFNT name "Source Han Sans SC".
+[artifact-tool] embedded_font_face_mismatch: Decoded font reports weight 700 and italic=false, which does not match the authored regular face (expected weight 300-500 and italic=false).
+rendered draft 1
+rendered draft 2
+rendered draft 3
+rendered draft 4
+rendered draft 5
+rendered draft 6
+rendered draft 7
+rendered draft 8
+rendered draft 9
+Inspect result written to file: D:/develop/vscode/projects/ex04/report/.build/draft.pptx.inspect.ndjson
+DRAFT_CREATED D:/develop/vscode/projects/ex04/report/.build/draft.pptx

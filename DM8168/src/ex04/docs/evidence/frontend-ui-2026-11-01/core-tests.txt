@@ -1,0 +1,19 @@
+********* Start testing of FrontendTest *********
+Config: Using QtTest library 5.15.3, Qt 5.15.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 11.3.0), ubuntu 22.04
+PASS   : FrontendTest::initTestCase()
+PASS   : FrontendTest::modeRestrictions()
+PASS   : FrontendTest::lifecycleAndArguments()
+PASS   : FrontendTest::recordSkipsLoader()
+PASS   : FrontendTest::loaderFailure()
+PASS   : FrontendTest::hostFailureStillUnloads()
+PASS   : FrontendTest::shutdownFailureIsFailure()
+PASS   : FrontendTest::hostCannotExecStillUnloads()
+PASS   : FrontendTest::stopDuringStartup()
+PASS   : FrontendTest::cooperativeStop()
+PASS   : FrontendTest::separateWindowLock()
+PASS   : FrontendTest::ipcRoundTrip(semaphores)
+PASS   : FrontendTest::ipcRoundTrip(shared-memory)
+PASS   : FrontendTest::ipcStopAndCrash()
+PASS   : FrontendTest::cleanupTestCase()
+Totals: 15 passed, 0 failed, 0 skipped, 0 blacklisted, 5472ms
+********* Finished testing of FrontendTest *********

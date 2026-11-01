@@ -45,9 +45,9 @@ help:
 	@$(ECHO) "make                  # build host executable"
 	@$(ECHO) "make clean            # clean generated files"
 	@$(ECHO) "app_host DSP smoke    # SysLink smoke test"
-	@$(ECHO) "app_host DSP audio 5 [passthrough|swap|gain2]  # blocking ALSA -> DSP -> playback"
+	@$(ECHO) "app_host DSP audio 5 [output.wav] [passthrough|swap|gain2|gain3|gain5|spatial40|spatial60|orbit|dual4060]  # threaded ALSA -> DSP -> playback, optionally save DSP output"
 	@$(ECHO) "app_host DSP record output.wav 5  # ALSA capture -> WAV"
-	@$(ECHO) "app_host DSP file input.wav [output.wav] [passthrough|swap|gain2]  # WAV file -> DSP -> playback"
+	@$(ECHO) "app_host DSP file input.wav [output.wav] [passthrough|swap|gain2|gain3|gain5|speed2|spatial40|spatial60|orbit|dual4060]  # WAV file -> DSP -> playback"
 
 install:
 	@$(ECHO) "#"
@@ -67,7 +67,7 @@ bin/$(PROFILE)/app_host: $(objs) $(libs)
 	@$(ECHO) "# Making $@ ..."
 	$(LD) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
-bin/$(PROFILE)/obj/main.ov5T: app/main.c ../shared/AppCommon.h \
+bin/$(PROFILE)/obj/main.ov5T: app/main.c ../shared/AppCommon.h ../shared/hrir_catalog.h \
         syslink/syslinkDsp.h $(AUDIO_DIR)/audioConfig.h \
         $(AUDIO_DIR)/audioCapture.h $(AUDIO_DIR)/audioPlayback.h \
         $(AUDIO_DIR)/audioWav.h
@@ -76,7 +76,7 @@ bin/$(PROFILE)/obj/main.ov5T: app/main.c ../shared/AppCommon.h \
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $<
 
 bin/$(PROFILE)/obj/syslinkDsp.ov5T: syslink/syslinkDsp.c syslink/syslinkDsp.h \
-        ../shared/AppCommon.h ../shared/SystemCfg.h
+        ../shared/AppCommon.h ../shared/hrir_catalog.h ../shared/SystemCfg.h
 	@$(ECHO) "#"
 	@$(ECHO) "# Making $@ ..."
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $<

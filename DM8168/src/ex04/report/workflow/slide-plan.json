@@ -1,0 +1,47 @@
+[
+  {
+    "slide": 1,
+    "sourceTemplateSlide": 1,
+    "notes": "本次中期汇报围绕空间音效处理系统展开，整体分为算法、Qt 图形交互开发和不足与后续工作三章。本文件先完成第一章，介绍空间音效处理算法的研究过程、实现与验证。\n\n资料依据：\n"
+  },
+  {
+    "slide": 2,
+    "sourceTemplateSlide": 2,
+    "notes": "汇报分为三章。第一章介绍空间音效处理算法的研究与实现。第二章为基于 Qt 的 GUI 图形交互应用开发上手，第三章为不足与后续工作。下面进入第一章。\n\n资料依据：\n"
+  },
+  {
+    "slide": 3,
+    "sourceTemplateSlide": 3,
+    "notes": "第一章分三部分介绍。先说明从 MATLAB 原型到 C 参考和 DSP 分块实现的开发过程，再介绍 MIT KEMAR 系数库导入和方向参数的接通，最后展示功能命令与验证结果。\n\n资料依据：\n"
+  },
+  {
+    "slide": 4,
+    "sourceTemplateSlide": 11,
+    "notes": "研究工作先围绕双耳卷积建立 MATLAB 原型，再用纯 C 定点版本明确数值规则，最后以 FFT 分块实现接入 DSP。原有工程只使用两组固定响应，本阶段进一步导入 MIT KEMAR 方位库，让方向选择通过参数进入算法，并扩展双声源的独立方向配置。这里按实现用途组织开发阶段；Q15 基准与 FFT 模块在同一空间算法提交中加入。\n\n资料依据：\nD:/develop/vscode/projects/ex04/assets/hrir/original/spatial_test.m\nD:/develop/vscode/projects/ex04/tests/spatial/spatial_fir.c\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c\nD:/develop/vscode/projects/ex04/tools/generate_hrir.py"
+  },
+  {
+    "slide": 5,
+    "sourceTemplateSlide": 13,
+    "notes": "本地目录 temp/MIT KERMER 中有 1420 个方向 HRIR WAV，配成 710 组双耳响应。生成器检查采样率、声道、PCM16 和 512 点长度，同时检查缺耳、重复与非法角度，保留原始系数幅度和顺序。ARM 只保留方向目录，DSP 保存原始系数并缓存当前方向的频谱。仰角和方位角经 ARM 校验、SysLink 方向确认后进入算法。当前精确匹配已存在的离散点，不做近邻或插值。\n\n参数预检查命令：\n./run.sh audio --seconds 10 --algo spatial --elevation -40 --azimuth 45 --check\n该命令不加载 DSP。当前新角度通过 CLI 配置，Qt 仍使用兼容模式。\n\n资料依据：\nD:/develop/vscode/projects/ex04/tools/generate_hrir.py\nD:/develop/vscode/projects/ex04/shared/hrir_catalog.h\nD:/develop/vscode/projects/ex04/host/syslink/syslinkDsp.c\nD:/develop/vscode/projects/ex04/dsp/Server.c\nD:/develop/vscode/projects/ex04/docs/evidence/spatial-kemar-update-2026-11-01/catalog-summary.json"
+  },
+  {
+    "slide": 6,
+    "sourceTemplateSlide": 4,
+    "notes": "试错主要集中在数据格式、数值规则和块间连续性。当前 input.wav 已经是标准 PCM16 WAV，旧格式对应 input_old.wav。MATLAB 试听脚本可能整体缩放，因此另建统一量化规则的参考。卷积使用自然顺序 HRIR，与 x[n-k]h[k] 的索引配套。FFT 长度由输入块和滤波器长度决定：最大 1024 帧和 512 点 HRIR 需要 1535 点线性卷积，选用 2048 点 FFT。实际加速幅度与实时预算仍需板端计时；块时长 23.22 ms 不作为端到端延迟。\n\n资料依据：\nD:/develop/vscode/projects/ex04/tests/spatial/matlab_q15_reference.m\nD:/develop/vscode/projects/ex04/tests/spatial/spatial_fir.c\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.h\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c"
+  },
+  {
+    "slide": 7,
+    "sourceTemplateSlide": 7,
+    "notes": "单声源模式将两个输入声道平均，再选取方向进行双耳渲染。文件路径先保存结果再使用 aplay 播放，方便检查数据。audio 模式接入采集、DSP 和播放，是连续音频链路的入口。orbit 保持原有实现，在 40e045 双耳输出和左右互换输出之间逐样本交叉淡化，往返约四秒，属于镜像往返演示。\n\n完整命令：\n./run.sh file --input input.wav --output midterm_spatial.wav --algo spatial --elevation 60 --azimuth 250\n./run.sh audio --seconds 10 --algo spatial --elevation -40 --azimuth 45\n./run.sh file --input input.wav --output midterm_orbit.wav --algo orbit\naplay -D default midterm_orbit.wav\n\n角度须存在于 directions 列表。板端性能与听感尚需实测。\n\n资料依据：\nD:/develop/vscode/projects/ex04/run.sh\nD:/develop/vscode/projects/ex04/host/app/main.c\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c"
+  },
+  {
+    "slide": 8,
+    "sourceTemplateSlide": 14,
+    "notes": "双声源模式保留输入左右声道的独立性。A、B 各自经过两耳卷积并保留独立尾部，随后以 0.5 权重混合为耳机双声道。新的具名参数可以分别选择两个方向；原固定模式继续保留。演示文件 dual_footsteps.wav 应事先把不同节奏的两路素材放到左右声道。\n\n完整命令：\n./run.sh file --input dual_footsteps.wav --output midterm_dual.wav --algo dual --a-elevation 60 --a-azimuth 250 --b-elevation 40 --b-azimuth 45\naplay -D default midterm_dual.wav\n\n旧语法 spatial40、spatial60、dual4060 保持原固定方向，不混用具名和位置参数。0.5 权重增加余量，不保证任意输入永不削波。\n\n资料依据：\nD:/develop/vscode/projects/ex04/dsp/dsp_spatial.c\nD:/develop/vscode/projects/ex04/host/app/main.c\nD:/develop/vscode/projects/ex04/run.sh"
+  },
+  {
+    "slide": 9,
+    "sourceTemplateSlide": 16,
+    "notes": "本次实际通过系数库检查、生成器五项测试和全部 710 方向的卷积回归，代表性双源组合、缓存切换与非法方向检查也通过。日志节选来自当前方位库版本，保持原始数字。兼容固定方向、orbit 和固定双源本次显示最大误差均为 1 LSB；这只对应测试输入与 PC 构建，不是任意输入上界。协议模拟测试在 MinGW 下未能链接部分 TI 模拟符号，测试逻辑未执行，仍需 Linux 补验。目标板的 TI 链接、共享内存硬件与声卡实时性能也需单独验证。\n\n测试命令面向 Ubuntu 开发机：\nmake hrir-check\nmake -C tests/spatial test test-catalog\n\n资料依据：\nD:/develop/vscode/projects/ex04/docs/evidence/spatial-kemar-update-2026-11-01/import-tests.log\nD:/develop/vscode/projects/ex04/docs/evidence/spatial-kemar-update-2026-11-01/dsp-catalog-tests.log\nD:/develop/vscode/projects/ex04/docs/evidence/spatial-kemar-update-2026-11-01/README.md"
+  }
+]

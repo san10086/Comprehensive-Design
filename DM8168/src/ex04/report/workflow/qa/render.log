@@ -1,0 +1,7 @@
+[artifact-tool] embedded_font_import_budget_exceeded: The presentation exceeds the 67108864-byte embedded font input budget.
+[artifact-tool] embedded_font_name_mismatch: EOT family "思源黑体 1" does not match decoded SFNT name "Source Han Sans SC".
+[artifact-tool] embedded_font_name_mismatch: EOT subfamily "Regular" does not match decoded SFNT name "Heavy".
+[artifact-tool] embedded_font_face_mismatch: Decoded font reports weight 900 and italic=false, which does not match the authored regular face (expected weight 300-500 and italic=false).
+[artifact-tool] embedded_font_name_mismatch: EOT family "思源黑体-超粗体" does not match decoded SFNT name "Source Han Sans SC".
+[artifact-tool] embedded_font_face_mismatch: Decoded font reports weight 700 and italic=false, which does not match the authored regular face (expected weight 300-500 and italic=false).
+REIMPORT_RENDER_OK 9

@@ -1,36 +1,74 @@
 #include "dsp_algorithm.h"
+#include "AudioAlgo.h"
+
+static int16_t dsp_saturating_multiply(int16_t value, int factor)
+{
+    int tmp = value * factor;
+
+    if (tmp > 32767) {
+        tmp = 32767;
+    }
+    if (tmp < -32768) {
+        tmp = -32768;
+    }
+
+    return (int16_t)tmp;
+}
 
 int dsp_process_audio(int16_t *pData, int numSamples, int mode)
 {
     int i;
 
-    /* 参数检查 */
-    if (pData == 0 || numSamples <= 0) {
+    if ((pData == 0) || (numSamples <= 0)) {
         return -1;
     }
 
     switch (mode) {
-        case 0:
-            /* 模式0：直通（什么都不做） */
+        case AUDIO_ALGO_MODE_PASSTHROUGH:
             break;
 
-        case 1:
-            /* 模式1：左右声道交换 */
+        case AUDIO_ALGO_MODE_SWAP_STEREO:
             for (i = 0; i < numSamples; i++) {
-                int16_t L = pData[2 * i];
-                int16_t R = pData[2 * i + 1];
-                pData[2 * i] = R;
-                pData[2 * i + 1] = L;
+                int16_t left = pData[2 * i];
+                int16_t right = pData[(2 * i) + 1];
+
+                pData[2 * i] = right;
+                pData[(2 * i) + 1] = left;
             }
             break;
 
-        case 2:
-            /* 模式2：音量×2（带饱和保护） */
+        case AUDIO_ALGO_MODE_GAIN_X2:
             for (i = 0; i < 2 * numSamples; i++) {
-                int tmp = pData[i] * 2;
-                if (tmp > 32767) tmp = 32767;
-                if (tmp < -32768) tmp = -32768;
-                pData[i] = (int16_t)tmp;
+                pData[i] = dsp_saturating_multiply(pData[i], 2);
+            }
+            break;
+
+        case AUDIO_ALGO_MODE_SPEED2:
+            {
+                int outFrames = (numSamples + 1) / 2;
+                int srcFrame;
+
+                for (i = 0; i < outFrames; i++) {
+                    srcFrame = 2 * i;
+                    pData[2 * i] = pData[2 * srcFrame];
+                    pData[(2 * i) + 1] = pData[(2 * srcFrame) + 1];
+                }
+                for (i = outFrames; i < numSamples; i++) {
+                    pData[2 * i] = 0;
+                    pData[(2 * i) + 1] = 0;
+                }
+            }
+            break;
+
+        case AUDIO_ALGO_MODE_GAIN_X3:
+            for (i = 0; i < 2 * numSamples; i++) {
+                pData[i] = dsp_saturating_multiply(pData[i], 3);
+            }
+            break;
+
+        case AUDIO_ALGO_MODE_GAIN_X5:
+            for (i = 0; i < 2 * numSamples; i++) {
+                pData[i] = dsp_saturating_multiply(pData[i], 10);
             }
             break;
 

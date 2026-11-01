@@ -1,0 +1,117 @@
+ATH="${ARM_PREFIX%/*}:$PATH"
+> 
+>     mkdir -p "$QT_BUILD/probe" "$PROJECT_ROOT/delivery" || return 1
+> 
+>     # 编译显示探针
+>     (
+>         cd "$QT_BUILD/probe" || return 1
+>         "$QMAKE_ARM" -nocache -spec linux-TIarmv7-g++ \
+>             "$PROJECT_ROOT/tests/qt_syslink_probe/qt_syslink_probe.pro" \
+>             CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release \
+>             || return 1
+>         make -j2 || return 1
+>         file ./qt_syslink_probe || return 1
+>     ) || return 1
+> 
+>     # 汇总 host、DSP、Qt 与运行脚本
+>     make install EXEC_DIR="$STAGE_ROOT" DEPOT="$EZSDK" \
+>         CGT_ARM_PREFIX="$ARM_PREFIX" ARM_SYSROOT="$ARM_SYSROOT" \
+>         || return 1
+> 
+>     BUILD_DIR="$QT_BUILD" \
+>         sh frontend_arm/install.sh "$STAGE_APP" || return 1
+> 
+>     install -m 755 "$QT_BUILD/probe/qt_syslink_probe" \
+>         "$STAGE_APP/" || return 1
+>     install -m 644 tests/spatial/input.wav \
+>         "$STAGE_APP/input.wav" || return 1
+> 
+>     chmod 755 "$STAGE_APP/app_host" "$STAGE_APP/slaveloader" \
+>         "$STAGE_APP/run.sh" "$STAGE_APP/run-qt5.sh" || return 1
+> 
+>     printf 'SOURCE_TAG=%s\nQT_TARGET=5.9.7 ARM\nBUILT_AT=%s\n' \
+>         "$SOURCE_TAG" "$(date -Iseconds)" \
+>         > "$STAGE_APP/BUILD_INFO.txt" || return 1
+> 
+>     # 生成并核对文件校验清单
+>     (
+>         set -o pipefail
+>         cd "$STAGE_ROOT" || return 1
+>         find ex04_syslink_dsp/release -type f -print0 \
+>             | sort -z | xargs -0 sha256sum > SHA256SUMS || return 1
+>         sha256sum -c SHA256SUMS || return 1
+>     ) || return 1
+> 
+>     DEPLOY_ARCHIVE="$PROJECT_ROOT/delivery/ex04-dm8168-qt597-$SOURCE_TAG.tar.gz"
+>     tar -czf "$DEPLOY_ARCHIVE" -C "$STAGE_ROOT" \
+>         ex04_syslink_dsp/release SHA256SUMS || return 1
+> 
+>     printf '\n部署包：%s\n' "$DEPLOY_ARCHIVE"
+>     sha256sum "$DEPLOY_ARCHIVE" || return 1
+>     tar -tzf "$DEPLOY_ARCHIVE" || return 1
+>     printf '\nUbuntu IP：\n'
+>     hostname -I
+> }
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ 
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ if ex04_package; then
+>     printf '\n发布包生成成功。\n'
+> else
+>     printf '\n本段失败，请保留错误输出，暂不部署。\n' >&2
+> fi
+arm-none-linux-gnueabi-g++ -c -pipe -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I../../../tests/qt_syslink_probe -I. -I/home/qt_arm/qt5.9.7_install/include -I/home/qt_arm/qt5.9.7_install/include/QtWidgets -I/home/qt_arm/qt5.9.7_install/include/QtGui -I/home/qt_arm/qt5.9.7_install/include/QtCore -I. -I/home/qt_arm/qt5.9.7_install/mkspecs/linux-TIarmv7-g++ -o main.o ../../../tests/qt_syslink_probe/main.cpp
+arm-none-linux-gnueabi-g++ -Wl,-O1 -Wl,-rpath,/home/qt_arm/qt5.9.7_install/lib -o qt_syslink_probe main.o   -L/home/qt_arm/qt5.9.7_install/lib -lQt5Widgets -lQt5Gui -lQt5Core -lpthread 
+./qt_syslink_probe: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.16, not stripped
+#
+# Making install ...
+install run.sh /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/debug
+cp /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages/ti/syslink/bin/TI816X/samples/slaveloader_debug /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/debug/slaveloader
+install run.sh /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/release
+cp /home/user/ti-ezsdk_dm816x-evm_5_05_01_04/component-sources/syslink_2_20_00_14/packages/ti/syslink/bin/TI816X/samples/slaveloader_release /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/release/slaveloader
+make -C host EXEC_DIR=/home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp install
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+#
+# Making install ...
+cp bin/debug/app_host /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/debug
+cp bin/release/app_host /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/release
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/host'
+make -C dsp EXEC_DIR=/home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp install
+make[1]: Entering directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+#
+# Making install ...
+cp bin/debug/server_dsp.xe674 /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/debug
+cp bin/release/server_dsp.xe674 /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/release
+make[1]: Leaving directory '/home/user/ex04-work/ex04-source-20261101-ui/dsp'
+Installed Qt application and IPC peer to /home/user/ex04-work/ex04-source-20261101-ui/stage-arm-qt597/ex04_syslink_dsp/release
+ex04_syslink_dsp/release/app_host: OK
+ex04_syslink_dsp/release/BUILD_INFO.txt: OK
+ex04_syslink_dsp/release/ex04_frontend_arm: OK
+ex04_syslink_dsp/release/ex04_ipc_peer: OK
+ex04_syslink_dsp/release/input.wav: OK
+ex04_syslink_dsp/release/qt_syslink_probe: OK
+ex04_syslink_dsp/release/run-qt4.sh: OK
+ex04_syslink_dsp/release/run-qt5.sh: OK
+ex04_syslink_dsp/release/run.sh: OK
+ex04_syslink_dsp/release/server_dsp.xe674: OK
+ex04_syslink_dsp/release/slaveloader: OK
+
+部署包：/home/user/ex04-work/ex04-source-20261101-ui/delivery/ex04-dm8168-qt597-20261101-ui.tar.gz
+3f8778a4c10d5c6813580b5a202b6be3d2d0c114a57f6c4c337b0a03a5901a0b  /home/user/ex04-work/ex04-source-20261101-ui/delivery/ex04-dm8168-qt597-20261101-ui.tar.gz
+ex04_syslink_dsp/release/
+ex04_syslink_dsp/release/run.sh
+ex04_syslink_dsp/release/run-qt5.sh
+ex04_syslink_dsp/release/ex04_ipc_peer
+ex04_syslink_dsp/release/qt_syslink_probe
+ex04_syslink_dsp/release/app_host
+ex04_syslink_dsp/release/BUILD_INFO.txt
+ex04_syslink_dsp/release/ex04_frontend_arm
+ex04_syslink_dsp/release/input.wav
+ex04_syslink_dsp/release/run-qt4.sh
+ex04_syslink_dsp/release/server_dsp.xe674
+ex04_syslink_dsp/release/slaveloader
+SHA256SUMS
+
+Ubuntu IP：
+192.168.198.130 192.168.1.41 
+
+发布包生成成功。
+user@ubuntu:~/ex04-work/ex04-source-20261101-ui$ unset -f ex04_package

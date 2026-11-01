@@ -1,0 +1,398 @@
+[
+  {
+    "slide_part": "ppt/slides/slide1.xml",
+    "name": "report.cover.main",
+    "role": "cover",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "10400",
+    "bold": null,
+    "spacing_hundredth_pt": null
+  },
+  {
+    "slide_part": "ppt/slides/slide1.xml",
+    "name": "report.coverSub.secondary",
+    "role": "coverSub",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "6399",
+    "bold": "true",
+    "spacing_hundredth_pt": "319"
+  },
+  {
+    "slide_part": "ppt/slides/slide2.xml",
+    "name": "report.tocTitle.contents",
+    "role": "tocTitle",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "8799",
+    "bold": null,
+    "spacing_hundredth_pt": null
+  },
+  {
+    "slide_part": "ppt/slides/slide2.xml",
+    "name": "report.toc.toc0",
+    "role": "toc",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "4800",
+    "bold": null,
+    "spacing_hundredth_pt": "96"
+  },
+  {
+    "slide_part": "ppt/slides/slide2.xml",
+    "name": "report.toc.toc1",
+    "role": "toc",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "4800",
+    "bold": null,
+    "spacing_hundredth_pt": "96"
+  },
+  {
+    "slide_part": "ppt/slides/slide2.xml",
+    "name": "report.toc.toc2",
+    "role": "toc",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "4800",
+    "bold": null,
+    "spacing_hundredth_pt": "96"
+  },
+  {
+    "slide_part": "ppt/slides/slide3.xml",
+    "name": "report.number.chapterNumber",
+    "role": "number",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "18800",
+    "bold": "true",
+    "spacing_hundredth_pt": "376"
+  },
+  {
+    "slide_part": "ppt/slides/slide3.xml",
+    "name": "report.chapter.chapterTitle",
+    "role": "chapter",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "10800",
+    "bold": "true",
+    "spacing_hundredth_pt": "216"
+  },
+  {
+    "slide_part": "ppt/slides/slide3.xml",
+    "name": "report.chapter.chapterGreen",
+    "role": "chapter",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "10800",
+    "bold": "true",
+    "spacing_hundredth_pt": "216"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.step0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.stage0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.step1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.stage1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.step2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.stage2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.step3",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide4.xml",
+    "name": "report.sub.stage3",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide5.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide5.xml",
+    "name": "report.sub.catalog",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide5.xml",
+    "name": "report.sub.fact0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide5.xml",
+    "name": "report.sub.fact1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide5.xml",
+    "name": "report.sub.fact2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.pitfall0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.pitfall1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.pitfall2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.pitfall3",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.fftTitle",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide6.xml",
+    "name": "report.sub.choiceWhite",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide7.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide7.xml",
+    "name": "report.sub.file",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide7.xml",
+    "name": "report.sub.audio",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide7.xml",
+    "name": "report.sub.orbit",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide8.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide8.xml",
+    "name": "report.sub.dualHead0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide8.xml",
+    "name": "report.sub.dualHead1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide8.xml",
+    "name": "report.sub.dualHead2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide8.xml",
+    "name": "report.sub.dualCmdTitle",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide9.xml",
+    "name": "report.header.header",
+    "role": "header",
+    "reference_font": "思源黑体 1 Heavy",
+    "font_size_hundredth_pt": "4200",
+    "bold": "true",
+    "spacing_hundredth_pt": "84"
+  },
+  {
+    "slide_part": "ppt/slides/slide9.xml",
+    "name": "report.sub.logTitle",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide9.xml",
+    "name": "report.sub.result0",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide9.xml",
+    "name": "report.sub.result1",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  },
+  {
+    "slide_part": "ppt/slides/slide9.xml",
+    "name": "report.sub.result2",
+    "role": "sub",
+    "reference_font": "思源黑体-超粗体",
+    "font_size_hundredth_pt": "3600",
+    "bold": null,
+    "spacing_hundredth_pt": "72"
+  }
+]

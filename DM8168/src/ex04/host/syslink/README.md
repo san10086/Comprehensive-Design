@@ -20,7 +20,7 @@ memset(&cfg, 0, sizeof(cfg));
 cfg.remoteProcName = "DSP";
 cfg.frameBytes = channels * sizeof(short);
 cfg.bufferBytes = 1024;
-cfg.sampleRate = 8000;
+cfg.sampleRate = 44100;
 cfg.channels = channels;
 cfg.bitDepth = 16;
 cfg.algorithmMode = APP_ALGO_MODE_PASSTHROUGH;
@@ -68,6 +68,9 @@ the data size in 16 bits.
 
 The paired DSP code in `dsp/Server.c` selects the algorithm through
 `cfg.algorithmMode`. Supported modes are `APP_ALGO_MODE_PASSTHROUGH`,
-`APP_ALGO_MODE_SWAP_STEREO`, and `APP_ALGO_MODE_GAIN_X2`.
+`APP_ALGO_MODE_SWAP_STEREO`, `APP_ALGO_MODE_GAIN_X2`,
+`APP_ALGO_MODE_SPEED2`, `APP_ALGO_MODE_GAIN_X3`,
+`APP_ALGO_MODE_GAIN_X5`, `APP_ALGO_MODE_SPATIAL_40E045`, and
+`APP_ALGO_MODE_SPATIAL_60E250`.
 
 The processing contract is still the same Notify/SharedRegion protocol.

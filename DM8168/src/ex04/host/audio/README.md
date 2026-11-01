@@ -91,14 +91,14 @@ int pipelineStop(void);
 |------|-----------|---------------|--------|
 | 录音设备 | `hw:0,0` | `default` | `AUDIO_DEV_CAPTURE` |
 | 播放设备 | `hw:0,0` | `default` | `AUDIO_DEV_PLAYBACK` |
-| 采样率 | 44100 Hz | 8000 Hz | `AUDIO_SAMPLE_RATE` |
+| 采样率 | 44100 Hz | 44100 Hz | `AUDIO_SAMPLE_RATE` |
 | 声道数 | 2 | 2 | `AUDIO_CHANNELS` |
 | 采样格式 | S16_LE | S16_LE | `AUDIO_FORMAT` |
 | 位深 | 16 bit | 16 bit | `AUDIO_BIT_DEPTH` |
-| Period 帧数 | 256 | 128 | `AUDIO_PERIOD_FRAMES` |
+| Period 帧数 | 256 | 1024 | `AUDIO_PERIOD_FRAMES` |
 | Period 数量 | 4 | 4 | `AUDIO_PERIODS` |
 | 单帧字节 | 4 | 4 | `channels × bitDepth/8` |
-| 单 period 字节 | 1024 | 512 | `periodFrames × frameBytes` |
+| 单 period 字节 | 1024 | 4096 | `periodFrames × frameBytes` |
 
 ### 数据格式
 
@@ -115,12 +115,12 @@ pcmData[0] = L0, pcmData[1] = R0, pcmData[2] = L1, pcmData[3] = R1, ...
 
 ### 时间参数
 
-| 参数 | x86 (44100Hz, 256per) | DM8168 (8000Hz, 128per) |
+| 参数 | x86 (44100Hz, 256per) | DM8168 (44100Hz, 1024per) |
 |------|-----------------------|------------------------|
-| Period 时间 | ~5.8 ms | 16.0 ms |
-| Buffer 时间 | ~23.2 ms | 64.0 ms |
-| 每秒回调次数 | ~172 次 | ~62 次 |
-| 每回调数据量 | 1024 bytes | 512 bytes |
+| Period 时间 | ~5.8 ms | ~23.2 ms |
+| Buffer 时间 | ~23.2 ms | ~92.9 ms |
+| 每秒回调次数 | ~172 次 | ~43 次 |
+| 每回调数据量 | 1024 bytes | 4096 bytes |
 
 ---
 
@@ -247,5 +247,6 @@ make clean && make ARM=1
 需要 `arm-none-linux-gnueabi-gcc` 在 PATH 中。
 
 **Q: 流水线 underrun？**
-DM8168 平台的 `AUDIO_PERIOD_FRAMES` 应为 128。播放端已在初始化时逐 period 预填充静音帧，测试流水线也改为录音首帧到达后再初始化播放。
+空间音效链路统一使用 44100 Hz；DM8168 的 `AUDIO_PERIOD_FRAMES` 为 1024。
+播放端仍在初始化时逐 period 预填充静音帧，测试流水线在录音首帧到达后初始化播放。
 

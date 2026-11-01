@@ -17,7 +17,7 @@ static snd_pcm_t        *capHandle       = NULL;
 static audioConfig       capConfig;
 static audioCapCallback  capCallback     = NULL;
 static void             *capUserData     = NULL;
-static int               capStopFlag     = 0;
+static volatile int      capStopFlag     = 0;
 static int               capInitialized  = 0;
 
 int audioCapInit(audioConfig *cfg) {

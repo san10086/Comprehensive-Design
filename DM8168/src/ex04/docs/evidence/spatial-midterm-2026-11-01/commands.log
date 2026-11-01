@@ -1,0 +1,94 @@
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ "D:\develop\CLion 2025.1.2\bin\mingw\bin\gcc.exe" --version
+gcc.exe (GCC) 13.1.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ "D:\develop\CLion 2025.1.2\bin\mingw\bin\gcc.exe" -std=c99 -O2 -Wall -Wextra -Werror -pedantic -o D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe main.c spatial_fir.c wav_pcm16.c
+
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ "D:\develop\CLion 2025.1.2\bin\mingw\bin\gcc.exe" -std=c99 -O2 -Wall -Wextra -Werror -pedantic -o D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\dsp_spatial_selftest.exe dsp_spatial_selftest.c spatial_fir.c wav_pcm16.c ../../dsp/dsp_spatial.c
+
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe selftest D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav
+selftest PASS: impulse response keeps natural HRIR order
+selftest PASS: variable-size blocks equal direct convolution
+selftest PASS: 511-sample tail flush is correct
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe selftest D:\develop\vscode\projects\ex04\assets\hrir\original\L60e250a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R60e250a.wav
+selftest PASS: impulse response keeps natural HRIR order
+selftest PASS: variable-size blocks equal direct convolution
+selftest PASS: 511-sample tail flush is correct
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\dsp_spatial_selftest.exe D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\L60e250a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R60e250a.wav
+DSP spatial FFT selftest PASS: D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav (max error 1 LSB)
+DSP spatial orbit selftest PASS: variable blocks remain within 3 LSB (max error 1 LSB)
+DSP spatial FFT selftest PASS: D:\develop\vscode\projects\ex04\assets\hrir\original\L60e250a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R60e250a.wav (max error 1 LSB)
+DSP spatial dual selftest PASS: independent L->60e250 and R->40e045 remain within 3 LSB (max error 1 LSB)
+DSP spatial orbit selftest PASS: 4-second triangular path turns smoothly
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe render D:\develop\vscode\projects\ex04\tests\spatial\input.wav D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_511.wav 511
+render PASS
+  input : D:\develop\vscode\projects\ex04\tests\spatial\input.wav (220500 frames, 2 channels)
+  HRIR  : D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav
+  block : 511 frames
+  output: D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_511.wav (221011 stereo frames, includes 511-frame tail)
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe render D:\develop\vscode\projects\ex04\tests\spatial\input.wav D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_1024.wav 1024
+render PASS
+  input : D:\develop\vscode\projects\ex04\tests\spatial\input.wav (220500 frames, 2 channels)
+  HRIR  : D:\develop\vscode\projects\ex04\assets\hrir\original\L40e045a.wav + D:\develop\vscode\projects\ex04\assets\hrir\original\R40e045a.wav
+  block : 1024 frames
+  output: D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_1024.wav (221011 stereo frames, includes 511-frame tail)
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe compare D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_511.wav D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_1024.wav 0
+compare PASS
+  samples             : 442022
+  max absolute error  : 0 LSB
+  mean absolute error : 0.000000 LSB
+  over tolerance (0) : 0
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe compare D:\develop\vscode\projects\ex04\tests\spatial\rendered_511.wav D:\develop\vscode\projects\ex04\tests\spatial\rendered_1024.wav 0
+compare PASS
+  samples             : 442022
+  max absolute error  : 0 LSB
+  mean absolute error : 0.000000 LSB
+  over tolerance (0) : 0
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe compare D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_511.wav D:\develop\vscode\projects\ex04\tests\spatial\rendered_511.wav 0
+compare PASS
+  samples             : 442022
+  max absolute error  : 0 LSB
+  mean absolute error : 0.000000 LSB
+  over tolerance (0) : 0
+EXIT: 0
+
+CWD: D:\develop\vscode\projects\ex04\tests\spatial
+$ D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\spatial_q15.exe compare D:\develop\vscode\projects\ex04\docs\evidence\spatial-midterm-2026-11-01\rerendered_1024.wav D:\develop\vscode\projects\ex04\tests\spatial\rendered_1024.wav 0
+compare PASS
+  samples             : 442022
+  max absolute error  : 0 LSB
+  mean absolute error : 0.000000 LSB
+  over tolerance (0) : 0
+EXIT: 0

@@ -92,7 +92,6 @@ Void smain(UArg arg0, UArg arg1)
 {
     Int             status          = 0;
     UInt16          remoteProcId;
-    Bool            running         = TRUE;
 
     Log_print0(Diags_ENTRY | Diags_INFO , "--> smain:");
 
@@ -102,80 +101,82 @@ Void smain(UArg arg0, UArg arg1)
     /* turn on Diags_INFO trace */
     Diags_setMask("Server+F");
 
-    /* loop forever */
-    while (running) {
+    /*
+     * run.sh loads and unloads this DSP image for each host invocation.
+     * Serve exactly one IPC session so that the DSP cannot enter another
+     * Ipc_start() while slaveloader is stopping the previous session.
+     */
 
-        /* only one thread must call start */
-        do {
-            status = Ipc_start();
-        } while (status == Ipc_E_NOTREADY);
+    /* only one thread must call start */
+    do {
+        status = Ipc_start();
+    } while (status == Ipc_E_NOTREADY);
 
-        if (status < 0) {
-            Log_error0("smain: Ipc_start() failed");
-            goto leave;
-        }
-
-        /* attach to the remote processor */
-        remoteProcId = MultiProc_getId("HOST");
-
-        /* connect to remote processor */
-        do {
-            status = Ipc_attach(remoteProcId);
-
-            if (status == Ipc_E_NOTREADY) {
-                Task_sleep(100);
-            }
-
-        } while (status == Ipc_E_NOTREADY);
-
-        if (status < 0) {
-            Log_error0("smain: Ipc_attach() failed");
-            goto leave;
-        }
-
-        /* BEGIN server phase */
-
-        /* server setup phase */
-        status = Server_create(remoteProcId);
-
-        if (status < 0) {
-            goto leave;
-        }
-
-        /* server execute phase */
-        status = Server_exec();
-
-        if (status < 0) {
-            goto leave;
-        }
-
-        /* server shutdown phase */
-        status = Server_delete();
-
-        if (status < 0) {
-            goto leave;
-        }
-
-        /* END server phase */
-
-        /* disconnect from remote processor */
-        do {
-            status = Ipc_detach(remoteProcId);
-
-            if (status == Ipc_E_NOTREADY) {
-                Task_sleep(100);
-            }
-
-        } while (status == Ipc_E_NOTREADY);
-
-        if (status < 0) {
-            Log_error0("smain: Failed to disconnect from remote process");
-            goto leave;
-        }
-
-        /* only one thread must call stop */
-        Ipc_stop();
+    if (status < 0) {
+        Log_error0("smain: Ipc_start() failed");
+        goto leave;
     }
+
+    /* attach to the remote processor */
+    remoteProcId = MultiProc_getId("HOST");
+
+    /* connect to remote processor */
+    do {
+        status = Ipc_attach(remoteProcId);
+
+        if (status == Ipc_E_NOTREADY) {
+            Task_sleep(100);
+        }
+
+    } while (status == Ipc_E_NOTREADY);
+
+    if (status < 0) {
+        Log_error0("smain: Ipc_attach() failed");
+        goto leave;
+    }
+
+    /* BEGIN server phase */
+
+    /* server setup phase */
+    status = Server_create(remoteProcId);
+
+    if (status < 0) {
+        goto leave;
+    }
+
+    /* server execute phase */
+    status = Server_exec();
+
+    if (status < 0) {
+        goto leave;
+    }
+
+    /* server shutdown phase */
+    status = Server_delete();
+
+    if (status < 0) {
+        goto leave;
+    }
+
+    /* END server phase */
+
+    /* disconnect from remote processor */
+    do {
+        status = Ipc_detach(remoteProcId);
+
+        if (status == Ipc_E_NOTREADY) {
+            Task_sleep(100);
+        }
+
+    } while (status == Ipc_E_NOTREADY);
+
+    if (status < 0) {
+        Log_error0("smain: Failed to disconnect from remote process");
+        goto leave;
+    }
+
+    /* only one thread must call stop */
+    Ipc_stop();
 
     /* finalize modules */
     Server_exit();

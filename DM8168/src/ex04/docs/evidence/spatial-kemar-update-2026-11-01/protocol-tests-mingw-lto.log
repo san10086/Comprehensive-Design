@@ -1,0 +1,58 @@
+Platform: Windows / MinGW GCC 13.1.0
+Test-source unchanged; runtime build adapter adds -flto to GCC invocation.
+Purpose: remove unused TI transport functions before PE linking, retaining real protocol logic and assertions.
+Harness:
+
+import runpy, subprocess
+original_run = subprocess.run
+def run_with_lto(args, *rest, **kwargs):
+    if isinstance(args, list) and args and str(args[0]).lower().endswith('gcc.exe'):
+        args = args[:1] + ['-flto'] + args[1:]
+        print('MinGW test build adaptation: adding -flto to omit unused transport functions', flush=True)
+    return original_run(args, *rest, **kwargs)
+subprocess.run = run_with_lto
+runpy.run_path('tests/spatial/test_spatial_protocol.py',run_name='__main__')
+
+Output:
+test_arm_direction_acknowledgements (__main__.ProtocolTest) ... MinGW test build adaptation: adding -flto to omit unused transport functions
+cc1.exe: error: LTO support has not been enabled in this configuration
+ERROR
+test_dsp_config_and_dispatch (__main__.ProtocolTest) ... MinGW test build adaptation: adding -flto to omit unused transport functions
+cc1.exe: error: LTO support has not been enabled in this configuration
+cc1.exe: error: LTO support has not been enabled in this configuration
+cc1.exe: error: LTO support has not been enabled in this configuration
+cc1.exe: error: LTO support has not been enabled in this configuration
+ERROR
+
+======================================================================
+ERROR: test_arm_direction_acknowledgements (__main__.ProtocolTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/spatial/test_spatial_protocol.py", line 243, in test_arm_direction_acknowledgements
+    self.compile_and_run("host", HOST, [])
+  File "tests/spatial/test_spatial_protocol.py", line 231, in compile_and_run
+    subprocess.run([os.environ.get("CC", "gcc"), "-std=c99", "-D_DEFAULT_SOURCE",
+  File "<string>", line 8, in run_with_lto
+  File "C:\Users\30522\AppData\Local\Programs\Python\Python39\lib\subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\develop\\CLion 2025.1.2\\bin\\mingw\\bin\\gcc.exe', '-flto', '-std=c99', '-D_DEFAULT_SOURCE', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-int-to-pointer-cast', '-O2', '-ffunction-sections', '-fdata-sections', '-Wl,--gc-sections', '-pthread', '-IC:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu', '-ID:\\develop\\vscode\\projects\\ex04', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu\\host.c', '-o', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu\\host']' returned non-zero exit status 1.
+
+======================================================================
+ERROR: test_dsp_config_and_dispatch (__main__.ProtocolTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/spatial/test_spatial_protocol.py", line 239, in test_dsp_config_and_dispatch
+    self.compile_and_run("server", SERVER,
+  File "tests/spatial/test_spatial_protocol.py", line 231, in compile_and_run
+    subprocess.run([os.environ.get("CC", "gcc"), "-std=c99", "-D_DEFAULT_SOURCE",
+  File "<string>", line 8, in run_with_lto
+  File "C:\Users\30522\AppData\Local\Programs\Python\Python39\lib\subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\develop\\CLion 2025.1.2\\bin\\mingw\\bin\\gcc.exe', '-flto', '-std=c99', '-D_DEFAULT_SOURCE', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-int-to-pointer-cast', '-O2', '-ffunction-sections', '-fdata-sections', '-Wl,--gc-sections', '-pthread', '-IC:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu', '-ID:\\develop\\vscode\\projects\\ex04', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu\\server.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\AudioAlgo.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\dsp_spatial.c', 'D:\\develop\\vscode\\projects\\ex04\\dsp\\dsp_algorithm.c', '-o', 'C:\\Users\\30522\\AppData\\Local\\Temp\\ex04-ti-mocks-2xi_ejlu\\server']' returned non-zero exit status 1.
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.263s
+
+FAILED (errors=2)
+
+EXIT: 1

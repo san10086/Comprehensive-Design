@@ -1,0 +1,28 @@
+{
+  "slides": 17,
+  "notes_rewritten": 15,
+  "changed_parts": [
+    "ppt/notesSlides/notesSlide2.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/notesSlides/notesSlide7.xml",
+    "ppt/notesSlides/notesSlide8.xml",
+    "ppt/notesSlides/notesSlide9.xml",
+    "ppt/notesSlides/notesSlide10.xml",
+    "ppt/notesSlides/notesSlide11.xml",
+    "ppt/notesSlides/notesSlide12.xml",
+    "ppt/notesSlides/notesSlide13.xml",
+    "ppt/notesSlides/notesSlide14.xml",
+    "ppt/notesSlides/notesSlide15.xml",
+    "ppt/notesSlides/notesSlide16.xml",
+    "ppt/notesSlides/notesSlide17.xml"
+  ],
+  "other_parts_byte_identical": true,
+  "native_table_slides": [
+    15,
+    16
+  ],
+  "source_sha256": "0b1e4795de111789c8d57c13a88ab00f5cb021114aea687ec543416cf3a15992",
+  "candidate_sha256": "1f035442bf54bd9beb06e321b987f7906b521d2b3d91c3c0a5fd6068604ee329"
+}

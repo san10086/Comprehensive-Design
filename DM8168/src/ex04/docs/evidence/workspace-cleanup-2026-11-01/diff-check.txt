@@ -1,0 +1,8 @@
+Own changed tracked paths: 11
+Exit: 0
+warning: in the working copy of 'docs/evidence/spatial-midterm-2026-11-01/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evidence/spatial-midterm-2026-11-01/verify.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/qt-syslink-coexistence-test.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend_arm/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend_arm/VALIDATION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'makefile', LF will be replaced by CRLF the next time Git touches it

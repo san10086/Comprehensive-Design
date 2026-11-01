@@ -12,10 +12,20 @@
 
 #include <xdc/std.h>
 #include "../shared/AppCommon.h"
+#include "dsp_spatial.h"
 
 #define AUDIO_ALGO_MODE_PASSTHROUGH      APP_ALGO_MODE_PASSTHROUGH
 #define AUDIO_ALGO_MODE_SWAP_STEREO      APP_ALGO_MODE_SWAP_STEREO
 #define AUDIO_ALGO_MODE_GAIN_X2          APP_ALGO_MODE_GAIN_X2
+#define AUDIO_ALGO_MODE_SPEED2           APP_ALGO_MODE_SPEED2
+#define AUDIO_ALGO_MODE_GAIN_X3          APP_ALGO_MODE_GAIN_X3
+#define AUDIO_ALGO_MODE_GAIN_X5          APP_ALGO_MODE_GAIN_X5
+#define AUDIO_ALGO_MODE_SPATIAL_40E045   APP_ALGO_MODE_SPATIAL_40E045
+#define AUDIO_ALGO_MODE_SPATIAL_60E250   APP_ALGO_MODE_SPATIAL_60E250
+#define AUDIO_ALGO_MODE_ORBIT             APP_ALGO_MODE_ORBIT
+#define AUDIO_ALGO_MODE_DUAL_60_40        APP_ALGO_MODE_DUAL_60_40
+#define AUDIO_ALGO_MODE_SPATIAL           APP_ALGO_MODE_SPATIAL
+#define AUDIO_ALGO_MODE_DUAL              APP_ALGO_MODE_DUAL
 #define AUDIO_ALGO_FLAG_BYPASS           0x00000001u
 #define AUDIO_ALGO_GAIN_UNITY_Q15        32768
 #define AUDIO_ALGO_RESERVED_WORDS        8
@@ -33,6 +43,8 @@ typedef struct {
     UInt32 mode;
     UInt32 flags;
     Int32  gainQ15;
+    Int32  directionA;
+    Int32  directionB;
     Int32  reserved[AUDIO_ALGO_RESERVED_WORDS];
 } AudioAlgoParams;
 
@@ -67,6 +79,7 @@ typedef struct {
     AudioAlgoConfig config;
     AudioAlgoParams params;
     AudioAlgoStats  stats;
+    DspSpatialState spatialState;
     Void           *userState;
 } AudioAlgoContext;
 

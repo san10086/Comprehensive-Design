@@ -1,9 +1,8 @@
 /*
  * AudioAlgo.c
  *
- * Placeholder DSP algorithm. Current behavior is passthrough: the shared PCM
- * buffer is left unchanged and returned to ARM. Replace AudioAlgo_process()
- * with the real DSP algorithm while preserving the frame contract.
+ * DSP algorithm adapter. Existing demonstration modes remain available; the
+ * spatial modes downmix stereo input and apply the selected binaural HRIR.
  */
 
 #include "AudioAlgo.h"
@@ -31,6 +30,8 @@ Void AudioAlgo_init(AudioAlgoContext *ctx)
     params.mode = AUDIO_ALGO_MODE_PASSTHROUGH;
     params.flags = AUDIO_ALGO_FLAG_BYPASS;
     params.gainQ15 = AUDIO_ALGO_GAIN_UNITY_Q15;
+    params.directionA = -1;
+    params.directionB = -1;
     for (i = 0; i < AUDIO_ALGO_RESERVED_WORDS; i++) {
         params.reserved[i] = 0;
     }
@@ -62,8 +63,30 @@ Int AudioAlgo_setParams(AudioAlgoContext *ctx, const AudioAlgoParams *params)
     if ((ctx == NULL) || (params == NULL)) {
         return (-1);
     }
+    if (params->mode > APP_ALGO_MODE_MAX) {
+        return (-1);
+    }
+    if (((params->mode == AUDIO_ALGO_MODE_SPATIAL_40E045) ||
+         (params->mode == AUDIO_ALGO_MODE_SPATIAL_60E250) ||
+         (params->mode == AUDIO_ALGO_MODE_ORBIT) ||
+         (params->mode == AUDIO_ALGO_MODE_DUAL_60_40) ||
+         (params->mode == AUDIO_ALGO_MODE_SPATIAL) ||
+         (params->mode == AUDIO_ALGO_MODE_DUAL)) &&
+            ((ctx->config.sampleRate != DSP_SPATIAL_SAMPLE_RATE) ||
+             (ctx->config.channels != 2) ||
+             (ctx->config.bitDepth != 16))) {
+        return (-1);
+    }
 
+    if (((params->mode == AUDIO_ALGO_MODE_SPATIAL) ||
+         (params->mode == AUDIO_ALGO_MODE_DUAL)) &&
+            ((hrir_direction_index(params->directionA) < 0) ||
+             ((params->mode == AUDIO_ALGO_MODE_DUAL) &&
+              (hrir_direction_index(params->directionB) < 0)))) {
+        return (-1);
+    }
     ctx->params = *params;
+    dsp_spatial_reset(&ctx->spatialState);
     return (0);
 }
 
@@ -83,6 +106,7 @@ Void AudioAlgo_reset(AudioAlgoContext *ctx)
     for (i = 0; i < AUDIO_ALGO_RESERVED_WORDS; i++) {
         ctx->stats.reserved[i] = 0;
     }
+    dsp_spatial_reset(&ctx->spatialState);
 }
 
 Void AudioAlgo_getStats(const AudioAlgoContext *ctx, AudioAlgoStats *stats)
@@ -150,6 +174,54 @@ Int AudioAlgo_process(AudioAlgoContext *ctx, AudioAlgoFrame *frame)
     else if ((frame->channels != 2) || (frame->bitDepth != 16) ||
             (frame->outputPcm == NULL)) {
         status = -1;
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_SPATIAL_40E045) {
+        if (frame->sampleRate != DSP_SPATIAL_SAMPLE_RATE) {
+            status = -1;
+        }
+        else {
+            status = dsp_spatial_process_inplace(&ctx->spatialState,
+                    frame->outputPcm, (int)frame->frameCount,
+                    DSP_SPATIAL_DIRECTION_40E045);
+        }
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_SPATIAL_60E250) {
+        if (frame->sampleRate != DSP_SPATIAL_SAMPLE_RATE) {
+            status = -1;
+        }
+        else {
+            status = dsp_spatial_process_inplace(&ctx->spatialState,
+                    frame->outputPcm, (int)frame->frameCount,
+                    DSP_SPATIAL_DIRECTION_60E250);
+        }
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_ORBIT) {
+        if (frame->sampleRate != DSP_SPATIAL_SAMPLE_RATE) {
+            status = -1;
+        }
+        else {
+            status = dsp_spatial_process_orbit_inplace(&ctx->spatialState,
+                    frame->outputPcm, (int)frame->frameCount);
+        }
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_DUAL_60_40) {
+        if (frame->sampleRate != DSP_SPATIAL_SAMPLE_RATE) {
+            status = -1;
+        }
+        else {
+            status = dsp_spatial_process_dual_inplace(&ctx->spatialState,
+                    frame->outputPcm, (int)frame->frameCount);
+        }
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_SPATIAL) {
+        status = dsp_spatial_process_inplace(&ctx->spatialState,
+                frame->outputPcm, (int)frame->frameCount,
+                (int)ctx->params.directionA);
+    }
+    else if (algorithmMode == AUDIO_ALGO_MODE_DUAL) {
+        status = dsp_spatial_process_dual_directions_inplace(&ctx->spatialState,
+                frame->outputPcm, (int)frame->frameCount,
+                (int)ctx->params.directionA, (int)ctx->params.directionB);
     }
     else {
         status = dsp_process_audio(frame->outputPcm,

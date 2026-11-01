@@ -1,0 +1,112 @@
+[
+  {
+    "path": "host/bin/release/app_host",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "dsp/configuro/linker.cmd",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "frontend_arm/build-desktop/app/Makefile",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "delivery/ex04-source-20261101-ui.tar.gz",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "delivery/ex04-source-20261101-ui.tar.gz.sha256",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "report/output/中期汇报.pptx",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "report/workflow/full/candidate.pptx",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "report/workflow/full/final-previews/slide-01.png",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "docs/evidence/x/selftest.exe",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "tests/spatial/build-verification/commands.log",
+    "expected_ignored": true,
+    "ignored": true
+  },
+  {
+    "path": "tools/generate_hrir.py",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "assets/hrir/mit_kemar/elev40/L40e045a.wav",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "shared/hrir_catalog.h",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "dsp/dsp_spatial_coefficients.inc",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "dsp/dsplib/mathlib.ae674",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "makefile",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "tests/spatial/Makefile",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "docs/evidence/arm-build-2026-11-01/host-dsp-build-user.log",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "report/workflow/slide-plan.json",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "report/workflow/full/build_append.mjs",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "report/ima/authoring-reference.jpg",
+    "expected_ignored": false,
+    "ignored": false
+  },
+  {
+    "path": "delivery/ex04-vnc-via-bridge.tigervnc",
+    "expected_ignored": false,
+    "ignored": false
+  }
+]

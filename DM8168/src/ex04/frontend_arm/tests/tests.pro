@@ -1,0 +1,10 @@
+QT += core testlib
+QT -= gui
+TEMPLATE = app
+TARGET = test_frontend_arm
+CONFIG += console warn_on
+CONFIG -= app_bundle
+INCLUDEPATH += ../app ../ipc_peer
+SOURCES += test_frontend.cpp ../app/RunRequest.cpp ../app/PipelineRunner.cpp ../app/IpcSession.cpp
+HEADERS += ../app/RunRequest.h ../app/PipelineRunner.h ../app/IpcSession.h
+unix:!macx: LIBS += -lpthread
